@@ -1,0 +1,825 @@
+$Ash: #cabfb3;
+$AshA: #cabfb3dd;
+$Birch: #393121;
+$Millbrook: #644c3a;
+$MillbrookA: #644c3ab9;
+$YellowMetal: #70643f;
+$YellowMetalA: #70643fc6;
+
+$Basic-font: "Cinzel", Comic Sans MS;
+
+.cinzel {
+    font-family: "Cinzel" !important;
+    font-size: 1.2rem;
+    //   font-optical-sizing: auto;
+    //   font-weight: bold;
+    //   font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    z-index: 0;
+    background-image: url('/images/main_bgnd.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+
+}
+
+.upstair {
+    background-image: url('/images/upstair/emelet_bgnd.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.ground {
+    background-image: url('/images/ground/ground.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.garden {
+    background-image: url('/images/garden/garden_bgnd.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.mainLogo {
+    padding-left: 4vw;
+
+    img {
+        height: 7vh;
+        border-radius: 50% / 20%;
+        border: 3px $Millbrook solid;
+    }
+}
+
+
+
+
+ul.navbar-nav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: $Basic-font;
+}
+
+.navBG {
+    background-color: #cabfb379 !important;
+}
+
+.navbar {
+    top: 1vh;
+    position: fixed;
+    font-size: 1rem;
+    transition: 500ms;
+    z-index: 10;
+    box-shadow: 0 5px 15px $Birch;
+}
+
+.header-sticky {
+    top: 0px;
+    // background: linear-gradient(to top, $Millbrook 5%, $Ash 70%);
+    background-color: $Ash !important;
+    transition: 500ms;
+}
+
+.nav-item {
+    padding: 0rem 1rem 0rem 1rem !important;
+    font-size: 1rem;
+}
+
+.text {
+    font-weight: bold;
+    font-family: $Basic-font;
+
+    &:hover {
+        padding-top: 0.5rem;
+        font-size: 1.2rem;
+        transition: 200ms;
+        font-weight: bold;
+        color: whitesmoke;
+        text-shadow: 0px 0px 25px $Birch;
+    }
+}
+
+.reservation a {
+    border-radius: 10px;
+    background-color: $Birch;
+    color: $Ash;
+
+    &:hover {
+        color: whitesmoke;
+        box-shadow: 0px 0px 10px $Ash;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+
+    }
+}
+
+.dropdown-item {
+    width: 100% !important;
+    background-color: $AshA;
+    color: #644c3a;
+
+    &:hover {
+        transition: 300ms;
+        background-color: #393121 !important;
+        color: whitesmoke
+    }
+}
+
+ul .dropdown-menu {
+    background-color: $Ash !important;
+
+    // border: none;
+}
+
+
+.facebook,
+.tiktok,
+.mail {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+
+    &:hover {
+        font-size: 1.3rem;
+        padding: 0;
+    }
+}
+
+.phone {
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.carousel-gallery {
+    position: relative;
+    top: 8vw;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    width: 65%;
+    height: 37vw;
+
+    img {
+        border: 5px solid $Ash;
+        border-radius: 2rem;
+        height: 37vw;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.carousel-upstair {
+    // background-color: $MillbrookA;
+    border-bottom: none;
+    position: relative;
+    top: 13.5vh;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    width: 60%;
+    border-radius: 1rem;
+
+    img {
+        box-shadow: 0 0 10px black;
+        border-radius: 1rem;
+        border: 3px solid $Ash;
+        height: 38vw;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.carousel-ground {
+    // background-color: $MillbrookA;
+    // border-bottom: none;
+    position: relative;
+    top: 13.5vh;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    width: 60%;
+
+    img {
+        border: 5px solid $Ash;
+        border-radius: 1rem;
+        height: 38vw;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.carousel-garden {
+    // background-color: $MillbrookA;
+    // border-bottom: none;
+    position: relative;
+    top: 13.5vh;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    width: 60%;
+
+    img {
+        border: 5px solid $Ash;
+        border-radius: 1rem;
+        height: 38vw;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.carousel-control-next-icon {
+    background-color: $Birch;
+    border-radius: 25% 75% 75% 25% / 50% 50% 50% 50%;
+}
+
+.carousel-control-prev-icon {
+    background-color: $Birch;
+    border-radius: 75% 25% 25% 75% / 50% 50% 50% 50%;
+}
+
+img.ratio-2-3 {
+    margin: 0 auto;
+    aspect-ratio: 2 / 3;
+}
+
+img.ratio-7-9 {
+    margin: 0 auto;
+    aspect-ratio: 7 / 9;
+}
+
+img.ratio-11-14 {
+    margin: 0 auto;
+    aspect-ratio: 11 / 14;
+}
+
+img.ratio-18-29 {
+    margin: 0 auto;
+    aspect-ratio: 18 / 29;
+}
+
+img.ratio-19-21 {
+    margin: 0 auto;
+    aspect-ratio: 19 / 21;
+}
+
+img.ratio-20-21 {
+    margin: 0 auto;
+    aspect-ratio: 20 / 21;
+}
+
+.indexBox {
+    z-index: 1;
+    // position: relative;
+    // top: 18vh;
+    padding: 3rem 4rem 3rem 3rem;
+    border-radius: 2rem;
+    border: 3px solid $Millbrook;
+    box-shadow: 0px 0px 10px black;
+    background-color: #cabfb3e4;
+
+    color: $Birch;
+    font-family: cinzel;
+    font-size: 100%;
+    font-style: italic;
+    font-weight: bold;
+    text-align: justify;
+    text-shadow: 0px 5px 4px rgb(111, 105, 75);
+
+    img.img-outside {
+        border: 2px solid $Millbrook;
+        border-radius: 1rem;
+        margin: 1rem 2rem 0rem 0rem;
+        width: 50%;
+        float: left;
+        box-shadow: 0 0 4px black;
+        cursor: pointer;
+    }
+
+    span.emptop {
+        display: inline;
+        font-weight: bold;
+        font-size: 1.3rem;
+        padding: 0vh 0 1vh 0;
+    }
+
+    span.empbot {
+        text-align: center;
+        display: block;
+        font-size: 1.5rem;
+        padding: 1vh 0 0 0;
+    }
+}
+
+div.boxSights {
+    position: absolute;
+    color: rgb(105, 52, 15);
+    top: 20vh;
+    font-size: 1.35rem;
+    font-style: italic;
+    background-color: #cabfb3d4;
+    padding: 3rem 4rem 3rem 4rem;
+    border-radius: 2rem;
+    text-shadow: 0px 0px 5px rgb(111, 105, 75);
+
+    img {
+        width: 75%;
+        height: 28vw;
+        border: 5px solid #644c3a;
+        border-radius: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(105, 52, 15);
+    }
+
+    p.title {
+        text-align: center;
+        font-size: 2rem;
+
+        img {
+            margin-top: 3vh;
+        }
+    }
+
+    p.sights {
+        text-align: center;
+        font-family: $Basic-font;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 75%;
+        margin: 0 auto;
+        text-shadow: none;
+
+    }
+}
+
+section div.rulesBox {
+    position: relative;
+    top: 20vh;
+    background-color: $AshA;
+    font-family: $Basic-font;
+    width: 50%;
+    border-radius: 30% / 5%;
+    box-shadow: 0 0 20px black;
+
+    hr {
+        padding: 1rem 0 0rem 0;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    p,
+    h4 {
+        margin: 0 auto;
+        width: 75%;
+        padding-bottom: 1rem;
+    }
+
+    span.span-thx {
+        display: block;
+        font-size: 1.5rem;
+        padding: 3vh 0 5vh 0;
+    }
+}
+.serviceBox{
+    position: relative;
+    top: 0vh;
+    background-color: $AshA;
+    font-family: $Basic-font;
+    width: 75%;
+    // border-radius: 30% / 5%;
+    box-shadow: 0 0 20px black;
+}
+
+
+section div.gdprBox {
+    position: relative;
+    top: 0vh;
+    background-color: $AshA;
+    font-family: $Basic-font;
+    width: 75%;
+    // border-radius: 30% / 5%;
+    box-shadow: 0 0 20px black;
+}
+
+.priceBox {
+    width: 60%;
+    z-index: 1;
+    position: relative;
+    top: 20vh;
+    background-color: $AshA;
+    font-family: $Basic-font;
+    padding: 0vh 3vh 3vh 0vh;
+    // border-radius: 30px;
+    box-shadow: 0 0 10px $Birch;
+
+    h1 {
+        padding: 4vh 2vh 2vh 2vh;
+    }
+
+    li {
+        list-style-type: none;
+        font-size: 1.4rem;
+    }
+}
+
+
+.toFooter {
+    font-family: $Basic-font;
+    color: $Ash;
+    z-index: 0;
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    width: 100%;
+    // bottom: 0rem;
+    background-color: #644c3aef;
+
+    ul {
+        padding: 0;
+    }
+}
+
+.toFooter li.list-item {
+    list-style-type: none;
+    // padding-left: 10px;
+    text-align: center;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+        color: $Ash;
+
+        &:hover {
+            color: wheat;
+        }
+    }
+
+    img {
+        height: 16vh;
+        border-radius: 50% / 20%;
+        border: 3px $Millbrook solid;
+    }
+}
+
+
+.toFooter h5 {
+    text-align: center;
+}
+
+.toFooter hr {
+    width: 80%;
+    margin: 1rem auto;
+    border: none;
+    border-top: 1px solid $Ash;
+}
+
+footer .footer {
+    font-family: $Basic-font;
+    color: wheat;
+    z-index: 1;
+    height: 5vh;
+    position: sticky;
+    padding: 1vh 0rem 0rem 5vw;
+    background-color: $Millbrook;
+
+}
+
+.footer-index {
+    font-family: $Basic-font;
+    color: wheat;
+    z-index: 1;
+    height: 5vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0rem 0rem 5vw;
+    background-color: $Millbrook;
+}
+
+.footerText {
+    text-align: left;
+}
+
+.gmap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    top: 20vh;
+
+    iframe {
+        border-radius: 15px;
+        border: 5px solid $YellowMetal;
+        width: 100%;
+        height: 70vh;
+
+    }
+}
+
+.lilgmap {
+    position: relative;
+    bottom: 0;
+
+    iframe {
+        border-radius: 1rem;
+        width: 80%;
+        height: 35vh;
+        border: 5px solid wheat;
+    }
+}
+
+
+.animation {
+    position: relative;
+    animation: showIndexBox 3000ms cubic-bezier(0, 0.25, 0.5, 1.2);
+}
+
+@keyframes showIndexBox {
+    0% {
+        opacity: 0;
+        top: -1000px;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.orderForm {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    top: 20vh;
+    padding: 2vh;
+    background-color: #cabfb3e4;
+    z-index: 0;
+    box-shadow: 0px 0px 15px $Birch;
+
+    input {
+        width: 100%;
+    }
+
+    label {
+        padding-left: 0.5rem;
+        // text-wrap: nowrap;
+        text-align: center;
+
+        &[for=checkbox] {
+            width: 50%;
+            text-align: left;
+            padding-top: 1%;
+        }
+    }
+
+    input[type=checkbox] {
+        background-color: $Ash;
+        border: 2px solid $Millbrook;
+        border-radius: 50%;
+        width: 3vh;
+        height: 3vh;
+        margin-left: 1%;
+    }
+
+    .btn {
+        background-color: $Millbrook;
+        border-color: $Millbrook;
+        color: $Ash;
+
+        &:hover {
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 6px 8px 6px 8px;
+            box-shadow: 0px 0px 20px $Ash inset;
+        }
+
+        &:active {
+            color: $YellowMetal;
+            background-color: $Ash;
+            border-color: #70643f;
+        }
+
+    }
+
+    select {
+        font-size: 1.2rem;
+        font-family: 'cinzel';
+        padding: 0 10px 0 15px;
+        background-color: $AshA;
+        border: none;
+        border-radius: 10%;
+    }
+
+    option {
+        background-color: $AshA;
+
+    }
+
+    input:focus,
+    textarea:focus {
+        background-color: $Ash;
+        border-color: #70643f !important;
+        outline: none;
+        box-shadow: 0 0 5px $Millbrook inset;
+
+    }
+}
+
+div.spacer-line {
+    height: 2vh;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+.big-modal {
+    top: 5vh;
+    background-color: transparent;
+    border: none;
+
+    img {
+        height: 95vh;
+        width: 100%;
+        border-radius: 10%;
+        box-shadow: 0 0 100px wheat;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// MEDIA QUERRIES
+
+@media only screen and (max-width: 1400px) {
+    .mainLogo {
+        padding-left: 3vw;
+    }
+
+    .carousel-gallery {
+        top: 15vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainLogo {
+        padding-left: 2vw;
+    }
+
+    .carousel-gallery {
+        top: 18vw;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .mainLogo {
+        padding-left: 1vw;
+
+        // &::after {
+        //     content: 'Vanília Vendégház';
+        //     padding-left: 6vw;
+        //     font-family: $Basic-font;
+        //     font-size: 4vw;
+        //     letter-spacing: 8px;
+        //     text-shadow: 0 0 3px black;
+        // }
+
+    }
+
+    .carousel-gallery {
+        top: 30vw;
+        height: 60vw;
+        width: 98%;
+
+        img {
+            height: 58vw;
+        }
+    }
+
+    .reservation a {
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+    }
+
+    .img-outside {
+        // margin: 0rem 1rem 2rem 0;
+        width: 100%;
+        // height: 400vw;
+        // float: left;
+    }
+
+    .facebook,
+    .tiktok,
+    .mail {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+
+        &:hover {
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    .facebook::after {
+        content: ' Facebook';
+    }
+
+    .tiktok::after {
+        content: ' TikTok';
+    }
+
+    .mail::after {
+        content: ' e-mail';
+        padding-bottom: 0;
+    }
+
+    .orderForm {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+
+    .priceBox {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mainLogo {
+        padding-left: 1vw;
+
+        &::after {
+            content: 'Vanília Vendégház';
+            padding-left: 6vw;
+            font-family: $Basic-font;
+            font-size: 4vw;
+            letter-spacing: 8px;
+            text-shadow: 0 0 3px black;
+        }
+    }
+
+    .carousel-gallery {
+        top: 32vw;
+    }
+
+    .gmap {
+        top: 25vh;
+        margin: 1rem;
+
+        iframe {
+            width: 90%;
+            height: 40vh;
+        }
+    }
+
+    .box {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 576px) {
+    .box {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .carousel-gallery {
+        top: 40vw;
+    }
+
+    .mainLogo {
+        padding-left: 1vw;
+
+        &::after {
+            content: 'Vanília Vendégház';
+            padding-left: 4vw;
+
+        }
+    }
+}

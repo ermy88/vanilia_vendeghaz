@@ -1,0 +1,688 @@
+@charset "UTF-8";
+.cinzel {
+  font-family: "Cinzel" !important;
+  font-size: 1.2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  z-index: 0;
+  background-image: url("/images/main_bgnd.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+}
+
+.upstair {
+  background-image: url("/images/upstair/emelet_bgnd.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.ground {
+  background-image: url("/images/ground/ground.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.garden {
+  background-image: url("/images/garden/garden_bgnd.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.mainLogo {
+  padding-left: 4vw;
+}
+.mainLogo img {
+  height: 7vh;
+  border-radius: 50%/20%;
+  border: 3px #644c3a solid;
+}
+
+ul.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Cinzel", Comic Sans MS;
+}
+
+.navBG {
+  background-color: rgba(202, 191, 179, 0.4745098039) !important;
+}
+
+.navbar {
+  top: 1vh;
+  position: fixed;
+  font-size: 1rem;
+  transition: 500ms;
+  z-index: 10;
+  box-shadow: 0 5px 15px #393121;
+}
+
+.header-sticky {
+  top: 0px;
+  background-color: #cabfb3 !important;
+  transition: 500ms;
+}
+
+.nav-item {
+  padding: 0rem 1rem 0rem 1rem !important;
+  font-size: 1rem;
+}
+
+.text {
+  font-weight: bold;
+  font-family: "Cinzel", Comic Sans MS;
+}
+.text:hover {
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+  transition: 200ms;
+  font-weight: bold;
+  color: whitesmoke;
+  text-shadow: 0px 0px 25px #393121;
+}
+
+.reservation a {
+  border-radius: 10px;
+  background-color: #393121;
+  color: #cabfb3;
+}
+.reservation a:hover {
+  color: whitesmoke;
+  box-shadow: 0px 0px 10px #cabfb3;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+}
+
+.dropdown-item {
+  width: 100% !important;
+  background-color: rgba(202, 191, 179, 0.8666666667);
+  color: #644c3a;
+}
+.dropdown-item:hover {
+  transition: 300ms;
+  background-color: #393121 !important;
+  color: whitesmoke;
+}
+
+ul .dropdown-menu {
+  background-color: #cabfb3 !important;
+}
+
+.facebook,
+.tiktok,
+.mail {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+.facebook:hover,
+.tiktok:hover,
+.mail:hover {
+  font-size: 1.3rem;
+  padding: 0;
+}
+
+.phone {
+  padding: 0;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.carousel-gallery {
+  position: relative;
+  top: 8vw;
+  z-index: 0;
+  overflow: hidden;
+  padding: 0 0 0 0;
+  width: 65%;
+  height: 37vw;
+}
+.carousel-gallery img {
+  border: 5px solid #cabfb3;
+  border-radius: 2rem;
+  height: 37vw;
+  aspect-ratio: 16/9;
+}
+
+.carousel-upstair {
+  border-bottom: none;
+  position: relative;
+  top: 13.5vh;
+  z-index: 0;
+  overflow: hidden;
+  padding: 0 0 0 0;
+  width: 60%;
+  border-radius: 1rem;
+}
+.carousel-upstair img {
+  box-shadow: 0 0 10px black;
+  border-radius: 1rem;
+  border: 3px solid #cabfb3;
+  height: 38vw;
+  aspect-ratio: 16/9;
+}
+
+.carousel-ground {
+  position: relative;
+  top: 13.5vh;
+  z-index: 0;
+  overflow: hidden;
+  padding: 0 0 0 0;
+  width: 60%;
+}
+.carousel-ground img {
+  border: 5px solid #cabfb3;
+  border-radius: 1rem;
+  height: 38vw;
+  aspect-ratio: 16/9;
+}
+
+.carousel-garden {
+  position: relative;
+  top: 13.5vh;
+  z-index: 0;
+  overflow: hidden;
+  padding: 0 0 0 0;
+  width: 60%;
+}
+.carousel-garden img {
+  border: 5px solid #cabfb3;
+  border-radius: 1rem;
+  height: 38vw;
+  aspect-ratio: 16/9;
+}
+
+.carousel-control-next-icon {
+  background-color: #393121;
+  border-radius: 25% 75% 75% 25%/50% 50% 50% 50%;
+}
+
+.carousel-control-prev-icon {
+  background-color: #393121;
+  border-radius: 75% 25% 25% 75%/50% 50% 50% 50%;
+}
+
+img.ratio-2-3 {
+  margin: 0 auto;
+  aspect-ratio: 2/3;
+}
+
+img.ratio-7-9 {
+  margin: 0 auto;
+  aspect-ratio: 7/9;
+}
+
+img.ratio-11-14 {
+  margin: 0 auto;
+  aspect-ratio: 11/14;
+}
+
+img.ratio-18-29 {
+  margin: 0 auto;
+  aspect-ratio: 18/29;
+}
+
+img.ratio-19-21 {
+  margin: 0 auto;
+  aspect-ratio: 19/21;
+}
+
+img.ratio-20-21 {
+  margin: 0 auto;
+  aspect-ratio: 20/21;
+}
+
+.indexBox {
+  z-index: 1;
+  padding: 3rem 4rem 3rem 3rem;
+  border-radius: 2rem;
+  border: 3px solid #644c3a;
+  box-shadow: 0px 0px 10px black;
+  background-color: rgba(202, 191, 179, 0.8941176471);
+  color: #393121;
+  font-family: cinzel;
+  font-size: 100%;
+  font-style: italic;
+  font-weight: bold;
+  text-align: justify;
+  text-shadow: 0px 5px 4px rgb(111, 105, 75);
+}
+.indexBox img.img-outside {
+  border: 2px solid #644c3a;
+  border-radius: 1rem;
+  margin: 1rem 2rem 0rem 0rem;
+  width: 50%;
+  float: left;
+  box-shadow: 0 0 4px black;
+  cursor: pointer;
+}
+.indexBox span.emptop {
+  display: inline;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0vh 0 1vh 0;
+}
+.indexBox span.empbot {
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
+  padding: 1vh 0 0 0;
+}
+
+div.boxSights {
+  position: absolute;
+  color: rgb(105, 52, 15);
+  top: 20vh;
+  font-size: 1.35rem;
+  font-style: italic;
+  background-color: rgba(202, 191, 179, 0.831372549);
+  padding: 3rem 4rem 3rem 4rem;
+  border-radius: 2rem;
+  text-shadow: 0px 0px 5px rgb(111, 105, 75);
+}
+div.boxSights img {
+  width: 75%;
+  height: 28vw;
+  border: 5px solid #644c3a;
+  border-radius: 2rem;
+}
+div.boxSights a {
+  text-decoration: none;
+  color: rgb(105, 52, 15);
+}
+div.boxSights p.title {
+  text-align: center;
+  font-size: 2rem;
+}
+div.boxSights p.title img {
+  margin-top: 3vh;
+}
+div.boxSights p.sights {
+  text-align: center;
+  font-family: "Cinzel", Comic Sans MS;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 75%;
+  margin: 0 auto;
+  text-shadow: none;
+}
+
+section div.rulesBox {
+  position: relative;
+  top: 20vh;
+  background-color: rgba(202, 191, 179, 0.8666666667);
+  font-family: "Cinzel", Comic Sans MS;
+  width: 50%;
+  border-radius: 30%/5%;
+  box-shadow: 0 0 20px black;
+}
+section div.rulesBox hr {
+  padding: 1rem 0 0rem 0;
+  width: 75%;
+  margin: 0 auto;
+}
+section div.rulesBox p,
+section div.rulesBox h4 {
+  margin: 0 auto;
+  width: 75%;
+  padding-bottom: 1rem;
+}
+section div.rulesBox span.span-thx {
+  display: block;
+  font-size: 1.5rem;
+  padding: 3vh 0 5vh 0;
+}
+
+.serviceBox {
+  position: relative;
+  top: 0vh;
+  background-color: rgba(202, 191, 179, 0.8666666667);
+  font-family: "Cinzel", Comic Sans MS;
+  width: 75%;
+  box-shadow: 0 0 20px black;
+}
+
+section div.gdprBox {
+  position: relative;
+  top: 0vh;
+  background-color: rgba(202, 191, 179, 0.8666666667);
+  font-family: "Cinzel", Comic Sans MS;
+  width: 75%;
+  box-shadow: 0 0 20px black;
+}
+
+.priceBox {
+  width: 60%;
+  z-index: 1;
+  position: relative;
+  top: 20vh;
+  background-color: rgba(202, 191, 179, 0.8666666667);
+  font-family: "Cinzel", Comic Sans MS;
+  padding: 0vh 3vh 3vh 0vh;
+  box-shadow: 0 0 10px #393121;
+}
+.priceBox h1 {
+  padding: 4vh 2vh 2vh 2vh;
+}
+.priceBox li {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.toFooter {
+  font-family: "Cinzel", Comic Sans MS;
+  color: #cabfb3;
+  z-index: 0;
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(100, 76, 58, 0.937254902);
+}
+.toFooter ul {
+  padding: 0;
+}
+
+.toFooter li.list-item {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+.toFooter li.list-item a {
+  text-decoration: none;
+  color: #cabfb3;
+}
+.toFooter li.list-item a:hover {
+  color: wheat;
+}
+.toFooter li.list-item img {
+  height: 16vh;
+  border-radius: 50%/20%;
+  border: 3px #644c3a solid;
+}
+
+.toFooter h5 {
+  text-align: center;
+}
+
+.toFooter hr {
+  width: 80%;
+  margin: 1rem auto;
+  border: none;
+  border-top: 1px solid #cabfb3;
+}
+
+footer .footer {
+  font-family: "Cinzel", Comic Sans MS;
+  color: wheat;
+  z-index: 1;
+  height: 5vh;
+  position: sticky;
+  padding: 1vh 0rem 0rem 5vw;
+  background-color: #644c3a;
+}
+
+.footer-index {
+  font-family: "Cinzel", Comic Sans MS;
+  color: wheat;
+  z-index: 1;
+  height: 5vh;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem 0rem 0rem 5vw;
+  background-color: #644c3a;
+}
+
+.footerText {
+  text-align: left;
+}
+
+.gmap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  top: 20vh;
+}
+.gmap iframe {
+  border-radius: 15px;
+  border: 5px solid #70643f;
+  width: 100%;
+  height: 70vh;
+}
+
+.lilgmap {
+  position: relative;
+  bottom: 0;
+}
+.lilgmap iframe {
+  border-radius: 1rem;
+  width: 80%;
+  height: 35vh;
+  border: 5px solid wheat;
+}
+
+.animation {
+  position: relative;
+  animation: showIndexBox 3000ms cubic-bezier(0, 0.25, 0.5, 1.2);
+}
+
+@keyframes showIndexBox {
+  0% {
+    opacity: 0;
+    top: -1000px;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+.orderForm {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  top: 20vh;
+  padding: 2vh;
+  background-color: rgba(202, 191, 179, 0.8941176471);
+  z-index: 0;
+  box-shadow: 0px 0px 15px #393121;
+}
+.orderForm input {
+  width: 100%;
+}
+.orderForm label {
+  padding-left: 0.5rem;
+  text-align: center;
+}
+.orderForm label[for=checkbox] {
+  width: 50%;
+  text-align: left;
+  padding-top: 1%;
+}
+.orderForm input[type=checkbox] {
+  background-color: #cabfb3;
+  border: 2px solid #644c3a;
+  border-radius: 50%;
+  width: 3vh;
+  height: 3vh;
+  margin-left: 1%;
+}
+.orderForm .btn {
+  background-color: #644c3a;
+  border-color: #644c3a;
+  color: #cabfb3;
+}
+.orderForm .btn:hover {
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 6px 8px 6px 8px;
+  box-shadow: 0px 0px 20px #cabfb3 inset;
+}
+.orderForm .btn:active {
+  color: #70643f;
+  background-color: #cabfb3;
+  border-color: #70643f;
+}
+.orderForm select {
+  font-size: 1.2rem;
+  font-family: "cinzel";
+  padding: 0 10px 0 15px;
+  background-color: rgba(202, 191, 179, 0.8666666667);
+  border: none;
+  border-radius: 10%;
+}
+.orderForm option {
+  background-color: rgba(202, 191, 179, 0.8666666667);
+}
+.orderForm input:focus,
+.orderForm textarea:focus {
+  background-color: #cabfb3;
+  border-color: #70643f !important;
+  outline: none;
+  box-shadow: 0 0 5px #644c3a inset;
+}
+
+div.spacer-line {
+  height: 2vh;
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+
+.big-modal {
+  top: 5vh;
+  background-color: transparent;
+  border: none;
+}
+.big-modal img {
+  height: 95vh;
+  width: 100%;
+  border-radius: 10%;
+  box-shadow: 0 0 100px wheat;
+}
+
+@media only screen and (max-width: 1400px) {
+  .mainLogo {
+    padding-left: 3vw;
+  }
+  .carousel-gallery {
+    top: 15vw;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .mainLogo {
+    padding-left: 2vw;
+  }
+  .carousel-gallery {
+    top: 18vw;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .mainLogo {
+    padding-left: 1vw;
+  }
+  .carousel-gallery {
+    top: 30vw;
+    height: 60vw;
+    width: 98%;
+  }
+  .carousel-gallery img {
+    height: 58vw;
+  }
+  .reservation a {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+  }
+  .img-outside {
+    width: 100%;
+  }
+  .facebook,
+  .tiktok,
+  .mail {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+  .facebook:hover,
+  .tiktok:hover,
+  .mail:hover {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+  .facebook::after {
+    content: " Facebook";
+  }
+  .tiktok::after {
+    content: " TikTok";
+  }
+  .mail::after {
+    content: " e-mail";
+    padding-bottom: 0;
+  }
+  .orderForm {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+  .priceBox {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mainLogo {
+    padding-left: 1vw;
+  }
+  .mainLogo::after {
+    content: "Vanília Vendégház";
+    padding-left: 6vw;
+    font-family: "Cinzel", Comic Sans MS;
+    font-size: 4vw;
+    letter-spacing: 8px;
+    text-shadow: 0 0 3px black;
+  }
+  .carousel-gallery {
+    top: 32vw;
+  }
+  .gmap {
+    top: 25vh;
+    margin: 1rem;
+  }
+  .gmap iframe {
+    width: 90%;
+    height: 40vh;
+  }
+  .box {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .box {
+    width: 80%;
+    font-size: 1rem;
+  }
+  .carousel-gallery {
+    top: 40vw;
+  }
+  .mainLogo {
+    padding-left: 1vw;
+  }
+  .mainLogo::after {
+    content: "Vanília Vendégház";
+    padding-left: 4vw;
+  }
+}
+
+/*# sourceMappingURL=indBS.css.map */
