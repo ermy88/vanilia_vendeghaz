@@ -25,7 +25,7 @@ $Basic-font: "Cinzel", Comic Sans MS;
 
 body {
     z-index: 0;
-    background-image: url('/images/main_bgnd.jpg');
+    background-image: url('images/main_bgnd.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: top;
@@ -33,21 +33,21 @@ body {
 }
 
 .upstair {
-    background-image: url('/images/upstair/emelet_bgnd.jpg');
+    background-image: url('images/upstair/emelet_bgnd.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 
 .ground {
-    background-image: url('/images/ground/ground.jpg');
+    background-image: url('images/ground/ground.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
 
 .garden {
-    background-image: url('/images/garden/garden_bgnd.jpg');
+    background-image: url('images/garden/garden_bgnd.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
