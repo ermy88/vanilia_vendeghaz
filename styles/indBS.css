@@ -698,7 +698,7 @@ div.spacer-line {
     width: 95%;
   }
   .header-sticky {
-    top: -150px;
+    top: -1000px;
   }
 }
 
