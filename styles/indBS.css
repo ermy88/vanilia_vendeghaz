@@ -734,7 +734,7 @@ div.spacer-line {
     font-size: 1.1rem;
   }
   .header-sticky {
-    top: -1000px;
+    top: -100px;
   }
 }
 
