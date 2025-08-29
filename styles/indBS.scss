@@ -25,7 +25,7 @@ $Basic-font: "Cinzel", Comic Sans MS;
 
 body {
     z-index: 0;
-    background-image: url('/images/main_bgnd.jpg');
+    background-image: url('images/main_bgnd.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: top;
@@ -402,7 +402,7 @@ section div.rulesBox {
     background-color: $AshA;
     font-family: $Basic-font;
     width: 75%;
-    // border-radius: 30% / 5%;
+    border-radius: 30% / 5%;
     box-shadow: 0 0 20px black;
 }
 
@@ -412,8 +412,9 @@ section div.gdprBox {
     top: 0vh;
     background-color: $AshA;
     font-family: $Basic-font;
+    padding: 15vh 10vh 10vh 15vh;
     width: 75%;
-    // border-radius: 30% / 5%;
+    border-radius: 30% / 5%;
     box-shadow: 0 0 20px black;
 }
 

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .cinzel {
   font-family: "Cinzel" !important;
   font-size: 1.2rem;
@@ -13,28 +12,28 @@
 
 body {
   z-index: 0;
-  background-image: url('/images/main_bgnd.jpg');
+  background-image: url("images/main_bgnd.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: top;
 }
 
 .upstair {
-  background-image: url('images/upstair/emelet_bgnd.jpg');
+  background-image: url("images/upstair/emelet_bgnd.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 
 .ground {
-  background-image: url('images/ground/ground.jpg');
+  background-image: url("images/ground/ground.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
 .garden {
-  background-image: url('images/garden/garden_bgnd.jpg');
+  background-image: url("images/garden/garden_bgnd.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -43,7 +42,6 @@ body {
 .mainLogo {
   padding-left: 4vw;
 }
-
 .mainLogo img {
   height: 7vh;
   border-radius: 50%/20%;
@@ -86,7 +84,6 @@ ul.navbar-nav {
   font-weight: bold;
   font-family: "Cinzel", Comic Sans MS;
 }
-
 .text:hover {
   padding-top: 0.5rem;
   font-size: 1.2rem;
@@ -101,7 +98,6 @@ ul.navbar-nav {
   background-color: #393121;
   color: #cabfb3;
 }
-
 .reservation a:hover {
   color: whitesmoke;
   box-shadow: 0px 0px 10px #cabfb3;
@@ -113,7 +109,6 @@ ul.navbar-nav {
   background-color: rgba(202, 191, 179, 0.8666666667);
   color: #644c3a;
 }
-
 .dropdown-item:hover {
   transition: 300ms;
   background-color: #393121 !important;
@@ -131,7 +126,6 @@ ul .dropdown-menu {
   padding: 0;
   font-size: 1.3rem;
 }
-
 .facebook:hover,
 .tiktok:hover,
 .mail:hover {
@@ -154,7 +148,6 @@ ul .dropdown-menu {
   width: 65%;
   height: 37vw;
 }
-
 .carousel-gallery img {
   border: 5px solid #cabfb3;
   border-radius: 2rem;
@@ -172,7 +165,6 @@ ul .dropdown-menu {
   width: 60%;
   border-radius: 1rem;
 }
-
 .carousel-upstair img {
   box-shadow: 0 0 10px black;
   border-radius: 1rem;
@@ -189,7 +181,6 @@ ul .dropdown-menu {
   padding: 0 0 0 0;
   width: 60%;
 }
-
 .carousel-ground img {
   border: 5px solid #cabfb3;
   border-radius: 1rem;
@@ -205,7 +196,6 @@ ul .dropdown-menu {
   padding: 0 0 0 0;
   width: 60%;
 }
-
 .carousel-garden img {
   border: 5px solid #cabfb3;
   border-radius: 1rem;
@@ -268,7 +258,6 @@ img.ratio-20-21 {
   text-align: justify;
   text-shadow: 0px 5px 4px rgb(111, 105, 75);
 }
-
 .indexBox img.img-outside {
   border: 2px solid #644c3a;
   border-radius: 1rem;
@@ -278,14 +267,12 @@ img.ratio-20-21 {
   box-shadow: 0 0 4px black;
   cursor: pointer;
 }
-
 .indexBox span.emptop {
   display: inline;
   font-weight: bold;
   font-size: 1.3rem;
   padding: 0vh 0 1vh 0;
 }
-
 .indexBox span.empbot {
   text-align: center;
   display: block;
@@ -304,28 +291,23 @@ div.boxSights {
   border-radius: 2rem;
   text-shadow: 0px 0px 5px rgb(111, 105, 75);
 }
-
 div.boxSights img {
   width: 75%;
   height: 28vw;
   border: 5px solid #644c3a;
   border-radius: 2rem;
 }
-
 div.boxSights a {
   text-decoration: none;
   color: rgb(105, 52, 15);
 }
-
 div.boxSights p.title {
   text-align: center;
   font-size: 2rem;
 }
-
 div.boxSights p.title img {
   margin-top: 3vh;
 }
-
 div.boxSights p.sights {
   text-align: center;
   font-family: "Cinzel", Comic Sans MS;
@@ -345,20 +327,17 @@ section div.rulesBox {
   border-radius: 30%/5%;
   box-shadow: 0 0 20px black;
 }
-
 section div.rulesBox hr {
   padding: 1rem 0 0rem 0;
   width: 75%;
   margin: 0 auto;
 }
-
 section div.rulesBox p,
 section div.rulesBox h4 {
   margin: 0 auto;
   width: 75%;
   padding-bottom: 1rem;
 }
-
 section div.rulesBox span.span-thx {
   display: block;
   font-size: 1.5rem;
@@ -371,6 +350,7 @@ section div.rulesBox span.span-thx {
   background-color: rgba(202, 191, 179, 0.8666666667);
   font-family: "Cinzel", Comic Sans MS;
   width: 75%;
+  border-radius: 30%/5%;
   box-shadow: 0 0 20px black;
 }
 
@@ -379,7 +359,9 @@ section div.gdprBox {
   top: 0vh;
   background-color: rgba(202, 191, 179, 0.8666666667);
   font-family: "Cinzel", Comic Sans MS;
+  padding: 15vh 10vh 10vh 15vh;
   width: 75%;
+  border-radius: 30%/5%;
   box-shadow: 0 0 20px black;
 }
 
@@ -393,11 +375,9 @@ section div.gdprBox {
   padding: 0vh 3vh 3vh 0vh;
   box-shadow: 0 0 10px #393121;
 }
-
 .priceBox h1 {
   padding: 4vh 2vh 2vh 2vh;
 }
-
 .priceBox li {
   list-style-type: none;
   font-size: 1.4rem;
@@ -413,7 +393,6 @@ section div.gdprBox {
   width: 100%;
   background-color: rgba(100, 76, 58, 0.937254902);
 }
-
 .toFooter ul {
   padding: 0;
 }
@@ -423,16 +402,13 @@ section div.gdprBox {
   text-align: center;
   padding: 0;
 }
-
 .toFooter li.list-item a {
   text-decoration: none;
   color: #cabfb3;
 }
-
 .toFooter li.list-item a:hover {
   color: wheat;
 }
-
 .toFooter li.list-item img {
   height: 16vh;
   border-radius: 50%/20%;
@@ -483,7 +459,6 @@ footer .footer {
   margin: 0 auto;
   top: 20vh;
 }
-
 .gmap iframe {
   border-radius: 15px;
   border: 5px solid #70643f;
@@ -495,7 +470,6 @@ footer .footer {
   position: relative;
   bottom: 0;
 }
-
 .lilgmap iframe {
   border-radius: 1rem;
   width: 80%;
@@ -513,16 +487,13 @@ footer .footer {
     opacity: 0;
     top: -1000px;
   }
-
   60% {
     opacity: 0;
   }
-
   100% {
     top: 0;
   }
 }
-
 .orderForm {
   display: flex;
   justify-content: space-evenly;
@@ -535,22 +506,18 @@ footer .footer {
   z-index: 0;
   box-shadow: 0px 0px 15px #393121;
 }
-
 .orderForm input {
   width: 100%;
 }
-
 .orderForm label {
   padding-left: 0.5rem;
   text-align: center;
 }
-
 .orderForm label[for=checkbox] {
   width: 50%;
   text-align: left;
   padding-top: 1%;
 }
-
 .orderForm input[type=checkbox] {
   background-color: #cabfb3;
   border: 2px solid #644c3a;
@@ -559,26 +526,22 @@ footer .footer {
   height: 3vh;
   margin-left: 1%;
 }
-
 .orderForm .btn {
   background-color: #644c3a;
   border-color: #644c3a;
   color: #cabfb3;
 }
-
 .orderForm .btn:hover {
   color: whitesmoke;
   font-weight: bold;
   padding: 6px 8px 6px 8px;
   box-shadow: 0px 0px 20px #cabfb3 inset;
 }
-
 .orderForm .btn:active {
   color: #70643f;
   background-color: #cabfb3;
   border-color: #70643f;
 }
-
 .orderForm select {
   font-size: 1.2rem;
   font-family: "cinzel";
@@ -587,11 +550,9 @@ footer .footer {
   border: none;
   border-radius: 10%;
 }
-
 .orderForm option {
   background-color: rgba(202, 191, 179, 0.8666666667);
 }
-
 .orderForm input:focus,
 .orderForm textarea:focus {
   background-color: #cabfb3;
@@ -611,8 +572,8 @@ div.spacer-line {
   background-color: transparent;
   border: none;
 }
-
 .big-modal img {
+  height: 95vh;
   width: 100%;
   border-radius: 10%;
   box-shadow: 0 0 100px wheat;
@@ -622,91 +583,71 @@ div.spacer-line {
   .mainLogo {
     padding-left: 3vw;
   }
-
   .carousel-gallery {
     top: 15vw;
   }
 }
-
 @media only screen and (max-width: 1200px) {
   .mainLogo {
     padding-left: 2vw;
   }
-
   .carousel-gallery {
     top: 18vw;
   }
 }
-
 @media only screen and (max-width: 992px) {
   .mainLogo {
     padding-left: 1vw;
   }
-
   .carousel-gallery {
     top: 30vw;
     height: 60vw;
     width: 98%;
   }
-
   .carousel-gallery img {
     height: 58vw;
   }
-
   .reservation a {
     padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
   }
-
   .img-outside {
     width: 100%;
   }
-
   .facebook,
   .tiktok,
   .mail {
     font-size: 1.1rem;
     padding: 0.5rem 0;
   }
-
   .facebook:hover,
   .tiktok:hover,
   .mail:hover {
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
   }
-
   .facebook::after {
     content: " Facebook";
   }
-
   .tiktok::after {
     content: " TikTok";
   }
-
   .mail::after {
     content: " e-mail";
     padding-bottom: 0;
   }
-
   .orderForm {
     flex-direction: column;
     align-items: center;
     width: 95%;
   }
-
   .priceBox {
     width: 95%;
   }
-  .header-sticky {
-    top: -100px;
-  }
 }
-
 @media only screen and (max-width: 767px) {
   .mainLogo {
     padding-left: 1vw;
   }
-
   .mainLogo::after {
     content: "Vanília Vendégház";
     padding-left: 6vw;
@@ -715,49 +656,35 @@ div.spacer-line {
     letter-spacing: 8px;
     text-shadow: 0 0 3px black;
   }
-
   .carousel-gallery {
     top: 32vw;
   }
-
   .gmap {
     top: 25vh;
     margin: 1rem;
   }
-
   .gmap iframe {
     width: 90%;
     height: 40vh;
   }
-
   .box {
     font-size: 1.1rem;
   }
-  .header-sticky {
-    top: -100px;
-  }
 }
-
 @media only screen and (max-width: 576px) {
   .box {
     width: 80%;
     font-size: 1rem;
   }
-
   .carousel-gallery {
     top: 40vw;
   }
-
   .mainLogo {
     padding-left: 1vw;
   }
-
   .mainLogo::after {
     content: "Vanília Vendégház";
     padding-left: 4vw;
-  }
-  .header-sticky {
-    top: -100px;
   }
 }
 
