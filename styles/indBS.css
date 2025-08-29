@@ -697,6 +697,9 @@ div.spacer-line {
   .priceBox {
     width: 95%;
   }
+  .header-sticky {
+    top: -150px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -749,10 +752,6 @@ div.spacer-line {
   .mainLogo::after {
     content: "Vanília Vendégház";
     padding-left: 4vw;
-  }
-
-  .header-sticky {
-    top: -150px;
   }
 }
 
