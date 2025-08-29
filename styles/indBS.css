@@ -19,21 +19,21 @@ body {
 }
 
 .upstair {
-  background-image: url("images/upstair/emelet_bgnd.jpg");
+  background-image: url('images/upstair/emelet_bgnd.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 
 .ground {
-  background-image: url("images/ground/ground.jpg");
+  background-image: url('images/ground/ground.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
 .garden {
-  background-image: url("images/garden/garden_bgnd.jpg");
+  background-image: url('images/garden/garden_bgnd.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -570,7 +570,6 @@ div.spacer-line {
   border: none;
 }
 .big-modal img {
-  height: 95vh;
   width: 100%;
   border-radius: 10%;
   box-shadow: 0 0 100px wheat;
