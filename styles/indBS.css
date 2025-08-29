@@ -699,6 +699,7 @@ div.spacer-line {
   }
   .header-sticky {
     top: -1000px;
+    background-color: #cabfb3 !important;
   }
 }
 
@@ -735,6 +736,7 @@ div.spacer-line {
   }
   .header-sticky {
     top: -1000px;
+    background-color: #cabfb3 !important;
   }
 }
 
