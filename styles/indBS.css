@@ -698,8 +698,7 @@ div.spacer-line {
     width: 95%;
   }
   .header-sticky {
-    top: -1000px;
-    background-color: #cabfb3 !important;
+    top: -100px;
   }
 }
 
@@ -736,7 +735,6 @@ div.spacer-line {
   }
   .header-sticky {
     top: -1000px;
-    background-color: #cabfb3 !important;
   }
 }
 
@@ -759,7 +757,7 @@ div.spacer-line {
     padding-left: 4vw;
   }
   .header-sticky {
-    top: -1000px;
+    top: -100px;
   }
 }
 
