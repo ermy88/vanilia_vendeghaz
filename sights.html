@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head id="icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanília Vendégház</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jersey+15&family=Shojumaru&family=Yesteryear&family=Zen+Dots&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a5ae97f596.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/indBS.css">
+
+
+
+</head>
+
+<body>
+
+    <header class="d-non">
+        <nav class="navBG navbar navbar-expand-md col-12 col-md-12">
+            <div class="container-fluid justify-content-evenly">
+                <a class="mainLogo navbar-brand" href="../index.html"><img src="/images/logo.jpg"
+                        alt="Vanília Vendégház" title="www.vaniliavendeghaz.hu"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                            <a class="cinzel text nav-link" aria-current="page" href="/index.html">Kezdőlap</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="cinzel text nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Apartmanok
+                            </a>
+                            <div class="dropdown-center">
+                                <ul class="dropdown-menu text-center">
+                                    <li><a class="dropdown-item cinzel text-center" href="/upstair.html">Emelet</a></li>
+                                    <li><a class="dropdown-item cinzel text-center" href="/ground.html">Földszint</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center" href="/garden.html">Garden</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="cinzel text nav-link" href="/gallery.html">Galéria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="cinzel text nav-link" href="/services.html">Szolgáltatások</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="cinzel text nav-link text-nowrap" href="" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Programok / Látnivalók
+                            </a>
+                            <div class="dropdown-center text-center">
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#gombahazak">Gombaházak</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#kisvasut">Kisvasút</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center" href="sights.html#kilato">Kilátó -
+                                            Miskó
+                                            István sétány</a></li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#tanosveny">Tanösvény</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#termal">Termálfürdő</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#strand">Szabadstrand</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="cinzel text nav-link text-nowrap" href="" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Információk
+                            </a>
+                            <div class="dropdown-center text-center">
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item cinzel text-center" href="info.html#rules">Házirend</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center" href="info.html#adatk">Adatkezelési
+                                            tájékoztató</a></li>
+                                    <li><a class="dropdown-item cinzel text-center" href="info.html#gmap">Térkép</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="reservation nav-item">
+                            <a class="cinzel text nav-link" href="/prices.html">Árak/Foglalás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text nav-link facebook"
+                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank">
+                                <i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text nav-link tiktok" href="https://www.tiktok.com/@vanlia.vendghz"
+                                target="_blank">
+                                <i class="fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text nav-link mail" href="prices.html">
+                                <i id="mail" class="fa-regular fa-envelope" title="info@vaniliavendeghaz.hu"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="d-flex justify-content-center">
+
+        <span id="gombahazak"></span>
+        <div class="container boxSights col-lg-12">
+            <section>
+                <div class="container d-flex justify-content-center flex-column">
+                    <p class="title">Gombaházak "Aprajafalva"
+                        <img src="/images/sights/gombahazak.jpg" alt="">
+                    </p>
+                    <p class="sights">
+                        <span id="kisvasut"></span>
+                        A termálfürdő melletti üdülőövezetben található gombaházak – eredetileg üdülőfalunak tervezték
+                        az 1990-es években, eredetileg 23 házzal – mára némileg elhagyatott állapotban, de különleges
+                        látványosságként szolgálnak. <br>
+                    </p><br>
+                    <hr style="width: 75%; margin: auto;"><br>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <p class="title">Tisza-parti kisvasút <br>
+                        <img src="/images/sights/kisvasut.jpg" alt="">
+                    </p>
+                    <p class="sights">
+                        A keskenynyomközű kisvasút a Sportcentrumból a Tisza-partra közlekedik, nosztalgikus hangulatban
+                        egész évben.
+                        <u>indulási időpontok:</u> <br>
+                        Tisza-parti végállomásról: 14:00–19:00 óráig (óránként) <br>
+                        Találkozások Háza felé (visszaindulás): 14:20–19:20 (óránként) <br>
+                        A vonal hossza 1,6 km, menetideje kb. 10–11 perc egy irányban. <br>
+                        <span id="kilato"></span>
+                        <a href="https://tiszapartikisvasut.hu/" target="_blank"><br>
+                            További információk
+                        </a>
+                    </p><br>
+                    <hr style="width: 75%; margin: auto;"><br>
+                </div>
+            </section>
+
+            <section>
+                <div class="contaier">
+                    <p class="title">Kilátó - Miskó István sétány <br>
+                        <img src="/images/sights/kilato.jpg" alt="">
+
+                    </p>
+                    <p class="sights">
+                        A kilátó egy fa (vörösfenyő és akác) szerkezetű torony, amely 22 méter magas – ebből 14 méter
+                        magas kilátószint érhető el a lépcsők megmászásával.
+                        Innen páratlan kilátás nyílik a Tisza egyik legnagyobb kanyarulatára.
+                        <span id="tanosveny"></span><br> <a href="https://www.youtube.com/watch?v=DAZDmVE9GTg"
+                            target="_blank"><i class="fa-brands fa-youtube" style="font-size: 2rem;"></i></a>
+                    </p><br>
+                    <hr style="width: 75%; margin: auto;"><br>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <p class="title">Nádirigó tanösvény <br>
+                        <img src="/images/sights/tanosveny.jpg" alt="">
+                    </p>
+                    <p class="sights">
+                        A tanösvény Tiszakécske Ókécske városrészében található, a kiindulóhely az Ókécskei Sportcsarnok
+                        mellett. Itt parkolási lehetőség és egy kisebb játszótér is rendelkezésre áll.
+                        Babakocsival is használható tanösvény kb. 1,5–2,5 km hosszban, madármegfigyelő toronnyal és
+                        információs táblákkal – a Holt‑Tiszánál folyik a természetmegújítás.
+                        <br>
+                        <br><br><span id="termal"></span>
+                        <a href="https://csodalatosmagyarorszag.hu/hirek/itthon/nadirigo-tanosveny-tiszakecske-legszebb-setaloutja-a-termeszetben/"
+                            target="_blank" title="csodalatosmagyarorszag.hu"> További információk </a> <br> <a
+                            href="https://www.youtube.com/watch?v=_eiezDeeoME" target="_blank"
+                            title="Videó madártávlatból"><i class="fa-brands fa-youtube"
+                                style="font-size: 2rem;"></i></a>
+
+                    </p><br>
+                    <hr style="width: 75%; margin: auto;"><br>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <p class="title"> Barack Gyógy‑ és Élményfürdő<br>
+                        <img src="/images/sights/termal.jpg" alt="">
+                    </p>
+                    <span id="strand"></span>
+                    <p class="sights">
+                        Barack Gyógy‑ és Élményfürdő.
+                        Élmény- és termálmedencék, szaunák, családbarát élmények várnak itt . <br><br>
+                        <a href="https://barackresort.hu/" target="_blank">További információk</a>
+                    </p><br>
+                    <hr style="width: 75%; margin: auto;"><br>
+                </div>
+            </section>
+
+            <section>
+                <div class="contaier">
+                    <p class="title">Kerekdombi Termálfürdő <br>
+                        <img src="/images/sights/kerekdombi_termal.jpg" alt="">
+                    </p>
+                    <p class="sights">
+                        <span style="margin-bottom:30vh;">Gyógyfürdő, szaunaprogramok. <br>
+                            Nyitva 06.03-08.31-ig minden nap.
+                            </span><br><br>
+                        <a href="https://termaldomb.hu/galeria/" target="_blank">További információk</a> <br><br>
+                        <hr style="width: 75%; margin: auto;">
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div class="contaier">
+                    <p class="title">Szabadstrand <br>
+                        <img src="/images/sights/tpart.jpg" alt="">
+                    </p>
+                    <p class="sights">
+                        Tiszta, gondozott fürdőhely öltözőkkel, büfékkel – jó hír, hogy egész nyáron várja a
+                        strandolókat. <br><br>
+                        <a href="https://www.youtube.com/watch?v=Kqcxz3eHTUs" target="_blank"><i
+                                class="fa-brands fa-youtube" style="font-size: 2rem; margin-bottom: 10rem;"></i></a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div style="height: 660vh; background: transparent;"></div>
+    
+        <section class="container-fluid toFooter w-100">
+    
+            <div class="pt-5 w-75">
+    
+                <div class="row">
+    
+                    <div class="col-12 col-lg-4 ">
+                        <ul>
+                            <h5 class="user-select-none">Vanília Vendégház</h5>
+                            <hr>
+                            <li class="list-item user-select-none">Elérhetőségek</li>
+                            <hr>
+                            <li class="list-item">6060 Tiszakécske, Móra Ferenc utca 16.</li> <br>
+                            <li class="list-item">Bencsik Szabolcs</li> <br>
+                            <li class="list-item">&#9742; +36 00 / 111-2233</li> <br>
+                            <li class="list-item"><i id="mail" class="fa-regular fa-envelope"
+                                    title="info@vaniliavendeghaz.hu"></i> info@vaniliavendeghaz.hu</li> <br>
+                            <li class="list-item">
+                                <a href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i> Facebook</a>
+                            </li><br>
+                            <li class="list-item">
+                                <a href="https://www.tiktok.com/@vanlia.vendghz" target="_blank">
+                                    <i class="fa-brands fa-tiktok"></i> TikTok</a>
+                            </li>
+                            <hr>
+                            <li class="list-item footerLogo">
+                                <img src="/images/logo.jpg" alt="" height="200px">
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-12 col-lg-4">
+                        <ul class="user-select-none">
+                            <h5 class="user-select-none">Oldaltérkép</h5>
+                            <hr>
+                            <li class="list-item"><a href="/index.html">Kezdőlap</a></li>
+                            <hr>
+                            <li class="list-item user-select-none">Apartmanok</li>
+                            <br>
+                            <li class="list-item"><a href="/upstair.html">Emelet</a></li>
+                            <li class="list-item"><a href="/ground.html">Földszint</a></li>
+                            <li class="list-item"><a href="/garden.html">Garden</a></li>
+                            <hr>
+                            <li class="list-item"><a href="/gallery.html">Galéria</a></li>
+                            <hr>
+                            <li class="list-item user-select-none">Programok / Látnivalók</li>
+                            <br>
+                            <li class="list-item"><a href="/sights.html#gombahazak">Gombaházak</a></li>
+                            <li class="list-item"><a href="/sights.html#kisvasut">Tisza-parti kisvasút</a></li>
+                            <li class="list-item"><a href="/sights.html#kilato">Kilátó - Miskó istván sétány</a></li>
+                            <li class="list-item"><a href="/sights.html#tanosveny">Nádirigó tanösvény</a></li>
+                            <li class="list-item"><a href="/sights.html#termal">Termálfürdő</a></li>
+                            <li class="list-item"><a href="/sights.html#strand">Szabadstrand</a></li>
+                            <hr>
+                        </ul>
+                    </div>
+    
+                    <div class="col-12 col-lg-4 ">
+                        <ul>
+                            <h5 class="user-select-none">információk</h5>
+                            <hr>
+                            <li class="list-item"><a href="/info.html#rules">Házirend</a></li>
+                            <hr>
+                            <li class="list-item"><a href="/info.html#adatk">Adatkezelési tájékoztató</a></li>
+                            <hr>
+                            <li class="list-item"><a href="/info.html#gmap">Térkép</a></li>
+                            <hr>
+                            <li class="list-item">
+                                <div class="lilgmap container user-select-none">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.9529959627207!2d20.108928528831484!3d46.933830967282624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741590005a4acad%3A0xf853531e9867b93c!2zVmFuw61saWEgVmVuZMOpZ2jDoXo!5e0!3m2!1shu!2shu!4v1755343921406!5m2!1shu!2shu"></iframe>
+                                    <div style="background: transparent;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style="height: 5vh; background: transparent;"></div>
+        <div class="footer-index">
+            <p class="footerText">
+                &copy; 2025 Vanília Vendégház. Bencsik Szabolcs
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/source/ind_BS.js"></script>
+</body>
+
+</html>

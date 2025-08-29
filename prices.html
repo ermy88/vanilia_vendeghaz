@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanília Vendégház</title>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a5ae97f596.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/indBS.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jersey+15&family=Shojumaru&family=Yesteryear&family=Zen+Dots&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navBG navbar navbar-expand-md col-12 col-md-12">
+            <div class="container-fluid justify-content-evenly">
+                <a class="mainLogo navbar-brand" href="../index.html"><img src="/images/logo.jpg"
+                        alt="Vanília Vendégház" title="www.vaniliavendeghaz.hu"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                            <a class="cinzel text nav-link" aria-current="page" href="/index.html">Kezdőlap</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="cinzel text nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Apartmanok
+                            </a>
+                            <div class="dropdown-center">
+                                <ul class="dropdown-menu text-center">
+                                    <li><a class="dropdown-item cinzel text-center" href="/upstair.html">Emelet</a></li>
+                                    <li><a class="dropdown-item cinzel text-center" href="/ground.html">Földszint</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center" href="/garden.html">Garden</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="cinzel text nav-link" href="/gallery.html">Galéria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="cinzel text nav-link" href="/services.html">Szolgáltatások</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="cinzel text nav-link text-nowrap" href="" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Programok / Látnivalók
+                            </a>
+                            <div class="dropdown-center text-center">
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#gombahazak">Gombaházak</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#kisvasut">Kisvasút</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center" href="sights.html#kilato">Kilátó -
+                                            Miskó
+                                            István sétány</a></li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#tanosveny">Tanösvény</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#termal">Termálfürdő</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center"
+                                            href="sights.html#strand">Szabadstrand</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="cinzel text nav-link text-nowrap" href="" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Információk
+                            </a>
+                            <div class="dropdown-center text-center">
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item cinzel text-center" href="info.html#rules">Házirend</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center" href="info.html#gmap">Térkép</a>
+                                    </li>
+                                    <li><a class="dropdown-item cinzel text-center" href="info.html#adatk">Adatkezelési
+                                            tájékoztató</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="reservation nav-item">
+                            <a class="cinzel text nav-link" href="/prices.html">Árak/Foglalás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text nav-link facebook"
+                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank">
+                                <i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text nav-link tiktok" href="https://www.tiktok.com/@vanlia.vendghz"
+                                target="_blank">
+                                <i class="fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text nav-link mail" href="prices.html">
+                                <i id="mail" class="fa-regular fa-envelope" title="info@vaniliavendeghaz.hu"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex justify-content-center flex-column">
+        <section class="container-fluid priceBox d-flex justify-content-center">
+            <div class="text-center">
+                <h1>Vanília Vendégház – Árlista </h1>
+                <ul>
+                    <li>
+                        Emeleti apartman (max. 4 fő): 25 000 Ft / éj
+                    </li>
+                    <li>
+                        Földszinti apartman (max. 4 fő): 35 000 Ft / éj
+                    </li><br>
+                    <li>
+                        Egy apartman foglalása esetén, ha kizárólagos használatot kérnek:
+                    </li>
+                    <li>
+                        40 000 Ft / éj
+                    </li>
+                    <li><br>
+                        Teljes ház foglalása (legalább 3 éjszakára):
+                    </li>
+                    <li>
+                        50 000 Ft / éj
+                    </li>
+                    <li><br>
+                        Kiemelt időszakokban:
+                    </li>
+                    <li>
+                        Ár egyedi ajánlat alapján
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div style="height: 0vh; background: transparent;"></div>
+        <section class="">
+            <div class="orderForm">
+
+                <div class="row col-12 col-lg-6">
+
+                    <form class="">
+                        <div class="mb-3 mx-1">
+                            <label for="fullName" class="form-label cinzel">Teljes név*</label>
+                            <input type="text" class="form-control cinzel" id="fullName" required>
+                        </div>
+                        <div class="mb-3 mx-1">
+                            <label for="email" class="form-label cinzel">E-mail cím*</label>
+                            <input type="email" class="form-control" placeholder="_____@_____ . __" id="email" required>
+                        </div>
+
+                        <div class="mb-3 mx-1">
+                            <label for="name" class="form-label cinzel">Telefonszám*</label>
+                            <input type="text" class="form-control cinzel" id="phone" placeholder="&#9742;" required>
+                        </div>
+                        <div class="d-flex justify-content-center flex-column align-items-center py-2">
+
+                            <div class="mb-3">
+                                <label for="guestNumber" class="cinzel">Vendégek száma?</label>
+                                <select name="guestNumber" id="guestNumber" id="quests" required>
+                                    <option value="" selected disabled> 0 </option>
+                                    <option value="" class="option">1</option>
+                                    <option value="" class="option">2</option>
+                                    <option value="" class="option">3</option>
+                                    <option value="" class="option">4</option>
+                                    <option value="" class="option">5</option>
+                                    <option value="" class="option">6</option>
+                                    <option value="" class="option">7</option>
+                                    <option value="" class="option">8</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="childNumber" class="cinzel">Gyerekek száma? (0 - 14 év)</label>
+                                <select name="childNumber" id="childNumber" id="children" required>
+                                    <option value="">0</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                <div class="row col-12 col-lg-6">
+
+                    <div class="mb-3 mx-1">
+                        <label for="dateStart" class="form-label cinzel">Érkezés napja*</label>
+                        <input type="date" class="form-control cinzel" id="dateStart" required>
+                    </div>
+                    <div class="mb-3 mx-1">
+                        <label for="dateEnd" class="form-label cinzel">Távozás napja* </label>
+                        <input type="date" class="form-control cinzel" id="dateEnd" required>
+                    </div>
+                    <div class="mb-3 mx-1">
+                        <label for="notes" class="form-label cinzel">Megjegyzés</label>
+                        <textarea type="text" class="form-control" id="notes" rows="5"></textarea>
+                    </div>
+                    <div class="mb-3 ms-3 form-check">
+                        <label class="form-check-label cinzel" for="checkbox">&nbsp;&ensp;asdasd</label>
+                        <input type="checkbox" class="form-check-input cinzel" id="checkbox" required>
+                    </div>
+                    <div class="container d-flex flex-column align-items-center">
+                        <button type="submit" class="btn cinzel col-12">Foglalás elküldése</button>
+                        <div class="spacer-line"></div>
+                    </div>
+                    <span class="cinzel">* Kötelezően kitöltendő</span>
+                </div>
+            </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div style="height: 25vh; background: transparent;"></div>
+        <section class="container-fluid toFooter w-100">
+
+            <div class="pt-5 w-75">
+
+                <div class="row">
+
+                    <div class="col-12 col-lg-4 ">
+                        <ul>
+                            <h5 class="user-select-none">Vanília Vendégház</h5>
+                            <hr>
+                            <li class="list-item user-select-none">Elérhetőségek</li>
+                            <hr>
+                            <li class="list-item">6060 Tiszakécske, Móra Ferenc utca 16.</li> <br>
+                            <li class="list-item">Bencsik Szabolcs</li> <br>
+                            <li class="list-item">&#9742; +36 00 / 111-2233</li> <br>
+                            <li class="list-item"><i id="mail" class="fa-regular fa-envelope"
+                                    title="info@vaniliavendeghaz.hu"></i> info@vaniliavendeghaz.hu</li> <br>
+                            <li class="list-item">
+                                <a href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i> Facebook</a>
+                            </li><br>
+                            <li class="list-item">
+                                <a href="https://www.tiktok.com/@vanlia.vendghz" target="_blank">
+                                    <i class="fa-brands fa-tiktok"></i> TikTok</a>
+                            </li>
+                            <hr>
+                            <li class="list-item footerLogo">
+                                <img src="/images/logo.jpg" alt="" height="200px">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <ul class="user-select-none">
+                            <h5 class="user-select-none">Oldaltérkép</h5>
+                            <hr>
+                            <li class="list-item"><a href="/index.html">Kezdőlap</a></li>
+                            <hr>
+                            <li class="list-item user-select-none">Apartmanok</li>
+                            <br>
+                            <li class="list-item"><a href="/upstair.html">Emelet</a></li>
+                            <li class="list-item"><a href="/ground.html">Földszint</a></li>
+                            <li class="list-item"><a href="/garden.html">Garden</a></li>
+                            <hr>
+                            <li class="list-item"><a href="/gallery.html">Galéria</a></li>
+                            <hr>
+                            <li class="list-item user-select-none">Programok / Látnivalók</li>
+                            <br>
+                            <li class="list-item"><a href="/sights.html#gombahazak">Gombaházak</a></li>
+                            <li class="list-item"><a href="/sights.html#kisvasut">Tisza-parti kisvasút</a></li>
+                            <li class="list-item"><a href="/sights.html#kilato">Kilátó - Miskó istván sétány</a></li>
+                            <li class="list-item"><a href="/sights.html#tanosveny">Nádirigó tanösvény</a></li>
+                            <li class="list-item"><a href="/sights.html#termal">Termálfürdő</a></li>
+                            <li class="list-item"><a href="/sights.html#strand">Szabadstrand</a></li>
+                            <hr>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4 ">
+                        <ul>
+                            <h5 class="user-select-none">információk</h5>
+                            <hr>
+                            <li class="list-item"><a href="/info.html#rules">Házirend</a></li>
+                            <hr>
+                            <li class="list-item"><a href="/info.html#adatk">Adatkezelési tájékoztató</a></li>
+                            <hr>
+                            <li class="list-item"><a href="/info.html#gmap">Térkép</a></li>
+                            <hr>
+                            <li class="list-item">
+                                <div class="lilgmap container user-select-none">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.9529959627207!2d20.108928528831484!3d46.933830967282624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741590005a4acad%3A0xf853531e9867b93c!2zVmFuw61saWEgVmVuZMOpZ2jDoXo!5e0!3m2!1shu!2shu!4v1755343921406!5m2!1shu!2shu"></iframe>
+                                    <div style="background: transparent;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style="height: 4vh; background: transparent;"></div>
+        <div class="footer-index">
+            <p class="footerText">
+                &copy; 2025 Vanília Vendégház. Bencsik Szabolcs
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/source/ind_BS.js"></script>
+</body>
+
+</html>
