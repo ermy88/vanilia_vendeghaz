@@ -787,6 +787,9 @@ div.spacer-line {
   }
 }
 @media only screen and (max-width: 576px) {
+  .reservation-label {
+    height: 15vh;
+  }
   .box {
     width: 80%;
     font-size: 1rem;
