@@ -789,6 +789,28 @@ div.spacer-line {
 @media only screen and (max-width: 576px) {
   .reservation-label {
     height: 15vh;
+    padding: 0 14px 0 14px;
+  }
+  a.text {
+    font-size: 1rem;
+  }
+  li.nav-item a.facebook,
+  li.nav-item a.tiktok,
+  li.nav-item a.messenger {
+    font-size: 1rem;
+  }
+  .facebook::after {
+    content: " Facebook";
+    font-size: 1rem;
+  }
+  .tiktok::after {
+    content: " TikTok";
+    font-size: 1rem;
+  }
+  .messenger::after {
+    content: " Messenger";
+    font-size: 1rem;
+    padding-bottom: 0;
   }
   .box {
     width: 80%;
