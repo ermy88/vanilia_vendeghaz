@@ -1,5 +1,6 @@
 $Ash: #cabfb3;
 $AshA: #cabfb3dd;
+$AshA2: #cabfb369;
 $Birch: #393121;
 $Millbrook: #644c3a;
 $MillbrookA: #644c3ab9;
@@ -10,10 +11,7 @@ $Basic-font: "Cinzel", Comic Sans MS;
 
 .cinzel {
     font-family: "Cinzel" !important;
-    font-size: 1.2rem;
-    //   font-optical-sizing: auto;
-    //   font-weight: bold;
-    //   font-style: normal;
+    font-weight: bold;
 
 }
 
@@ -91,7 +89,6 @@ ul.navbar-nav {
 .navbar {
     top: 1vh;
     position: fixed;
-    font-size: 1rem;
     transition: 500ms;
     z-index: 10;
     box-shadow: 0 5px 15px $Birch;
@@ -105,22 +102,50 @@ ul.navbar-nav {
 }
 
 .nav-item {
-    padding: 0rem 1rem 0rem 1rem !important;
-    font-size: 1rem;
+    padding: 0rem 1vw 0rem 1vw;
+    font-size: 1vw;
 }
 
 .text {
     font-weight: bold;
     font-family: $Basic-font;
+    transition: 800ms;
 
     &:hover {
-        padding-top: 0.5rem;
-        font-size: 1.2rem;
+        // padding-top: 0.5rem;
+        font-size: 1vw;
         transition: 200ms;
         font-weight: bold;
         color: whitesmoke;
         text-shadow: 0px 0px 25px $Birch;
     }
+}
+
+.reservation-label {
+    z-index: 4;
+    position: relative;
+    top: 20vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: $AshA;
+
+    h2 {
+        position: relative;
+        top: 2vh;
+        margin: 0 auto;
+    }
+
+    p {
+        position: relative;
+        top: 2.5vh;
+        margin: 0 auto;
+        text-decoration: overline solid;
+        text-align: center;
+    }
+    
 }
 
 .reservation a {
@@ -131,7 +156,7 @@ ul.navbar-nav {
     &:hover {
         color: whitesmoke;
         box-shadow: 0px 0px 10px $Ash;
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 
     }
 }
@@ -157,13 +182,13 @@ ul .dropdown-menu {
 
 .facebook,
 .tiktok,
-.mail {
+.messenger {
     margin: 0;
     padding: 0;
-    font-size: 1.3rem;
+    font-size: 1vw;
 
     &:hover {
-        font-size: 1.3rem;
+        font-size: 1vw;
         padding: 0;
     }
 }
@@ -411,18 +436,21 @@ section div.rulesBox {
     top: 0vh;
     background-color: $AshA;
     font-family: $Basic-font;
-    width: 75%;
+    width: 60%;
     border-radius: 2rem;
     box-shadow: 0 0 20px black;
     font-size: 1.3rem;
     padding: 0 6vw 4vh 6vw;
-    h1{
-        padding: 10vh 0 1vw 0;    
+
+    h1 {
+        padding: 10vh 0 1vw 0;
     }
-    p{
+
+    p {
         padding: 1vw 0 1vw 0;
     }
-    li{
+
+    li {
         padding: 1vh 0 1vh 0vw;
     }
 }
@@ -452,7 +480,8 @@ section div.gdprBox {
     background-color: $AshA;
     font-family: $Basic-font;
     padding: 0vh 3vh 3vh 0vh;
-    // border-radius: 30px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     box-shadow: 0 0 10px $Birch;
 
     h1 {
@@ -593,6 +622,9 @@ footer .footer {
 }
 
 .orderForm {
+    z-index: -1;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     display: flex;
     justify-content: space-evenly;
     position: relative;
@@ -600,33 +632,37 @@ footer .footer {
     margin: 0 auto;
     top: 20vh;
     padding: 2vh;
-    background-color: #cabfb3e4;
+    background-color: $AshA;
     z-index: 0;
     box-shadow: 0px 0px 15px $Birch;
-
+    a{
+        text-decoration: none;
+    }
     input {
         width: 100%;
-    }
+        background-color: $AshA2;
 
-    label {
-        padding-left: 0.5rem;
-        // text-wrap: nowrap;
-        text-align: center;
-
-        &[for=checkbox] {
-            width: 50%;
+        &:focus {
+            background-color: $AshA;
+            border-color: #70643f !important;
+            outline: none;
+            box-shadow: 0 0 5px $Millbrook inset;
             text-align: left;
-            padding-top: 1%;
         }
     }
 
+    label {
+        display: inline;
+        padding-left: 0.5rem;
+        text-align: left;
+    }
+
     input[type=checkbox] {
-        background-color: $Ash;
+        background-color: $AshA;
         border: 2px solid $Millbrook;
         border-radius: 50%;
         width: 3vh;
         height: 3vh;
-        margin-left: 1%;
     }
 
     .btn {
@@ -653,23 +689,27 @@ footer .footer {
         font-size: 1.2rem;
         font-family: 'cinzel';
         padding: 0 10px 0 15px;
-        background-color: $AshA;
+        background-color: $AshA2;
         border: none;
         border-radius: 10%;
     }
 
     option {
-        background-color: $AshA;
+        background-color: $AshA2;
 
     }
 
-    input:focus,
-    textarea:focus {
-        background-color: $Ash;
-        border-color: #70643f !important;
-        outline: none;
-        box-shadow: 0 0 5px $Millbrook inset;
+    textarea {
 
+        background-color: $AshA2;
+
+        &:focus {
+            background-color: $AshA;
+            border-color: #70643f !important;
+            outline: none;
+            box-shadow: 0 0 5px $Millbrook inset;
+            text-align: left;
+        }
     }
 }
 
@@ -702,6 +742,27 @@ div.spacer-line {
 
 // MEDIA QUERRIES
 
+@media only screen and (min-width: 2300px) {
+    .mainLogo {
+        padding-left: 10%;
+    }
+
+    .carousel-gallery {
+        top: 4.25vw;
+        width: 55vw;
+
+        img {
+            height: 30vw;
+        }
+    }
+
+    li.nav-item a.facebook,
+    li.nav-item a.tiktok,
+    li.nav-item a.messenger {
+        padding: 0 !important;
+    }
+}
+
 @media only screen and (max-width: 1400px) {
     .mainLogo {
         padding-left: 3vw;
@@ -709,6 +770,24 @@ div.spacer-line {
 
     .carousel-gallery {
         top: 15vw;
+    }
+
+    .carousel-upstair {
+        top: 15vw;
+    }
+
+    .carousel-ground {
+        top: 15vw;
+    }
+
+    .carousel-garden {
+        top: 15vw;
+    }
+
+    li.nav-item a.facebook,
+    li.nav-item a.tiktok,
+    li.nav-item a.messenger {
+        padding: 0 !important;
     }
 }
 
@@ -720,6 +799,8 @@ div.spacer-line {
     .carousel-gallery {
         top: 18vw;
     }
+
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -743,18 +824,18 @@ div.spacer-line {
 
     .img-outside {
         width: 100%;
-        
+
     }
 
-    .facebook,
-    .tiktok,
-    .mail {
-        font-size: 1.1rem;
-        padding: 0.5rem 0;
+    li.nav-item a.facebook,
+    li.nav-item a.tiktok,
+    li.nav-item a.messenger {
+        font-size: 2vw;
+        padding: 0.5rem 0 !important;
 
         &:hover {
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
+            font-size: 2vw;
+            padding: 0.5rem 1rem !important;
         }
     }
 
@@ -766,9 +847,17 @@ div.spacer-line {
         content: ' TikTok';
     }
 
-    .mail::after {
-        content: ' e-mail';
+    .messenger::after {
+        content: ' Messenger';
         padding-bottom: 0;
+    }
+
+    .text {
+        font-size: 2vw;
+
+        &:hover {
+            font-size: 2vw;
+        }
     }
 
     section {
@@ -779,12 +868,14 @@ div.spacer-line {
             border-radius: 0;
         }
     }
-    .serviceBox{
+
+    .serviceBox {
         width: 100%;
         margin: 0 auto;
     }
-    div.sightsBox{
-        img{
+
+    div.sightsBox {
+        img {
             width: 100%;
             height: 100%;
         }
@@ -794,15 +885,18 @@ div.spacer-line {
         width: 100%;
     }
 
+    .priceBox {
+        width: 95%;
+    }
+    .reservation-label {
+        width: 95%;
+    }
     .orderForm {
         flex-direction: column;
         align-items: center;
         width: 95%;
     }
 
-    .priceBox {
-        width: 95%;
-    }
 }
 
 @media only screen and (max-width: 767px) {

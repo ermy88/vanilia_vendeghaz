@@ -68,8 +68,7 @@
                                             href="sights.html#kisvasut">Kisvasút</a>
                                     </li>
                                     <li><a class="dropdown-item cinzel text-center" href="sights.html#kilato">Kilátó -
-                                            Miskó
-                                            István sétány</a></li>
+                                            Miskó István sétány</a></li>
                                     <li><a class="dropdown-item cinzel text-center"
                                             href="sights.html#tanosveny">Tanösvény</a>
                                     </li>
@@ -103,7 +102,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="text nav-link facebook"
-                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank">
+                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank" title="Kövess Facebookon!">
                                 <i class="fa-brands fa-facebook"></i></a>
                         </li>
                         <li class="nav-item">
@@ -112,8 +111,9 @@
                                 <i class="fa-brands fa-tiktok"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="text nav-link mail" href="prices.html">
-                                <i id="mail" class="fa-regular fa-envelope" title="info@vaniliavendeghaz.hu"></i></a>
+                            <a class="text nav-link messenger" href="https://m.me/61577007959763" target="_blank" title="Kérdezz tőlünk Messengeren!">
+                                <i class="fa-brands fa-facebook-messenger"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -153,10 +153,12 @@
                 </ul>
             </div>
         </section>
-        <div style="height: 0vh; background: transparent;"></div>
+        <section class="">
+            <div class="reservation-label cinzel"><h2><strong>Foglalás</strong></h2>
+            <p>Kérjük érdeklődjön szabad időpontjaink felől, mielőtt elküldené foglalását! </p></div>
+        </section>
         <section class="">
             <div class="orderForm">
-
                 <div class="row col-12 col-lg-6">
 
                     <form class="">
@@ -212,12 +214,13 @@
                         <input type="date" class="form-control cinzel" id="dateEnd" required>
                     </div>
                     <div class="mb-3 mx-1">
-                        <label for="notes" class="form-label cinzel">Megjegyzés</label>
-                        <textarea type="text" class="form-control" id="notes" rows="5"></textarea>
+                        <label for="notes" class="form-label cinzel">Üzenet</label>
+                        <textarea type="text" class="form-control" id="notes" rows="5" placeholder="" ></textarea>
                     </div>
-                    <div class="mb-3 ms-3 form-check">
-                        <label class="form-check-label cinzel" for="checkbox">&nbsp;&ensp;</label>
-                        <input type="checkbox" class="form-check-input cinzel" id="checkbox" required>
+                    <div class="mb-3 ms-3 d-flex">
+                        <input type="checkbox" class="form-check-input " id="checkbox" required>
+                        <label class="cinzel" for="checkbox">Megismertem és elfogadom az <a href="info.html#adatk" target="_blank">adatkezelési tájékoztatóban</a> 
+                            foglaltakat.</label>
                     </div>
                     <div class="container d-flex flex-column align-items-center">
                         <button type="submit" class="btn cinzel col-12">Foglalás elküldése</button>

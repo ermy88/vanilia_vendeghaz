@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .cinzel {
   font-family: "Cinzel" !important;
-  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 * {
@@ -68,7 +68,6 @@ ul.navbar-nav {
 .navbar {
   top: 1vh;
   position: fixed;
-  font-size: 1rem;
   transition: 500ms;
   z-index: 10;
   box-shadow: 0 5px 15px #393121;
@@ -81,21 +80,45 @@ ul.navbar-nav {
 }
 
 .nav-item {
-  padding: 0rem 1rem 0rem 1rem !important;
-  font-size: 1rem;
+  padding: 0rem 1vw 0rem 1vw;
+  font-size: 1vw;
 }
 
 .text {
   font-weight: bold;
   font-family: "Cinzel", Comic Sans MS;
+  transition: 800ms;
 }
 .text:hover {
-  padding-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1vw;
   transition: 200ms;
   font-weight: bold;
   color: whitesmoke;
   text-shadow: 0px 0px 25px #393121;
+}
+
+.reservation-label {
+  z-index: 4;
+  position: relative;
+  top: 20vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  margin: 0 auto;
+  background-color: rgba(202, 191, 179, 0.8666666667);
+}
+.reservation-label h2 {
+  position: relative;
+  top: 2vh;
+  margin: 0 auto;
+}
+.reservation-label p {
+  position: relative;
+  top: 2.5vh;
+  margin: 0 auto;
+  text-decoration: overline solid;
+  text-align: center;
 }
 
 .reservation a {
@@ -106,7 +129,7 @@ ul.navbar-nav {
 .reservation a:hover {
   color: whitesmoke;
   box-shadow: 0px 0px 10px #cabfb3;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .dropdown-item {
@@ -126,15 +149,15 @@ ul .dropdown-menu {
 
 .facebook,
 .tiktok,
-.mail {
+.messenger {
   margin: 0;
   padding: 0;
-  font-size: 1.3rem;
+  font-size: 1vw;
 }
 .facebook:hover,
 .tiktok:hover,
-.mail:hover {
-  font-size: 1.3rem;
+.messenger:hover {
+  font-size: 1vw;
   padding: 0;
 }
 
@@ -357,7 +380,7 @@ section div.rulesBox span.span-thx {
   top: 0vh;
   background-color: rgba(202, 191, 179, 0.8666666667);
   font-family: "Cinzel", Comic Sans MS;
-  width: 75%;
+  width: 60%;
   border-radius: 2rem;
   box-shadow: 0 0 20px black;
   font-size: 1.3rem;
@@ -396,6 +419,8 @@ section div.gdprBox h2 {
   background-color: rgba(202, 191, 179, 0.8666666667);
   font-family: "Cinzel", Comic Sans MS;
   padding: 0vh 3vh 3vh 0vh;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   box-shadow: 0 0 10px #393121;
 }
 .priceBox h1 {
@@ -518,6 +543,9 @@ footer .footer {
   }
 }
 .orderForm {
+  z-index: -1;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-evenly;
   position: relative;
@@ -525,29 +553,35 @@ footer .footer {
   margin: 0 auto;
   top: 20vh;
   padding: 2vh;
-  background-color: rgba(202, 191, 179, 0.8941176471);
+  background-color: rgba(202, 191, 179, 0.8666666667);
   z-index: 0;
   box-shadow: 0px 0px 15px #393121;
 }
+.orderForm a {
+  text-decoration: none;
+}
 .orderForm input {
   width: 100%;
+  background-color: rgba(202, 191, 179, 0.4117647059);
+}
+.orderForm input:focus {
+  background-color: rgba(202, 191, 179, 0.8666666667);
+  border-color: #70643f !important;
+  outline: none;
+  box-shadow: 0 0 5px #644c3a inset;
+  text-align: left;
 }
 .orderForm label {
+  display: inline;
   padding-left: 0.5rem;
-  text-align: center;
-}
-.orderForm label[for=checkbox] {
-  width: 50%;
   text-align: left;
-  padding-top: 1%;
 }
 .orderForm input[type=checkbox] {
-  background-color: #cabfb3;
+  background-color: rgba(202, 191, 179, 0.8666666667);
   border: 2px solid #644c3a;
   border-radius: 50%;
   width: 3vh;
   height: 3vh;
-  margin-left: 1%;
 }
 .orderForm .btn {
   background-color: #644c3a;
@@ -569,19 +603,22 @@ footer .footer {
   font-size: 1.2rem;
   font-family: "cinzel";
   padding: 0 10px 0 15px;
-  background-color: rgba(202, 191, 179, 0.8666666667);
+  background-color: rgba(202, 191, 179, 0.4117647059);
   border: none;
   border-radius: 10%;
 }
 .orderForm option {
-  background-color: rgba(202, 191, 179, 0.8666666667);
+  background-color: rgba(202, 191, 179, 0.4117647059);
 }
-.orderForm input:focus,
+.orderForm textarea {
+  background-color: rgba(202, 191, 179, 0.4117647059);
+}
 .orderForm textarea:focus {
-  background-color: #cabfb3;
+  background-color: rgba(202, 191, 179, 0.8666666667);
   border-color: #70643f !important;
   outline: none;
   box-shadow: 0 0 5px #644c3a inset;
+  text-align: left;
 }
 
 div.spacer-line {
@@ -601,12 +638,43 @@ div.spacer-line {
   box-shadow: 0 0 100px wheat;
 }
 
+@media only screen and (min-width: 2300px) {
+  .mainLogo {
+    padding-left: 10%;
+  }
+  .carousel-gallery {
+    top: 4.25vw;
+    width: 55vw;
+  }
+  .carousel-gallery img {
+    height: 30vw;
+  }
+  li.nav-item a.facebook,
+  li.nav-item a.tiktok,
+  li.nav-item a.messenger {
+    padding: 0 !important;
+  }
+}
 @media only screen and (max-width: 1400px) {
   .mainLogo {
     padding-left: 3vw;
   }
   .carousel-gallery {
     top: 15vw;
+  }
+  .carousel-upstair {
+    top: 15vw;
+  }
+  .carousel-ground {
+    top: 15vw;
+  }
+  .carousel-garden {
+    top: 15vw;
+  }
+  li.nav-item a.facebook,
+  li.nav-item a.tiktok,
+  li.nav-item a.messenger {
+    padding: 0 !important;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -635,17 +703,17 @@ div.spacer-line {
   .img-outside {
     width: 100%;
   }
-  .facebook,
-  .tiktok,
-  .mail {
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
+  li.nav-item a.facebook,
+  li.nav-item a.tiktok,
+  li.nav-item a.messenger {
+    font-size: 2vw;
+    padding: 0.5rem 0 !important;
   }
-  .facebook:hover,
-  .tiktok:hover,
-  .mail:hover {
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
+  li.nav-item a.facebook:hover,
+  li.nav-item a.tiktok:hover,
+  li.nav-item a.messenger:hover {
+    font-size: 2vw;
+    padding: 0.5rem 1rem !important;
   }
   .facebook::after {
     content: " Facebook";
@@ -653,9 +721,15 @@ div.spacer-line {
   .tiktok::after {
     content: " TikTok";
   }
-  .mail::after {
-    content: " e-mail";
+  .messenger::after {
+    content: " Messenger";
     padding-bottom: 0;
+  }
+  .text {
+    font-size: 2vw;
+  }
+  .text:hover {
+    font-size: 2vw;
   }
   section div.gdprBox {
     font-size: 1rem;
@@ -673,12 +747,15 @@ div.spacer-line {
   section div.rulesBox {
     width: 100%;
   }
+  .priceBox {
+    width: 95%;
+  }
+  .reservation-label {
+    width: 95%;
+  }
   .orderForm {
     flex-direction: column;
     align-items: center;
-    width: 95%;
-  }
-  .priceBox {
     width: 95%;
   }
 }
