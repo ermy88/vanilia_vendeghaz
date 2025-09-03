@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .cinzel {
   font-family: "Cinzel" !important;
   font-weight: bold;
@@ -101,6 +100,10 @@ button.navbar-toggler {
 .nav-item {
   padding: 0rem 1vw 0rem 1vw;
   font-size: 1vw;
+  text-align: center;
+}
+.nav-item a {
+  color: #393121;
 }
 
 .text {
@@ -150,19 +153,19 @@ button.navbar-toggler {
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-.dropdown-item {
-  width: 100% !important;
-  background-color: rgba(202, 191, 179, 0.8666666667);
-  color: #644c3a;
+ul .dropdown-menu {
+  background-color: rgba(202, 191, 179, 0.8666666667) !important;
+  border: none;
 }
-.dropdown-item:hover {
-  transition: 300ms;
+ul .dropdown-menu .dropdown-item {
+  color: #644c3a;
+  text-wrap: wrap;
+}
+ul .dropdown-menu .dropdown-item:hover {
+  transition: 400ms;
   background-color: #393121 !important;
   color: whitesmoke;
-}
-
-ul .dropdown-menu {
-  background-color: #cabfb3 !important;
+  border-radius: 1rem;
 }
 
 .facebook,
@@ -586,6 +589,7 @@ section div.gdprBox h5 a {
 .orderForm input {
   width: 100%;
   background-color: rgba(202, 191, 179, 0.4117647059);
+  border-color: #644c3a;
 }
 .orderForm input:focus {
   background-color: rgba(202, 191, 179, 0.8666666667);
@@ -721,6 +725,15 @@ div.sights-footer-spacer {
   .mainLogo {
     display: none;
   }
+  .nav-item {
+    width: 50%;
+  }
+  .reservation {
+    width: 50%;
+  }
+  .reservation a {
+    padding: 1rem 0rem 1rem 0rem !important;
+  }
   .carousel-gallery,
   .carousel-upstair,
   .carousel-ground,
@@ -734,9 +747,6 @@ div.sights-footer-spacer {
   .carousel-ground img,
   .carousel-garden img {
     height: 58vw;
-  }
-  .reservation a {
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
   }
   .img-outside {
     width: 100%;
@@ -761,7 +771,6 @@ div.sights-footer-spacer {
   }
   .messenger::after {
     content: " Messenger";
-    padding-bottom: 0;
   }
   .text {
     font-size: 2vw;
@@ -830,10 +839,6 @@ div.sights-footer-spacer {
   }
 }
 @media only screen and (max-width: 576px) {
-  body::before {
-    background-attachment: scroll;
-    /* Változtathatod scroll-ra is, ha mást akarsz */
-  }
   .reservation-label {
     height: 15vh;
     padding: 0 14px 0 14px;
@@ -843,18 +848,24 @@ div.sights-footer-spacer {
   }
   li.nav-item a:hover {
     font-size: 2vh;
-    padding: 0.5rem 1rem !important;
+    padding: 0.5rem 1rem;
   }
   li.nav-item a .fa-facebook,
   li.nav-item a .fa-tiktok,
   li.nav-item a .fa-facebook-messenger {
     font-size: 2vh;
   }
-  li.nav-item a .fa-facebook:hover,
-  li.nav-item a .fa-tiktok:hover,
-  li.nav-item a .fa-facebook-messenger:hover {
-    font-size: 2vh;
-    padding: 0.5rem 1rem !important;
+  ul .dropdown-menu {
+    padding: 0;
+  }
+  ul .dropdown-menu .dropdown-item:hover {
+    padding: 4px 0 4px 0 !important;
+  }
+  .reservation {
+    width: 100%;
+  }
+  .reservation a:hover {
+    padding: 1rem 0 !important;
   }
   .facebook::after {
     content: " Facebook";

@@ -24,10 +24,6 @@ $Basic-font: "Cinzel", Comic Sans MS;
 
 body {
     z-index: 0;
-    // background-image: url('../images/main_bgnd.jpg');
-    // background-attachment: fixed;
-    // background-size: cover;
-    // background-position: top;
     position: relative;
     height: 100vh;
     overflow: auto;
@@ -92,6 +88,8 @@ ul.navbar-nav {
     align-items: center;
     flex-wrap: wrap;
     font-family: $Basic-font;
+
+
 }
 
 .navBG {
@@ -131,6 +129,11 @@ button.navbar-toggler {
 .nav-item {
     padding: 0rem 1vw 0rem 1vw;
     font-size: 1vw;
+    text-align: center;
+
+    a {
+        color: $Birch;
+    }
 }
 
 .text {
@@ -138,7 +141,6 @@ button.navbar-toggler {
     font-family: $Basic-font;
 
     &:hover {
-        // padding-top: 0.5rem;
         font-size: 1vw;
         transition: 200ms;
         font-weight: bold;
@@ -187,22 +189,25 @@ button.navbar-toggler {
     }
 }
 
-.dropdown-item {
-    width: 100% !important;
-    background-color: $AshA;
-    color: #644c3a;
 
-    &:hover {
-        transition: 300ms;
-        background-color: #393121 !important;
-        color: whitesmoke
-    }
-}
 
 ul .dropdown-menu {
-    background-color: $Ash !important;
+    background-color: $AshA !important;
+    border: none;
 
-    // border: none;
+    .dropdown-item {
+        // margin: 0 auto;
+        color: #644c3a;
+        text-wrap: wrap;
+
+
+        &:hover {
+            transition: 400ms;
+            background-color: #393121 !important;
+            color: whitesmoke;
+            border-radius: 1rem;
+        }
+    }
 }
 
 
@@ -243,7 +248,6 @@ ul .dropdown-menu {
 }
 
 .carousel-upstair {
-    // background-color: $MillbrookA;
     border-bottom: none;
     position: relative;
     top: 13.5vh;
@@ -263,8 +267,6 @@ ul .dropdown-menu {
 }
 
 .carousel-ground {
-    // background-color: $MillbrookA;
-    // border-bottom: none;
     position: relative;
     top: 13.5vh;
     z-index: 0;
@@ -281,8 +283,6 @@ ul .dropdown-menu {
 }
 
 .carousel-garden {
-    // background-color: $MillbrookA;
-    // border-bottom: none;
     position: relative;
     top: 13.5vh;
     z-index: 0;
@@ -548,26 +548,28 @@ section div.gdprBox {
 }
 
 .toFooter {
-    
-    
-    h5{
+
+
+    h5 {
         text-align: center;
     }
+
     li.list-item {
         list-style-type: none;
         text-align: center;
         padding: 0;
-        
+
         a {
             text-wrap: nowrap;
             text-decoration: none;
             color: $Ash;
             padding: 0px 1vw 0px 1vw;
             border-radius: 20px;
-            h5{
+
+            h5 {
                 text-align: center;
             }
-            
+
             &:hover {
                 color: wheat;
                 border-color: wheat;
@@ -685,6 +687,7 @@ section div.gdprBox {
     input {
         width: 100%;
         background-color: $AshA2;
+        border-color: $Millbrook;
 
         &:focus {
             background-color: $AshA;
@@ -886,6 +889,19 @@ div.sights-footer-spacer {
         display: none;
     }
 
+    .nav-item {
+
+        width: 50%;
+    }
+
+    .reservation {
+        width: 50%;
+
+        a {
+            padding: 1rem 0rem 1rem 0rem !important;
+        }
+    }
+
     .carousel-gallery,
     .carousel-upstair,
     .carousel-ground,
@@ -897,10 +913,6 @@ div.sights-footer-spacer {
         img {
             height: 58vw;
         }
-    }
-
-    .reservation a {
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
     }
 
     .img-outside {
@@ -930,7 +942,6 @@ div.sights-footer-spacer {
 
     .messenger::after {
         content: ' Messenger';
-        padding-bottom: 0;
     }
 
     .text {
@@ -1024,10 +1035,7 @@ div.sights-footer-spacer {
 
 @media only screen and (max-width: 576px) {
 
-    body::before {
-        background-attachment: scroll;
-        /* Változtathatod scroll-ra is, ha mást akarsz */
-    }
+
 
     .reservation-label {
         height: 15vh;
@@ -1036,11 +1044,12 @@ div.sights-footer-spacer {
 
 
     li.nav-item a {
+
         font-size: 2vh;
 
         &:hover {
             font-size: 2vh;
-            padding: 0.5rem 1rem !important;
+            padding: 0.5rem 1rem;
         }
 
         .fa-facebook,
@@ -1048,13 +1057,28 @@ div.sights-footer-spacer {
         .fa-facebook-messenger {
 
             font-size: 2vh;
+        }
+    }
+
+    ul .dropdown-menu {
+        padding: 0;
+
+        .dropdown-item {
 
             &:hover {
-                font-size: 2vh;
-                padding: 0.5rem 1rem !important;
+                padding: 4px 0 4px 0 !important;
             }
         }
+    }
 
+    .reservation {
+        width: 100%;
+
+        a {
+            &:hover {
+                padding: 1rem 0 !important;
+            }
+        }
     }
 
     .facebook::after {
@@ -1120,6 +1144,7 @@ div.sights-footer-spacer {
 
     .gmap {
         width: 100%;
+
         iframe {
             border: none;
             width: 100%;

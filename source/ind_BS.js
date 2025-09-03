@@ -16,7 +16,7 @@ window.onscroll = function navTop0() {
     }
 };
 
-// Mobilnézet
+// Mobilnézet, navbar
 
 
 document.getElementsByClassName('navbar')[0].addEventListener('mouseenter', () => {
