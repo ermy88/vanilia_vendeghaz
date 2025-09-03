@@ -16,7 +16,7 @@ $Basic-font: "Cinzel", Comic Sans MS;
 }
 
 * {
-    transition: 1000ms;
+    // transition: 1000ms;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -28,11 +28,12 @@ body {
     // background-attachment: fixed;
     // background-size: cover;
     // background-position: top;
-    position: relative; 
-    height: 100vh; 
-    overflow: auto; 
+    position: relative;
+    height: 100vh;
+    overflow: auto;
 
 }
+
 body::before {
     content: "";
     position: fixed;
@@ -102,6 +103,7 @@ button.navbar-toggler {
     margin: 0;
     border: none;
     outline: none;
+    width: 100%;
 
 
 }
@@ -134,7 +136,6 @@ button.navbar-toggler {
 .text {
     font-weight: bold;
     font-family: $Basic-font;
-    transition: 800ms;
 
     &:hover {
         // padding-top: 0.5rem;
@@ -546,38 +547,49 @@ section div.gdprBox {
 
 }
 
-.toFooter li.list-item {
-    list-style-type: none;
-    // padding-left: 10px;
-    text-align: center;
-    padding: 0;
+.toFooter {
+    
+    
+    h5{
+        text-align: center;
+    }
+    li.list-item {
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+        
+        a {
+            text-wrap: nowrap;
+            text-decoration: none;
+            color: $Ash;
+            padding: 0px 1vw 0px 1vw;
+            border-radius: 20px;
+            h5{
+                text-align: center;
+            }
+            
+            &:hover {
+                color: wheat;
+                border-color: wheat;
+                transition: 500ms;
+                box-shadow: 0 0 5px wheat;
+            }
+        }
 
-    a {
-        text-decoration: none;
-        color: $Ash;
-
-        &:hover {
-            color: wheat;
+        img {
+            height: 16vh;
+            border-radius: 50% / 20%;
+            border: 3px $Millbrook solid;
         }
     }
 
-    img {
-        height: 16vh;
-        border-radius: 50% / 20%;
-        border: 3px $Millbrook solid;
+
+    hr {
+        width: 80%;
+        margin: 1rem auto;
+        border: none;
+        border-top: 1px solid $Ash;
     }
-}
-
-
-.toFooter h5 {
-    text-align: center;
-}
-
-.toFooter hr {
-    width: 80%;
-    margin: 1rem auto;
-    border: none;
-    border-top: 1px solid $Ash;
 }
 
 .footer-index {
@@ -590,7 +602,7 @@ section div.gdprBox {
     bottom: 0;
     padding: 1rem 0rem 0rem 5vw;
     background-color: $Millbrook;
-    
+
     .footerText {
         text-wrap: nowrap;
         text-align: left;
@@ -610,9 +622,10 @@ section div.gdprBox {
 
     iframe {
         border-radius: 15px;
-        border: 5px solid $YellowMetal;
+        border: 1px solid $Millbrook;
         width: 100%;
         height: 70vh;
+        box-shadow: 0 0 15px black;
 
     }
 }
@@ -1012,8 +1025,10 @@ div.sights-footer-spacer {
 @media only screen and (max-width: 576px) {
 
     body::before {
-        background-attachment: scroll; /* Változtathatod scroll-ra is, ha mást akarsz */
+        background-attachment: scroll;
+        /* Változtathatod scroll-ra is, ha mást akarsz */
     }
+
     .reservation-label {
         height: 15vh;
         padding: 0 14px 0 14px;
@@ -1104,11 +1119,11 @@ div.sights-footer-spacer {
     }
 
     .gmap {
+        width: 100%;
         iframe {
+            border: none;
             width: 100%;
             height: 80vh;
-            border: none;
-            // width: 110%;
         }
     }
 }

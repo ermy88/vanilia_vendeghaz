@@ -27,7 +27,6 @@ document.getElementsByClassName('navbar')[0].addEventListener('mouseenter', () =
 });
 
 document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', () => {
-    document.getElementsByTagName('nav')[0].style.transition = '1000ms';
     document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
     document.getElementsByClassName('navbar-toggler-icon')[0].style.border = '2px #644c3a solid';
     document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '50% / 20%';
