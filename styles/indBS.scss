@@ -160,6 +160,16 @@ button.navbar-toggler {
     margin: 0 auto;
     background-color: $AshA;
 
+    hr {
+        position: relative;
+        width: 75%;
+        margin: 0 auto;
+        top: 2vh;
+        border: none;
+        border-top: 5px solid $Birch;
+        border-radius: 5px;
+    }
+
     h2 {
         position: relative;
         top: 2vh;
@@ -170,7 +180,6 @@ button.navbar-toggler {
         position: relative;
         top: 2.5vh;
         margin: 0 auto;
-        text-decoration: overline solid;
         text-align: center;
     }
 
@@ -514,7 +523,7 @@ section div.gdprBox {
     top: 20vh;
     background-color: $AshA;
     font-family: $Basic-font;
-    padding: 0vh 3vh 3vh 0vh;
+    padding: 0vh 3vh 0vh 0vh;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     box-shadow: 0 0 10px $Birch;
@@ -557,7 +566,7 @@ section div.gdprBox {
     li.list-item {
         list-style-type: none;
         text-align: center;
-        padding: 0;
+        padding: 6px;
 
         a {
             text-wrap: nowrap;
@@ -587,8 +596,8 @@ section div.gdprBox {
 
 
     hr {
-        width: 80%;
-        margin: 1rem auto;
+        width: 60%;
+        margin: 0rem auto;
         border: none;
         border-top: 1px solid $Ash;
     }
@@ -633,14 +642,13 @@ section div.gdprBox {
 }
 
 .lilgmap {
-    position: relative;
-    bottom: 0;
+    padding-top: 1vh;
 
     iframe {
         border-radius: 1rem;
-        width: 80%;
-        height: 35vh;
-        border: 5px solid wheat;
+        width: 100%;
+        height: 30vh;
+        border: 3px solid $Birch;
     }
 }
 
@@ -688,12 +696,19 @@ section div.gdprBox {
         width: 100%;
         background-color: $AshA2;
         border-color: $Millbrook;
+        transition: 250ms;
+
+        &:hover {
+            box-shadow: 0px 1px 5px $Millbrook;
+
+        }
 
         &:focus {
+            transition: 250ms;
             background-color: $AshA;
             border-color: #70643f !important;
             outline: none;
-            box-shadow: 0 0 5px $Millbrook inset;
+            box-shadow: 2px 1px 5px $Millbrook inset;
             text-align: left;
         }
     }
@@ -739,23 +754,36 @@ section div.gdprBox {
         background-color: $AshA2;
         border: none;
         border-radius: 10%;
-    }
+        transition: 300ms;
 
+        &:hover {
+            
+            box-shadow: 0px 1px 5px $Millbrook;
+        }
+    }
+    
     option {
         background-color: $AshA2;
-
+        border-radius: 1rem;
+        &:hover{
+            color: red;
+        }
     }
 
     textarea {
 
         background-color: $AshA2;
+        border-color: $Birch !important;
+        &:hover {
+            box-shadow: 0px 1px 5px $Millbrook;
+        }
 
         &:focus {
             background-color: $AshA;
-            border-color: #70643f !important;
             outline: none;
             box-shadow: 0 0 5px $Millbrook inset;
             text-align: left;
+
         }
     }
 }
@@ -783,12 +811,18 @@ div.spacer-line {
 
 
 
+.price-note {
+    text-align: left;
+    margin-top: 10rem;
+}
 
+.coordinates {
+    font-size: 1rem;
+}
 
-
-
-
-
+.boxShadow {
+    box-shadow: 0 0 5px wheat;
+}
 
 // SPACERS
 
@@ -796,6 +830,12 @@ div.sights-footer-spacer {
     height: 595vh;
     background: transparent;
 }
+
+
+
+
+
+
 
 
 
@@ -915,10 +955,14 @@ div.sights-footer-spacer {
         }
     }
 
-    .img-outside {
-        width: 100%;
+    .indexBox {
+        text-align: center;
 
+        .img-outside {
+            width: 100%;
+        }
     }
+
 
     li.nav-item a.facebook,
     li.nav-item a.tiktok,
@@ -1017,6 +1061,12 @@ div.sights-footer-spacer {
         }
     }
 
+    .toFooter {
+        hr {
+            width: 100%;
+        }
+    }
+
     .gmap {
         top: 25vh;
         margin: 1rem;
@@ -1044,7 +1094,6 @@ div.sights-footer-spacer {
 
 
     li.nav-item a {
-
         font-size: 2vh;
 
         &:hover {
@@ -1060,10 +1109,15 @@ div.sights-footer-spacer {
         }
     }
 
+    .nav-link a {
+        width: 100%;
+    }
+
     ul .dropdown-menu {
         padding: 0;
 
         .dropdown-item {
+            width: 100% !important;
 
             &:hover {
                 padding: 4px 0 4px 0 !important;

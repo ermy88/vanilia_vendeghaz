@@ -129,6 +129,15 @@ button.navbar-toggler {
   margin: 0 auto;
   background-color: rgba(202, 191, 179, 0.8666666667);
 }
+.reservation-label hr {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  top: 2vh;
+  border: none;
+  border-top: 5px solid #393121;
+  border-radius: 5px;
+}
 .reservation-label h2 {
   position: relative;
   top: 2vh;
@@ -138,7 +147,6 @@ button.navbar-toggler {
   position: relative;
   top: 2.5vh;
   margin: 0 auto;
-  text-decoration: overline solid;
   text-align: center;
 }
 
@@ -444,7 +452,7 @@ section div.gdprBox h5 a {
   top: 20vh;
   background-color: rgba(202, 191, 179, 0.8666666667);
   font-family: "Cinzel", Comic Sans MS;
-  padding: 0vh 3vh 3vh 0vh;
+  padding: 0vh 3vh 0vh 0vh;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   box-shadow: 0 0 10px #393121;
@@ -477,7 +485,7 @@ section div.gdprBox h5 a {
 .toFooter li.list-item {
   list-style-type: none;
   text-align: center;
-  padding: 0;
+  padding: 6px;
 }
 .toFooter li.list-item a {
   text-wrap: nowrap;
@@ -501,8 +509,8 @@ section div.gdprBox h5 a {
   border: 3px #644c3a solid;
 }
 .toFooter hr {
-  width: 80%;
-  margin: 1rem auto;
+  width: 60%;
+  margin: 0rem auto;
   border: none;
   border-top: 1px solid #cabfb3;
 }
@@ -541,14 +549,13 @@ section div.gdprBox h5 a {
 }
 
 .lilgmap {
-  position: relative;
-  bottom: 0;
+  padding-top: 1vh;
 }
 .lilgmap iframe {
   border-radius: 1rem;
-  width: 80%;
-  height: 35vh;
-  border: 5px solid wheat;
+  width: 100%;
+  height: 30vh;
+  border: 3px solid #393121;
 }
 
 .animation {
@@ -590,12 +597,17 @@ section div.gdprBox h5 a {
   width: 100%;
   background-color: rgba(202, 191, 179, 0.4117647059);
   border-color: #644c3a;
+  transition: 250ms;
+}
+.orderForm input:hover {
+  box-shadow: 0px 1px 5px #644c3a;
 }
 .orderForm input:focus {
+  transition: 250ms;
   background-color: rgba(202, 191, 179, 0.8666666667);
   border-color: #70643f !important;
   outline: none;
-  box-shadow: 0 0 5px #644c3a inset;
+  box-shadow: 2px 1px 5px #644c3a inset;
   text-align: left;
 }
 .orderForm label {
@@ -633,16 +645,27 @@ section div.gdprBox h5 a {
   background-color: rgba(202, 191, 179, 0.4117647059);
   border: none;
   border-radius: 10%;
+  transition: 300ms;
+}
+.orderForm select:hover {
+  box-shadow: 0px 1px 5px #644c3a;
 }
 .orderForm option {
   background-color: rgba(202, 191, 179, 0.4117647059);
+  border-radius: 1rem;
+}
+.orderForm option:hover {
+  color: red;
 }
 .orderForm textarea {
   background-color: rgba(202, 191, 179, 0.4117647059);
+  border-color: #393121 !important;
+}
+.orderForm textarea:hover {
+  box-shadow: 0px 1px 5px #644c3a;
 }
 .orderForm textarea:focus {
   background-color: rgba(202, 191, 179, 0.8666666667);
-  border-color: #70643f !important;
   outline: none;
   box-shadow: 0 0 5px #644c3a inset;
   text-align: left;
@@ -663,6 +686,19 @@ div.spacer-line {
   width: 100%;
   border-radius: 10%;
   box-shadow: 0 0 100px wheat;
+}
+
+.price-note {
+  text-align: left;
+  margin-top: 10rem;
+}
+
+.coordinates {
+  font-size: 1rem;
+}
+
+.boxShadow {
+  box-shadow: 0 0 5px wheat;
 }
 
 div.sights-footer-spacer {
@@ -748,7 +784,10 @@ div.sights-footer-spacer {
   .carousel-garden img {
     height: 58vw;
   }
-  .img-outside {
+  .indexBox {
+    text-align: center;
+  }
+  .indexBox .img-outside {
     width: 100%;
   }
   li.nav-item a.facebook,
@@ -829,6 +868,9 @@ div.sights-footer-spacer {
     font-size: 2vw;
     padding: 0.5rem 1rem !important;
   }
+  .toFooter hr {
+    width: 100%;
+  }
   .gmap {
     top: 25vh;
     margin: 1rem;
@@ -855,8 +897,14 @@ div.sights-footer-spacer {
   li.nav-item a .fa-facebook-messenger {
     font-size: 2vh;
   }
+  .nav-link a {
+    width: 100%;
+  }
   ul .dropdown-menu {
     padding: 0;
+  }
+  ul .dropdown-menu .dropdown-item {
+    width: 100% !important;
   }
   ul .dropdown-menu .dropdown-item:hover {
     padding: 4px 0 4px 0 !important;

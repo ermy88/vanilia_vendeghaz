@@ -19,7 +19,7 @@
 
 <body>
 
-     <header>
+    <header>
         <nav class="navBG navbar navbar-expand-md col-12 col-md-12">
             <div class="container-fluid justify-content-evenly">
                 <a class="mainLogo navbar-brand" href="index.html"><img src="images/logo.jpg" alt="Vanília Vendégház"
@@ -102,7 +102,8 @@
                         </li>
                         <li class="nav-item">
                             <a class="text nav-link facebook"
-                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank" title="Kövess Facebookon!">
+                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank"
+                                title="Kövess Facebookon!">
                                 <i class="fa-brands fa-facebook"></i></a>
                         </li>
                         <li class="nav-item">
@@ -111,7 +112,8 @@
                                 <i class="fa-brands fa-tiktok"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="text nav-link messenger" href="https://m.me/61577007959763" target="_blank" title="Kérdezz tőlünk Messengeren!">
+                            <a class="text nav-link messenger" href="https://m.me/61577007959763" target="_blank"
+                                title="Kérdezz tőlünk Messengeren!">
                                 <i class="fa-brands fa-facebook-messenger"></i>
                             </a>
                         </li>
@@ -126,36 +128,44 @@
             <div class="text-center">
                 <h1>Vanília Vendégház – Árlista </h1>
                 <ul>
-                    <li>
-                        Emeleti apartman (max. 4 fő): 25 000 Ft / éj
+                    <li class="price-list-item">
+                        Emeleti apartman (max. 4 fő): 25 000 Ft / éj*
                     </li>
-                    <li>
-                        Földszinti apartman (max. 4 fő): 35 000 Ft / éj
+                    <li class="price-list-item">
+                        Földszinti apartman (max. 4 fő): 35 000 Ft / éj*
                     </li><br>
-                    <li>
+                    <li class="price-list-item">
                         Egy apartman foglalása esetén, ha kizárólagos használatot kérnek:
                     </li>
-                    <li>
-                        40 000 Ft / éj
+                    <li class="price-list-item">
+                        40 000 Ft / éj*
                     </li>
-                    <li><br>
+                    <li class="price-list-item"><br>
                         Teljes ház foglalása (legalább 3 éjszakára):
                     </li>
-                    <li>
-                        50 000 Ft / éj
+                    <li class="price-list-item">
+                        50 000 Ft / éj*
                     </li>
-                    <li><br>
+                    <li class="price-list-item"><br>
                         Kiemelt időszakokban:
                     </li>
-                    <li>
+                    <li class="price-list-item">
                         Ár egyedi ajánlat alapján
                     </li>
+                    <p class="price-note">
+                        <em>* Áraink az 27% Áfát és az idegenforgalmi adót nem tartalmazzák</em>
+                    </p>
                 </ul>
             </div>
         </section>
         <section class="">
-            <div class="reservation-label cinzel"><h2><strong>Foglalás</strong></h2>
-            <p>Kérjük érdeklődjön szabad időpontjaink felől, mielőtt elküldené foglalását! </p></div>
+            <div class="reservation-label cinzel">
+                <h2>
+                    <strong>Foglalás</strong>
+                </h2>
+                <hr>
+                <p>Kérjük érdeklődjön szabad időpontjaink felől, mielőtt elküldené foglalását! </p>
+            </div>
         </section>
         <section class="">
             <div class="orderForm">
@@ -216,11 +226,12 @@
                     </div>
                     <div class="mb-3 mx-1">
                         <label for="notes" class="form-label cinzel">Üzenet</label>
-                        <textarea type="text" class="form-control" id="notes" rows="5" placeholder="" ></textarea>
+                        <textarea type="text" class="form-control" id="notes" rows="5" placeholder=""></textarea>
                     </div>
                     <div class="mb-3 ms-3 d-flex">
                         <input type="checkbox" class="form-check-input " id="checkbox" required>
-                        <label class="cinzel" for="checkbox">Megismertem és elfogadom az <a href="info.html#adatk" target="_blank">adatkezelési tájékoztatóban</a> 
+                        <label class="cinzel" for="checkbox">Megismertem és elfogadom az <a href="info.html#adatk"
+                                target="_blank" title="Adatkezelési tájékoztató">adatkezelési tájékoztatóban</a>
                             foglaltakat.</label>
                     </div>
                     <div class="container d-flex flex-column align-items-center">
@@ -251,20 +262,31 @@
                             <hr>
                             <li class="list-item user-select-none">Elérhetőségek</li>
                             <hr>
-                            <li class="list-item">6060 Tiszakécske, Móra Ferenc utca 16.</li> <br>
-                            <li class="list-item">Bencsik Szabolcs</li> <br>
-                            <li class="list-item">&#9742; +36 70 / 699-4069 <br>
-                                &#9742; +36 70 / 866-1927</li> <br>
-                            <li class="list-item"><i id="mail" class="fa-regular fa-envelope"
-                                    title="info@vaniliavendeghaz.hu"></i> info@vaniliavendeghaz.hu</li> <br>
+                            <li class="list-item">6060 Tiszakécske, Móra Ferenc utca 16.</li>
+                            <li class="list-item">Bencsik Szabolcs</li>
+                            <li class="list-item">&#9742; <a href="tel:+36706994069">+36 70 / 699-4069</a><br>
+                                &#9742; <a href="tel:+36708661927">+36 70 / 866-1927</a></li>
+                            <li class="list-item">
+                                <a class="boxShadow" href="https://m.me/61577007959763" target="_blank"
+                                    title="Kérdezz tőlünk Messengeren!">
+                                    <i class="fa-brands fa-facebook-messenger"></i> Messenger
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a href="mailto:info@vaniliavendeghaz.hu"><i id="mail" class="fa-regular fa-envelope"
+                                        title="info@vaniliavendeghaz.hu"></i> info@vaniliavendeghaz.hu
+                            </li>
+                            </a>
                             <li class="list-item">
                                 <a href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank">
-                                    <i class="fa-brands fa-facebook"></i> Facebook</a>
-                            </li><br>
+                                    <i class="fa-brands fa-facebook"></i> Facebook
+                                </a>
+                            </li>
                             <li class="list-item">
-                                <a href="https://www.tiktok.com/@vanlia.vendghz" target="_blank">
-                                    <i class="fa-brands fa-tiktok"></i> TikTok</a>
-                            </li><br>
+                                <a class="" href="https://www.tiktok.com/@vanlia.vendghz" target="_blank">
+                                    <i class="fa-brands fa-tiktok"></i> TikTok
+                                </a>
+                            </li>
                             <li class="list-item footerLogo">
                                 <img src="images/logo.jpg" alt="" height="200px">
                             </li>
@@ -312,10 +334,12 @@
                             <li class="list-item"><a href="info.html#gmap">Térkép</a></li>
                             <hr>
                             <li class="list-item">
-                                <div class="lilgmap container user-select-none">
+                                <div class="lilgmap container">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.9529959627207!2d20.108928528831484!3d46.933830967282624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741590005a4acad%3A0xf853531e9867b93c!2zVmFuw61saWEgVmVuZMOpZ2jDoXo!5e0!3m2!1shu!2shu!4v1755343921406!5m2!1shu!2shu"></iframe>
                                     <div style="background: transparent;"></div>
+                                    <p class="coordinates">Koordináták: <br>ÉSZ: 46.93358224056558 <br> KH:
+                                        20.10898660077493</p>
                                 </div>
                             </li>
                         </ul>
@@ -323,13 +347,14 @@
                 </div>
             </div>
         </section>
-        <div style="height: 5vh; background: transparent;"></div>
+        <div style="height: 4vh; background: transparent;"></div>
         <div class="footer-index">
             <p class="footerText">
                 &copy; 2025 Vanília Vendégház. Bencsik Szabolcs
             </p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="source/ind_BS.js"></script>
 
