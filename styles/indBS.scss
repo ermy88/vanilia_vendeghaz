@@ -385,7 +385,7 @@ div.sightsBox {
 
     img {
         width: 70%;
-        height: 30vw;
+        height: 50vh;
         border: 5px solid #644c3a;
         border-radius: 2rem;
     }
@@ -418,6 +418,7 @@ div.sightsBox {
 
 section div.rulesBox {
     position: relative;
+    margin: 0 auto;
     top: 20vh;
     background-color: $AshA;
     font-family: $Basic-font;
@@ -486,6 +487,11 @@ section div.gdprBox {
         text-align: center;
         padding: 2rem 0 1rem 0;
     }
+
+    h5 a {
+        color: $Millbrook;
+        text-align: center;
+    }
 }
 
 .priceBox {
@@ -525,6 +531,7 @@ section div.gdprBox {
     ul {
         padding: 0;
     }
+
 }
 
 .toFooter li.list-item {
@@ -561,17 +568,6 @@ section div.gdprBox {
     border-top: 1px solid $Ash;
 }
 
-footer .footer {
-    font-family: $Basic-font;
-    color: wheat;
-    z-index: 1;
-    height: 5vh;
-    position: sticky;
-    padding: 1vh 0rem 0rem 5vw;
-    background-color: $Millbrook;
-
-}
-
 .footer-index {
     font-family: $Basic-font;
     color: wheat;
@@ -582,11 +578,15 @@ footer .footer {
     bottom: 0;
     padding: 1rem 0rem 0rem 5vw;
     background-color: $Millbrook;
+    
+    .footerText {
+        text-wrap: nowrap;
+        text-align: left;
+        font-size: 70%;
+    }
 }
 
-.footerText {
-    text-align: left;
-}
+
 
 .gmap {
     display: flex;
@@ -594,6 +594,7 @@ footer .footer {
     position: relative;
     margin: 0 auto;
     top: 20vh;
+    width: 90%;
 
     iframe {
         border-radius: 15px;
@@ -761,6 +762,25 @@ div.spacer-line {
 
 
 
+// SPACERS
+
+div.sights-footer-spacer {
+    height: 595vh;
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // MEDIA QUERRIES
 
@@ -769,7 +789,10 @@ div.spacer-line {
         padding-left: 10%;
     }
 
-    .carousel-gallery {
+    .carousel-gallery,
+    .carousel-upstair,
+    .carousel-ground,
+    .carousel-garden {
         top: 4.25vw;
         width: 55vw;
 
@@ -794,18 +817,9 @@ div.spacer-line {
         padding-left: 3vw;
     }
 
-    .carousel-gallery {
-        top: 15vw;
-    }
-
-    .carousel-upstair {
-        top: 15vw;
-    }
-
-    .carousel-ground {
-        top: 15vw;
-    }
-
+    .carousel-gallery,
+    .carousel-upstair,
+    .carousel-ground,
     .carousel-garden {
         top: 15vw;
     }
@@ -829,6 +843,13 @@ div.spacer-line {
     .carousel-gallery {
         top: 18vw;
     }
+
+    div.sightsBox {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 
@@ -840,7 +861,10 @@ div.spacer-line {
         display: none;
     }
 
-    .carousel-gallery {
+    .carousel-gallery,
+    .carousel-upstair,
+    .carousel-ground,
+    .carousel-garden {
         top: 30vw;
         height: 60vw;
         width: 98%;
@@ -896,7 +920,6 @@ div.spacer-line {
         div.gdprBox {
             font-size: 1rem;
             width: 100vw;
-            // margin: 0 auto;
             border-radius: 0;
         }
     }
@@ -904,13 +927,6 @@ div.spacer-line {
     .serviceBox {
         width: 100%;
         margin: 0 auto;
-    }
-
-    div.sightsBox {
-        img {
-            width: 100%;
-            height: 100%;
-        }
     }
 
     section div.rulesBox {
@@ -982,6 +998,15 @@ div.spacer-line {
 
 
 @media only screen and (max-width: 576px) {
+
+    body {
+    z-index: 0;
+    background-image: url('../images/main_bgnd.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+}
     .reservation-label {
         height: 15vh;
         padding: 0 14px 0 14px;
@@ -1009,7 +1034,7 @@ div.spacer-line {
         }
 
     }
-    
+
     .facebook::after {
         content: ' Facebook';
         font-size: 2vh;
@@ -1043,7 +1068,7 @@ div.spacer-line {
         width: 98%;
         padding: 3vh 8vw 2vh 8vw;
         text-align: center;
-        
+
         img.img-outside {
             width: 100%;
             margin: 0 0 4vh 0;
@@ -1054,6 +1079,29 @@ div.spacer-line {
             display: block;
             font-size: 1rem;
             padding: 1vh 0 0 0;
+        }
+    }
+
+    div.sightsBox {
+        padding: 5px;
+        border-radius: 1rem;
+
+        p.sights {
+            width: 100%;
+        }
+    }
+
+    div.sights-footer-spacer {
+        height: 465vh;
+        background: transparent;
+    }
+
+    .gmap {
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            // width: 110%;
         }
     }
 }
