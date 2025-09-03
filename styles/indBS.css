@@ -1,10 +1,10 @@
-@charset "UTF-8";
 .cinzel {
   font-family: "Cinzel" !important;
   font-weight: bold;
 }
 
 * {
+  transition: 1000ms;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,28 +12,28 @@
 
 body {
   z-index: 0;
-  background-image: url("images/main_bgnd.jpg");
+  background-image: url("../images/main_bgnd.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-position: top;
+  background-position: center;
 }
 
 .upstair {
-  background-image: url("images/upstair/emelet_bgnd.jpg");
+  background-image: url("../images/upstair/emelet_bgnd.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 
 .ground {
-  background-image: url("images/ground/ground.jpg");
+  background-image: url("../images/ground/ground.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
 .garden {
-  background-image: url("images/garden/garden_bgnd.jpg");
+  background-image: url("../images/garden/garden_bgnd.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -41,6 +41,8 @@ body {
 
 .mainLogo {
   padding-left: 4vw;
+  border: none;
+  outline: none;
 }
 .mainLogo img {
   height: 7vh;
@@ -57,26 +59,33 @@ ul.navbar-nav {
 }
 
 .navBG {
-  background-color: rgba(202, 191, 179, 0.4745098039) !important;
+  background-color: rgba(202, 191, 179, 0.4117647059);
+}
+
+button.navbar-toggler {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
 }
 
 .navbar-toggler-icon {
-  height: 20px;
-  width: 10px;
+  background-color: red;
+  background-image: url("../images/logo.jpg");
+  border: none;
+  outline: none;
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%/20%;
+  outline: 0;
+  border: 3px #644c3a solid;
 }
 
 .navbar {
   top: 1vh;
   position: fixed;
-  transition: 500ms;
   z-index: 10;
   box-shadow: 0 5px 15px #393121;
-}
-
-.header-sticky {
-  top: 0px;
-  background-color: #cabfb3 !important;
-  transition: 500ms;
 }
 
 .nav-item {
@@ -295,13 +304,13 @@ img.ratio-20-21 {
   box-shadow: 0 0 4px black;
   cursor: pointer;
 }
-.indexBox span.emptop {
+.indexBox span.emp-top {
   display: inline;
   font-weight: bold;
   font-size: 1.3rem;
   padding: 0vh 0 1vh 0;
 }
-.indexBox span.empbot {
+.indexBox span.emp-bottom {
   text-align: center;
   display: block;
   font-size: 1.5rem;
@@ -687,7 +696,7 @@ div.spacer-line {
 }
 @media only screen and (max-width: 992px) {
   .mainLogo {
-    padding-left: 1vw;
+    display: none;
   }
   .carousel-gallery {
     top: 30vw;
@@ -760,19 +769,31 @@ div.spacer-line {
   }
 }
 @media only screen and (max-width: 767px) {
-  .mainLogo {
-    padding-left: 0vw;
+  .carousel-gallery,
+  .carousel-upstair,
+  .carousel-ground,
+  .carousel-garden {
+    top: 30vw;
+    height: 60vw;
+    width: 98%;
   }
-  .mainLogo::after {
-    content: "Vanília Vendégház";
-    padding-left: 5vw;
-    font-family: "Cinzel", Comic Sans MS;
-    font-size: 3vw;
-    letter-spacing: 8px;
-    text-shadow: 0 0 3px black;
+  .carousel-gallery img,
+  .carousel-upstair img,
+  .carousel-ground img,
+  .carousel-garden img {
+    height: 58vw;
   }
-  .carousel-gallery {
-    top: 32vw;
+  li.nav-item a.facebook,
+  li.nav-item a.tiktok,
+  li.nav-item a.messenger {
+    font-size: 2vw;
+    padding: 0.5rem 0 !important;
+  }
+  li.nav-item a.facebook:hover,
+  li.nav-item a.tiktok:hover,
+  li.nav-item a.messenger:hover {
+    font-size: 2vw;
+    padding: 0.5rem 1rem !important;
   }
   .gmap {
     top: 25vh;
@@ -782,46 +803,71 @@ div.spacer-line {
     width: 90%;
     height: 40vh;
   }
-  .box {
-    font-size: 1.1rem;
-  }
 }
 @media only screen and (max-width: 576px) {
   .reservation-label {
     height: 15vh;
     padding: 0 14px 0 14px;
   }
-  a.text {
-    font-size: 1rem;
+  li.nav-item a {
+    font-size: 2vh;
   }
-  li.nav-item a.facebook,
-  li.nav-item a.tiktok,
-  li.nav-item a.messenger {
-    font-size: 1rem;
+  li.nav-item a:hover {
+    font-size: 2vh;
+    padding: 0.5rem 1rem !important;
+  }
+  li.nav-item a .fa-facebook,
+  li.nav-item a .fa-tiktok,
+  li.nav-item a .fa-facebook-messenger {
+    font-size: 2vh;
+  }
+  li.nav-item a .fa-facebook:hover,
+  li.nav-item a .fa-tiktok:hover,
+  li.nav-item a .fa-facebook-messenger:hover {
+    font-size: 2vh;
+    padding: 0.5rem 1rem !important;
   }
   .facebook::after {
     content: " Facebook";
-    font-size: 1rem;
+    font-size: 2vh;
   }
   .tiktok::after {
     content: " TikTok";
-    font-size: 1rem;
+    font-size: 2vh;
   }
   .messenger::after {
     content: " Messenger";
+    font-size: 2vh;
+  }
+  .carousel-gallery,
+  .carousel-upstair,
+  .carousel-ground,
+  .carousel-garden {
+    top: 25vw;
+    height: 60vw;
+    width: 98%;
+  }
+  .carousel-gallery img,
+  .carousel-upstair img,
+  .carousel-ground img,
+  .carousel-garden img {
+    height: 58vw;
+  }
+  .indexBox {
+    font-size: 80%;
+    width: 98%;
+    padding: 3vh 8vw 2vh 8vw;
+    text-align: center;
+  }
+  .indexBox img.img-outside {
+    width: 100%;
+    margin: 0 0 4vh 0;
+  }
+  .indexBox span.emp-bottom {
+    text-align: center;
+    display: block;
     font-size: 1rem;
-    padding-bottom: 0;
-  }
-  .box {
-    width: 80%;
-    font-size: 1rem;
-  }
-  .carousel-gallery {
-    top: 40vw;
-  }
-  .mainLogo::after {
-    content: "Vanília Vendégház";
-    padding-left: 4vw;
+    padding: 1vh 0 0 0;
   }
 }
 
