@@ -36,14 +36,12 @@ body {
 body::before {
     content: "";
     position: fixed;
-    // top: 0;
-    // left: 0;
     height: 100vh;
     width: 100%;
     background-image: url('../images/main_bgnd.jpg');
     background-size: cover;
     background-position: top;
-    z-index: -1; /* Ez helyezi el a tartalom mögé */
+    z-index: -1;
 }
 
 .upstair {
@@ -109,7 +107,6 @@ button.navbar-toggler {
 }
 
 .navbar-toggler-icon {
-    background-color: red;
     background-image: url('../images/logo.jpg');
     border: none;
     outline: none;

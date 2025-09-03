@@ -22,7 +22,7 @@ window.onscroll = function navTop0() {
 document.getElementsByClassName('navbar')[0].addEventListener('mouseenter', () => {
     document.getElementsByTagName('nav')[0].style.transition = '1000ms';
     document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb3';
-    document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '5px';
+    document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '50%';
     document.getElementsByClassName('navbar-toggler-icon')[0].style.transition = '300ms';
 });
 
@@ -30,7 +30,7 @@ document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', () =
     document.getElementsByTagName('nav')[0].style.transition = '1000ms';
     document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
     document.getElementsByClassName('navbar-toggler-icon')[0].style.border = '2px #644c3a solid';
-    document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = ' 50% / 20%';
+    document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '50% / 20%';
     document.getElementsByClassName('navbar-toggler-icon')[0].style.transition = '300ms';
 });
 
