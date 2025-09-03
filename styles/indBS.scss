@@ -24,11 +24,26 @@ $Basic-font: "Cinzel", Comic Sans MS;
 
 body {
     z-index: 0;
-    background-image: url('../images/main_bgnd.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    // background-image: url('../images/main_bgnd.jpg');
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-position: top;
+    position: relative; 
+    height: 100vh; 
+    overflow: auto; 
 
+}
+body::before {
+    content: "";
+    position: fixed;
+    // top: 0;
+    // left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/main_bgnd.jpg');
+    background-size: cover;
+    background-position: top;
+    z-index: -1; /* Ez helyezi el a tartalom mögé */
 }
 
 .upstair {
@@ -999,14 +1014,9 @@ div.sights-footer-spacer {
 
 @media only screen and (max-width: 576px) {
 
-    body {
-    z-index: 0;
-    background-image: url('../images/main_bgnd.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-
-}
+    body::before {
+        background-attachment: scroll; /* Változtathatod scroll-ra is, ha mást akarsz */
+    }
     .reservation-label {
         height: 15vh;
         padding: 0 14px 0 14px;
