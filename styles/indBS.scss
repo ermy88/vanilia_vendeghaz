@@ -22,6 +22,59 @@ $Basic-font: "Cinzel", Comic Sans MS;
     padding: 0;
 }
 
+.scroll-top-btn {
+    display: none;
+    position: fixed;
+    bottom: -1px;
+    right: 20px;
+    z-index: 20;
+    font-size: 1.5rem;
+
+    a {
+        transition: 500ms;
+        text-decoration: none;
+        color: $Ash;
+
+        &:hover {
+            color: wheat;
+        }
+    }
+
+    animation: scrollUp 1000ms ease-out;
+}
+
+@keyframes scrollUp {
+    0% {
+        bottom: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+.animation {
+    position: relative;
+    animation: showIndexBox 3000ms cubic-bezier(0, 0.25, 0.5, 1.2);
+
+    @keyframes showIndexBox {
+        0% {
+            opacity: 0;
+            top: -1000px;
+        }
+
+        60% {
+            opacity: 0;
+        }
+
+        100% {
+            top: 0;
+        }
+    }
+}
+
 body {
     z-index: 0;
     position: relative;
@@ -350,7 +403,7 @@ img.ratio-20-21 {
 .indexBox {
 
     // Box
-
+    width: 65%;
     z-index: 1;
     padding: 3rem 4rem 3rem 3rem;
     border-radius: 2rem;
@@ -359,19 +412,18 @@ img.ratio-20-21 {
     background-color: #cabfb3e4;
 
     // Text
-
     color: $Birch;
     font-family: cinzel;
-    font-size: 100%;
+    font-size: 2vh;
     font-style: italic;
     font-weight: bold;
-    text-align: justify;
-    text-shadow: 0px 5px 4px rgb(111, 105, 75);
+    text-align: center;
+    text-shadow: 0px 2px 4px rgb(111, 105, 75);
 
     img.img-outside {
         border: 2px solid $Millbrook;
         border-radius: 1rem;
-        margin: 1rem 2rem 0rem 0rem;
+        margin: 1vh 2vh 0rem 0rem;
         width: 50%;
         float: left;
         box-shadow: 0 0 4px black;
@@ -388,26 +440,26 @@ img.ratio-20-21 {
     span.emp-bottom {
         text-align: center;
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding: 1vh 0 0 0;
     }
 }
 
 div.sightsBox {
-    width: 100%;
+    width: 60%;
     position: absolute;
     color: rgb(105, 52, 15);
     top: 20vh;
-    font-size: 1.35rem;
-    font-style: italic;
+    font-size: 0.1rem;
+    // font-style: italic;
     background-color: #cabfb3d4;
-    padding: 3rem 4rem 3rem 4rem;
+    padding: 5vh 3vw 4vh 3vw;
     border-radius: 2rem;
     text-shadow: 0px 0px 5px rgb(111, 105, 75);
 
     img {
-        width: 70%;
-        height: 50vh;
+        width: 80%;
+        // height: 50vh;
         border: 5px solid #644c3a;
         border-radius: 2rem;
     }
@@ -418,8 +470,9 @@ div.sightsBox {
     }
 
     p.title {
+        padding: 3vh 0px;
         text-align: center;
-        font-size: 2rem;
+        font-size: 4vh;
 
         img {
             margin-top: 3vh;
@@ -429,7 +482,7 @@ div.sightsBox {
     p.sights {
         text-align: center;
         font-family: $Basic-font;
-        font-size: 1rem;
+        font-size: 7em;
         font-weight: bold;
         width: 75%;
         margin: 0 auto;
@@ -558,9 +611,15 @@ section div.gdprBox {
 
 .toFooter {
 
+    font-size: 0.6rem;
 
+    .coordinates {
+        font-size: 0.6rem;
+    }
+    
     h5 {
         text-align: center;
+        font-size: 1.5em;
     }
 
     li.list-item {
@@ -653,25 +712,7 @@ section div.gdprBox {
 }
 
 
-.animation {
-    position: relative;
-    animation: showIndexBox 3000ms cubic-bezier(0, 0.25, 0.5, 1.2);
-}
 
-@keyframes showIndexBox {
-    0% {
-        opacity: 0;
-        top: -1000px;
-    }
-
-    60% {
-        opacity: 0;
-    }
-
-    100% {
-        top: 0;
-    }
-}
 
 .orderForm {
     z-index: -1;
@@ -757,15 +798,16 @@ section div.gdprBox {
         transition: 300ms;
 
         &:hover {
-            
+
             box-shadow: 0px 1px 5px $Millbrook;
         }
     }
-    
+
     option {
         background-color: $AshA2;
         border-radius: 1rem;
-        &:hover{
+
+        &:hover {
             color: red;
         }
     }
@@ -774,6 +816,7 @@ section div.gdprBox {
 
         background-color: $AshA2;
         border-color: $Birch !important;
+
         &:hover {
             box-shadow: 0px 1px 5px $Millbrook;
         }
@@ -816,9 +859,7 @@ div.spacer-line {
     margin-top: 10rem;
 }
 
-.coordinates {
-    font-size: 1rem;
-}
+
 
 .boxShadow {
     box-shadow: 0 0 5px wheat;
@@ -889,7 +930,7 @@ div.sights-footer-spacer {
     .carousel-upstair,
     .carousel-ground,
     .carousel-garden {
-        top: 15vw;
+        top: 15vh;
     }
 
     li.nav-item a.facebook,
@@ -908,19 +949,13 @@ div.sights-footer-spacer {
         padding-left: 2vw;
     }
 
-    .carousel-gallery {
-        top: 18vw;
-    }
-
-    div.sightsBox {
-        img {
-            width: 100%;
-            height: 100%;
-        }
+    .carousel-gallery,
+    .carousel-upstair,
+    .carousel-ground,
+    .carousel-garden {
+        top: 15vh;
     }
 }
-
-
 
 
 
@@ -946,12 +981,12 @@ div.sights-footer-spacer {
     .carousel-upstair,
     .carousel-ground,
     .carousel-garden {
-        top: 30vw;
-        height: 60vw;
-        width: 98%;
+        top: 14vh;
+        height: 50vw;
+        width: 90%;
 
         img {
-            height: 58vw;
+            height: 50vw;
         }
     }
 
@@ -1012,6 +1047,9 @@ div.sights-footer-spacer {
     section div.rulesBox {
         width: 100%;
     }
+    div.sightsBox{
+        width: 80%;
+    }
 
     .priceBox {
         width: 95%;
@@ -1035,12 +1073,23 @@ div.sights-footer-spacer {
 
 @media only screen and (max-width: 767px) {
 
+    .indexBox {
+
+        img.img-outside {
+            width: 100%;
+            margin: 0 0 4vh 0;
+        }
+
+        span.emp-bottom {
+            font-size: 1rem;
+        }
+    }
 
     .carousel-gallery,
     .carousel-upstair,
     .carousel-ground,
     .carousel-garden {
-        top: 30vw;
+        top: 15vh;
         height: 60vw;
         width: 98%;
 
@@ -1154,7 +1203,7 @@ div.sights-footer-spacer {
     .carousel-upstair,
     .carousel-ground,
     .carousel-garden {
-        top: 25vw;
+        top: 30vw;
         height: 60vw;
         width: 98%;
 
@@ -1185,6 +1234,7 @@ div.sights-footer-spacer {
     div.sightsBox {
         padding: 5px;
         border-radius: 1rem;
+        width: 95%;
 
         p.sights {
             width: 100%;
@@ -1196,6 +1246,10 @@ div.sights-footer-spacer {
         background: transparent;
     }
 
+    .scroll-top-btn {
+        bottom: 6px;
+    }
+
     .gmap {
         width: 100%;
 
@@ -1203,6 +1257,12 @@ div.sights-footer-spacer {
             border: none;
             width: 100%;
             height: 80vh;
+        }
+    }
+    .toFooter{
+        font-size: 1rem;
+        .coordinates{
+            font-size: 1rem;
         }
     }
 }

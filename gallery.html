@@ -17,9 +17,9 @@
 
 </head>
 
-<body>
+<body id="top">
 
-      <header>
+    <header>
         <nav class="navBG navbar navbar-expand-md col-12 col-md-12">
             <div class="container-fluid justify-content-evenly">
                 <a class="mainLogo navbar-brand" href="index.html"><img src="images/logo.jpg" alt="Vanília Vendégház"
@@ -102,7 +102,8 @@
                         </li>
                         <li class="nav-item">
                             <a class="text nav-link facebook"
-                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank" title="Kövess Facebookon!">
+                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank"
+                                title="Kövess Facebookon!">
                                 <i class="fa-brands fa-facebook"></i></a>
                         </li>
                         <li class="nav-item">
@@ -111,7 +112,8 @@
                                 <i class="fa-brands fa-tiktok"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="text nav-link messenger" href="https://m.me/61577007959763" target="_blank" title="Kérdezz tőlünk Messengeren!">
+                            <a class="text nav-link messenger" href="https://m.me/61577007959763" target="_blank"
+                                title="Kérdezz tőlünk Messengeren!">
                                 <i class="fa-brands fa-facebook-messenger"></i>
                             </a>
                         </li>
@@ -213,10 +215,13 @@
             </div>
         </div>
     </main>
-    
-    <footer>
 
-        <div style="height: 15vh; background: transparent;"></div>
+    <footer>
+        <div class="scroll-top-btn" title="Lap tetejére">
+            <a href="#top"><i class="fa-regular fa-circle-up"></i></a>
+        </div>
+
+        <div style="height: 45vh; background: transparent;"></div>
         <section class="container-fluid toFooter w-100">
 
             <div class="pt-5 w-75">
@@ -235,16 +240,17 @@
                             <li class="list-item">Bencsik Szabolcs</li>
                             <li class="list-item">&#9742; <a href="tel:+36706994069">+36 70 / 699-4069</a><br>
                                 &#9742; <a href="tel:+36708661927">+36 70 / 866-1927</a></li>
-                                <li class="list-item">
-                                    <a class="boxShadow" href="https://m.me/61577007959763" target="_blank"
-                                        title="Kérdezz tőlünk Messengeren!">
-                                        <i class="fa-brands fa-facebook-messenger"></i> Messenger
-                                    </a>
-                                </li>
+                            <li class="list-item">
+                                <a class="boxShadow" href="https://m.me/61577007959763" target="_blank"
+                                    title="Kérdezz tőlünk Messengeren!">
+                                    <i class="fa-brands fa-facebook-messenger"></i> Messenger
+                                </a>
+                            </li>
                             <li class="list-item">
                                 <a href="mailto:info@vaniliavendeghaz.hu"><i id="mail" class="fa-regular fa-envelope"
-                                    title="info@vaniliavendeghaz.hu"></i> info@vaniliavendeghaz.hu</li>
-                                </a>
+                                        title="info@vaniliavendeghaz.hu"></i> info@vaniliavendeghaz.hu
+                            </li>
+                            </a>
                             <li class="list-item">
                                 <a href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank">
                                     <i class="fa-brands fa-facebook"></i> Facebook
@@ -278,7 +284,7 @@
                             <li class="list-item"><a href="gallery.html">Galéria</a></li>
                             <hr>
                             <li class="list-item user-select-none">Programok / Látnivalók</li>
-                            <br>
+                            <hr>
                             <li class="list-item"><a href="sights.html#gombahazak">Gombaházak</a></li>
                             <li class="list-item"><a href="sights.html#kisvasut">Tisza-parti kisvasút</a></li>
                             <li class="list-item"><a href="sights.html#kilato">Kilátó - Miskó istván sétány</a></li>
@@ -292,21 +298,27 @@
                     <div class="col-12 col-lg-4 ">
                         <ul>
                             <li class="list-item">
-                                <h5 class="user-select-none">információk</h5>
+                                <h5 class="user-select-none">
+                                    Információk
+                                </h5>
+                            </li> <hr>
+                            <li class="list-item"><a href="info.html#rules">
+                                    Házirend</a>
                             </li>
-                            <hr>
-                            <li class="list-item"><a href="info.html#rules">Házirend</a></li>
-                            <hr>
-                            <li class="list-item"><a href="info.html#adatk">Adatkezelési tájékoztató</a></li>
-                            <hr>
-                            <li class="list-item"><a href="info.html#gmap">Térkép</a></li>
+                            <li class="list-item"><a href="info.html#adatk">
+                                    Adatkezelési tájékoztató</a>
+                            </li>
+                            <li class="list-item"><a href="info.html#gmap">
+                                    Térkép</a>
+                            </li>
                             <hr>
                             <li class="list-item">
                                 <div class="lilgmap container">
                                     <iframe
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.9529959627207!2d20.108928528831484!3d46.933830967282624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741590005a4acad%3A0xf853531e9867b93c!2zVmFuw61saWEgVmVuZMOpZ2jDoXo!5e0!3m2!1shu!2shu!4v1755343921406!5m2!1shu!2shu"></iframe>
                                     <div style="background: transparent;"></div>
-                                    <p class="coordinates">Koordináták: <br>ÉSZ: 46.93358224056558 <br> KH: 20.10898660077493</p>
+                                    <p class="coordinates">Koordináták: <br>ÉSZ: 46.93358224056558 <br> KH:
+                                        20.10898660077493</p>
                                 </div>
                             </li>
                         </ul>
