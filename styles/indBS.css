@@ -927,6 +927,22 @@ div.sights-footer-spacer {
     height: 40vh;
   }
 }
+@media only screen and (max-width: 670px) {
+  .carousel-gallery,
+  .carousel-upstair,
+  .carousel-ground,
+  .carousel-garden {
+    top: 10vw;
+    height: 76vh;
+    width: 90%;
+  }
+  .carousel-gallery img,
+  .carousel-upstair img,
+  .carousel-ground img,
+  .carousel-garden img {
+    height: 75vh;
+  }
+}
 @media only screen and (max-width: 576px) {
   .reservation-label {
     height: 15vh;

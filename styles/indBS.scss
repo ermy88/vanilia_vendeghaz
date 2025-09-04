@@ -616,7 +616,7 @@ section div.gdprBox {
     .coordinates {
         font-size: 0.6rem;
     }
-    
+
     h5 {
         text-align: center;
         font-size: 1.5em;
@@ -931,10 +931,11 @@ div.sights-footer-spacer {
     .carousel-ground,
     .carousel-garden {
         top: 15vh;
-        height: 75vh ;
-        img{
+        height: 75vh;
+
+        img {
             height: 75vh;
-            
+
         }
     }
 
@@ -1052,7 +1053,8 @@ div.sights-footer-spacer {
     section div.rulesBox {
         width: 100%;
     }
-    div.sightsBox{
+
+    div.sightsBox {
         width: 80%;
     }
 
@@ -1132,6 +1134,21 @@ div.sights-footer-spacer {
     }
 }
 
+@media only screen and (max-width: 670px) {
+
+    .carousel-gallery,
+    .carousel-upstair,
+    .carousel-ground,
+    .carousel-garden {
+        top: 10vw;
+        height: 76vh;
+        width: 90%;
+
+        img {
+            height: 75vh;
+        }
+    }
+}
 
 
 
@@ -1264,9 +1281,11 @@ div.sights-footer-spacer {
             height: 80vh;
         }
     }
-    .toFooter{
+
+    .toFooter {
         font-size: 1rem;
-        .coordinates{
+
+        .coordinates {
             font-size: 1rem;
         }
     }
