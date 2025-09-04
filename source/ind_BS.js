@@ -14,6 +14,7 @@ window.onscroll = function navTop0() {
         document.getElementsByTagName('nav')[0].style.borderRadius = '0rem';
 
     }
+    // Scroll-top-btn
     if (document.documentElement.scrollTop > 300){
         document.getElementsByClassName('scroll-top-btn')[0].style.display = 'inline';
         
@@ -40,7 +41,7 @@ document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', () =
     document.getElementsByClassName('navbar-toggler-icon')[0].style.transition = '300ms';
 });
 
-// Scroll-top-btn
+
 
 
 

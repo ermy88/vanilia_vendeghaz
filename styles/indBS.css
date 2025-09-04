@@ -12,7 +12,7 @@
 .scroll-top-btn {
   display: none;
   position: fixed;
-  bottom: -1px;
+  bottom: -3px;
   right: 20px;
   z-index: 20;
   font-size: 1.5rem;
@@ -737,22 +737,22 @@ div.sights-footer-spacer {
   background: transparent;
 }
 
-@media only screen and (min-width: 2300px) {
+@media only screen and (min-width: 1401px) {
   .mainLogo {
-    padding-left: 10%;
+    padding-left: 5%;
   }
   .carousel-gallery,
   .carousel-upstair,
   .carousel-ground,
   .carousel-garden {
-    top: 4.25vw;
+    top: 15vh;
     width: 55vw;
   }
   .carousel-gallery img,
   .carousel-upstair img,
   .carousel-ground img,
   .carousel-garden img {
-    height: 30vw;
+    height: 75vh;
   }
   li.nav-item a.facebook,
   li.nav-item a.tiktok,
@@ -769,6 +769,13 @@ div.sights-footer-spacer {
   .carousel-ground,
   .carousel-garden {
     top: 15vh;
+    height: 75vh;
+  }
+  .carousel-gallery img,
+  .carousel-upstair img,
+  .carousel-ground img,
+  .carousel-garden img {
+    height: 75vh;
   }
   li.nav-item a.facebook,
   li.nav-item a.tiktok,
@@ -1010,7 +1017,7 @@ div.sights-footer-spacer {
     background: transparent;
   }
   .scroll-top-btn {
-    bottom: 6px;
+    bottom: 1px;
   }
   .gmap {
     width: 100%;
