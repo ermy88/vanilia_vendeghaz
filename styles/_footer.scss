@@ -1,0 +1,153 @@
+@use'../styles/colors';
+
+
+footer {
+    .scroll-top-btn {
+        display: none;
+        position: fixed;
+        bottom: 3vh;
+        right: 2vw;
+        z-index: 20;
+        font-size: 3rem;
+        transition: 500ms;
+
+        a {
+            transition: 500ms;
+            text-decoration: none;
+            color: colors.$Ash;
+
+            &:hover {
+                color: wheat;
+            }
+        }
+
+        animation: scrollUp 1000ms ease-out;
+    }
+
+    @keyframes scrollUp {
+        0% {
+            bottom: -5vh;
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            bottom: 3vh;
+        }
+    }
+}
+
+.toFooter {
+    font-family: colors.$Basic-font;
+    color: colors.$Ash;
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    width: 100%;
+    background-color: #644c3aef;
+    z-index: 2;
+    font-size: 1rem;
+
+    ul {
+        padding: 0;
+    }
+
+    .coordinates {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    h5 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    li.list-item {
+        list-style-type: none;
+        text-align: center;
+        padding: 6px;
+
+        a {
+            text-wrap: nowrap;
+            text-decoration: none;
+            color: colors.$Ash;
+            padding: 0px 1vw 0px 1vw;
+            border-radius: 20px;
+
+            h5 {
+                text-align: center;
+            }
+
+            &:hover {
+                color: colors.$Vanilla;
+                border-color: colors.$Vanilla;
+                transition: 500ms;
+                box-shadow: 0 0 5px colors.$Vanilla;
+            }
+        }
+
+
+        img {
+            height: 18vh;
+            border-radius: 50% / 20%;
+            border: 3px colors.$Millbrook solid;
+        }
+    }
+
+    hr {
+        width: 60%;
+        margin: 0rem auto;
+        border: none;
+        border-top: 1px solid colors.$Ash;
+    }
+}
+
+.footer-index {
+    user-select: none;
+    font-family: colors.$Basic-font;
+    color: colors.$Vanilla;
+    z-index: 11;
+    height: 4vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0rem 0rem 5vw;
+    background-color: colors.$Millbrook;
+
+    .footerText {
+        text-wrap: nowrap;
+        text-align: left;
+        font-size: 70%;
+    }
+}
+
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+@media only screen and (max-width: 767px) {
+
+    .toFooter {
+        hr {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 576) {
+    .toFooter {
+        font-size: 1rem;
+
+        .coordinates {
+            font-size: 1rem;
+        }
+    }
+
+    .footer-index {
+        height: 5vh;
+
+    }
+
+    .scroll-top-btn {
+        bottom: -1vh;
+        right: 0;
+        font-size: 1.9rem;
+    }
+}

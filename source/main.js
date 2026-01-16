@@ -1,5 +1,14 @@
+import { createNavbar } from "./navbar.comp.js";
+import { snowFall } from "./snowFall.comp.js";
+
+
 
 // Navbar Presets
+
+if (document.body.dataset.page !== 'home') {
+    createNavbar();  // navbar.comp.js
+    console.log('navbar created');
+}
 
 document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
 document.getElementsByTagName('nav')[0].style.width = '99%';
@@ -13,7 +22,7 @@ window.onscroll = function navTop0() {
         document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb3';
         document.getElementsByTagName('nav')[0].style.top = '0vh';
         document.getElementsByTagName('nav')[0].style.transition = '500ms';
-        document.getElementsByTagName('nav')[0].style.borderRadius = '10px 10px 25% 25%';
+        // document.getElementsByTagName('nav')[0].style.borderRadius = '10px 10px 25% 25%';
     } else {
         document.getElementsByTagName('nav')[0].style.backgroundImage = 'none';
         document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
@@ -31,8 +40,7 @@ window.onscroll = function navTop0() {
     }
 };
 
-// Mobilnézet, navbar
-
+//  NAVBAR
 
 document.getElementsByClassName('navbar')[0].addEventListener('mouseenter', () => {
     document.getElementsByTagName('nav')[0].style.transition = '1000ms';
@@ -47,7 +55,8 @@ document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', () =
     document.getElementsByClassName('navbar-toggler-icon')[0].style.transition = '300ms';
 });
 
-// reserve animation
+// RESERVE ANIMATION
+
 if (document.getElementsByClassName('reserve')[0]) {
 
 
@@ -69,7 +78,7 @@ if (document.getElementsByClassName('reserve')[0]) {
 
 // dinamikus évszám a foglalási oldalon
 
-if (document.getElementsByTagName('h1')[0].innerText === "Árlista") {
+if (document.getElementsByTagName('h1')[0].innerText === '') {
     document.getElementsByTagName('h1')[0].innerHTML =
         `Vanília Vendégház Árlista <br> ${new Date().getFullYear()}`;
 }
@@ -98,43 +107,18 @@ complainHandling.appendChild(complainHandlingRef);
 
 function monthToString() {
 
-
+    const monthName = ['január', 'február', 'március', 'április', 'május', 'június',
+        'július', 'augusztus', 'szeptember', 'október', 'november', 'december'];
 
     if (document.querySelector(".footerText")) {
 
-        let month = new Date().getMonth()
-        switch (month) {
-
-            case 0: month = 'Január';
-                break;
-            case 1: month = 'Február';
-                break;
-            case 2: month = 'Március';
-                break;
-            case 3: month = 'Április';
-                break;
-            case 4: month = 'Május';
-                break;
-            case 5: month = 'Június';
-                break;
-            case 6: month = 'Július';
-                break;
-            case 7: month = 'Augusztus';
-                break;
-            case 8: month = 'Szeptember';
-                break;
-            case 9: month = 'Október';
-                break;
-            case 10: month = 'November';
-                break;
-            case 11: month = 'December';
-                break;
-
-        }
+        let month = new Date().getMonth();
 
         document.querySelector('.footerText').innerHTML =
-            `&copy; Vanília Vendégház. Bencsik Szabolcs | ${new Date().getFullYear()}. ${month} ${new Date().getDate()}.`;
-
+            `&copy; Vanília Vendégház. Bencsik Szabolcs | 
+            ${new Date().getFullYear()}. 
+            ${monthName.slice(month, 1)} 
+            ${new Date().getDate()}.`;
     }
 };
 monthToString();
@@ -192,7 +176,47 @@ function nameValidation() {
     }
 }
 
+// SOCIAL ICONS ANIMATION
+// FACEBOOK
+document.querySelector('.facebook').addEventListener('mouseenter', (fb) => {
+    fb = document.querySelector('.facebook');
+    fb.style.transform = 'rotate(360deg)';
+    fb.style.transition = '500ms';
+    fb.style.scale = 1.2;
+});
+document.querySelector('.facebook').addEventListener('mouseleave', (fb) => {
+    fb = document.querySelector('.facebook');
+    fb.style.transition = '2000ms';
+    fb.style.transform = 'rotate(0deg)';
+});
+// TIKTOK
+document.querySelector('.tiktok').addEventListener('mouseenter', (fb) => {
+    fb = document.querySelector('.tiktok');
+    fb.style.transform = 'rotate(360deg)';
+    fb.style.transition = '500ms';
+    fb.style.scale = 1.2;
+});
+document.querySelector('.tiktok').addEventListener('mouseleave', (fb) => {
+    fb = document.querySelector('.tiktok');
+    fb.style.transition = '2000ms';
+    fb.style.transform = 'rotate(0deg)';
+});
+// MESSENGER
+document.querySelector('.messenger').addEventListener('mouseenter', (fb) => {
+    fb = document.querySelector('.messenger');
+    fb.style.transform = 'rotate(360deg)';
+    fb.style.transition = '500ms';
+    fb.style.scale = 1.2;
+});
+document.querySelector('.messenger').addEventListener('mouseleave', (fb) => {
+    fb = document.querySelector('.messenger');
+    fb.style.transition = '2000ms';
+    fb.style.transform = 'rotate(0deg)';
+});
 
+// Snowflakes
+const screenWidth = window.innerWidth;
+screenWidth > 900 ? snowFall(500) : snowFall(150); //snowFall.comp.js
 
-
+console.log('main.js running');
 

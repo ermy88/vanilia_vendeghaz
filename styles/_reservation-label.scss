@@ -1,0 +1,59 @@
+@use '../styles/colors';
+
+
+.reservation-label {
+    z-index: 4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2vh 0 8vh 0;
+    font-size: 1rem;
+    border: 6px solid colors.$Millbrook;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 0px 0px 130px colors.$Birch inset;
+    color: colors.$Vanilla;
+    text-shadow: 3px 3px 3px black;
+
+    hr {
+        position: relative;
+        width: 75%;
+        margin: 0 auto;
+        top: 2vh;
+        border: none;
+        border-top: 5px solid colors.$Birch;
+        border-radius: 5px;
+    }
+
+    h2 {
+        position: relative;
+        top: 2vh;
+        margin: 0 auto;
+        font-size: 4vh;
+        padding: 2vh 0;
+    }
+
+    p {
+        font-size: 2vh;
+        position: relative;
+        top: 2.5vh;
+        text-align: center;
+        padding: 2vh 0;
+    }
+}
+
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+@media only screen and (max-width: 576px) {
+
+    .reservation-label {
+        height: 16vh;
+        padding: 5vh 0.5rem 25vh 0.5rem;
+
+        p {
+            display: block;
+            margin-bottom: 2000px;
+        }
+    }
+
+}

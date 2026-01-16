@@ -1,0 +1,95 @@
+@use'../styles/colors';
+@use 'sass:math';
+
+// SNOWFLAKE BUTTON
+
+.snowFall {
+    position: fixed;
+    bottom: 2vw;
+    margin: 5vh 1vh;
+    z-index: 10;
+    i{
+        cursor: pointer;
+        font-size: 2.5rem;
+        color: colors.$ice;
+        animation: freeze 3000ms ease infinite;
+        @keyframes freeze {
+        50% {
+            text-shadow: 0 0 10px colors.$ice;
+            color: colors.$thin-ice;
+        }
+    }
+        &:hover{
+            transition: 300ms;
+            scale: 1.2;
+        }
+    }
+}
+
+// SNOWFALL OFF AT START
+
+.snowOff {
+    position:fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    span {
+        position: absolute;
+        top: -100px;
+        color: rgb(255, 255, 255);
+        user-select: none;
+    }
+
+}
+
+// SNOWFALL ON
+
+.snow {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    span {
+        position: absolute;
+        top: -100px;
+        color: rgb(255, 255, 255);
+        user-select: none;
+        animation: snowFall ease-out infinite;
+    }
+}
+
+// RANDOMIZE SPANS
+
+@for $i from 1 through 500 {
+    .snow span:nth-child(#{$i}) {
+        left: math.random(100)* 1vw;
+
+        animation-delay: math.random(3)* 1s;
+
+        animation-duration: math.random(20)* 1s;
+
+        font-size: math.random(15)* 1px;
+    }
+}
+
+// ANIMATION
+
+@keyframes snowFall {
+    0% {
+        transform: translateY(-200px) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}

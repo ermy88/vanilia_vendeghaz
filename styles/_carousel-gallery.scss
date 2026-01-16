@@ -1,0 +1,127 @@
+@use '../styles/colors';
+
+.carousel-gallery {
+    position: relative;
+    top: 12vh !important;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    width: 95% !important;
+    background-color: colors.$AshA1;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: 6px solid colors.$Millbrook;
+    outline: 2px solid colors.$AshA1;
+    box-shadow: 0px 0px 100px colors.$Birch inset;
+    user-select: none;
+
+    h1 {
+        font-weight: bolder;
+        text-align: center;
+        margin: 10px;
+        font-family: 'cinzel';
+        text-shadow: 0 0 15px colors.$Vanilla;
+    }
+
+    img {
+        user-select: none;
+        margin: 2rem auto;
+        // margin-top: 2rem;
+        border: 2px solid colors.$Millbrook;
+        border-radius: 10px;
+        box-shadow: 0 0 5px colors.$Vanilla;
+        height: 70vh !important;
+    }
+}
+
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+
+@media only screen and (min-width: 1401px) {
+
+    .carousel-gallery {
+        top: 15vh;
+        width: 70vw;
+
+        img {
+            height: 75vh;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .carousel-gallery {
+
+        .carousel-inner {
+            height: 80vh;
+
+            .carousel-item {
+
+                img.pic-h {
+                    margin: 2rem auto;
+                    padding: 0;
+                    width: 50%;
+                    height: 80vw !important;
+                }
+
+                img.pic-w {
+                    margin: 2rem auto;
+                    padding: 0;
+                    width: 90%;
+                    height: 56vw !important;
+                }
+            }
+        }
+    }
+}
+
+// @media only screen and (max-width: 1400px && 992px && 767px && 670px)
+// ARE ON SAME VALUES in the main scss (indBS.scss)
+
+@media only screen and (max-width: 576px) {
+
+    .carousel-gallery {
+
+        .carousel-inner {
+            height: 80vh;
+
+            .carousel-item {
+
+                img.pic-h {
+                    margin: 0 auto;
+                    margin-top: 1rem;
+                    padding: 0;
+                    width: 85%;
+                    height: 70vh !important;
+                }
+
+                img.pic-n {
+                    top: 10px;
+                    margin: 0 auto;
+                    margin-top: 2rem;
+                    padding: 0;
+                    width: 70%;
+                    height: 70vw !important;
+                }
+
+                img.pic-nf {
+                    top: 10px;
+                    margin: 0 auto;
+                    margin-top: 5rem;
+                    padding: 0;
+                    width: 86%;
+                    height: 50vh !important;
+                }
+
+                img.pic-w {
+                    margin: 0 auto;
+                    margin-top: 2rem;
+                    padding: 0;
+                    width: 90%;
+                    height: 60vw !important;
+                }
+            }
+        }
+    }
+
+}

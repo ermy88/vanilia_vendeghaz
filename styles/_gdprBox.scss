@@ -1,0 +1,64 @@
+@use '../styles/colors';
+
+.gdprBox {
+    position: relative;
+    top: 0vh;
+    font-family: colors.$Basic-font;
+    padding: 5vw 5vw 20vh 5vw;
+    width: 60%;
+    box-shadow: 0px 0px 100px colors.$Birch inset;
+    background-image: linear-gradient(to bottom, transparent, colors.$AshA 10% 90%, transparent);
+
+    h2 {
+        text-align: center;
+        padding: 10vh 0 1rem 0;
+        font-weight: bold;
+        text-shadow: 0 0 5px colors.$Vanilla;
+    }
+
+    h5 a {
+        color: colors.$Millbrook;
+        text-align: center;
+    }
+}
+
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+
+@media only screen and (max-width: 992px) {
+
+    .gdprBox {
+        font-size: 1rem;
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 576) {
+    .gdprBox {
+        width: 98% !important;
+        background-image: linear-gradient(to bottom, transparent, colors.$AshA 15% 95%, transparent);
+        border: none;
+        outline: none;
+        border-radius: 0;
+        top: 0;
+        padding-top: 10vh;
+
+        p {
+            text-align: center;
+        }
+
+        span.span-thx {
+            font-size: 3vh;
+            text-align: center;
+        }
+
+        ol {
+            list-style-position: inside;
+            padding-inline-start: 2rem;
+
+            li {
+                padding: 0rem 2rem 0 1rem;
+            }
+        }
+    }
+
+}

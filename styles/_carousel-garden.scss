@@ -1,0 +1,96 @@
+@use '../styles/colors';
+
+.carousel-garden {
+    position: relative;
+    top: 12vh !important;
+    z-index: 0;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    width: 95% !important;
+    background-color: colors.$AshA1;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: 6px solid colors.$Millbrook;
+    outline: 2px solid colors.$AshA1;
+    box-shadow: 0px 0px 100px colors.$Birch inset;
+    user-select: none;
+    padding-bottom: 1.3vh;
+
+    h1,
+    h4 {
+        text-align: center;
+        margin-top: 6vh;
+        font-family: 'cinzel';
+        text-shadow: 0 0 15px colors.$Vanilla;
+    }
+
+    img {
+        user-select: none;
+        margin: 50px auto 10px auto;
+        border: 2px solid colors.$Millbrook;
+        border-radius: 10px;
+        box-shadow: 0 0 5px colors.$Vanilla;
+    }
+
+    p,
+    ul {
+        list-style-type: none;
+        margin: 3vh auto;
+        padding-inline: 100px;
+        text-align: justify;
+
+        li {
+            padding-left: 2vw;
+        }
+    }
+}
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+@media only screen and (min-width: 1401px) {
+
+    .carousel-garden {
+        top: 15vh;
+        width: 70vw;
+
+        img {
+            height: 75vh;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200) {
+
+    .carousel-garden {
+        top: 15vh;
+        width: 90%;
+    }
+}
+
+// @media only screen and (max-width: 1400px && 992px && 767px && 670px)
+// ARE ON SAME VALUES in the main scss (indBS.scss)
+
+@media only screen and (max-width: 576px){
+
+    .carousel-garden {
+        top: 14vh !important;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+
+        h4 {
+            font-size: 3vh;
+            padding-bottom: 2vh;
+        }
+
+        img {
+            height: 60% !important;
+            width: 100%;
+        }
+
+        p,
+        ul {
+            font-size: 2vh;
+            padding: 0px 2vh;
+            text-align: left;
+        }
+    }
+}

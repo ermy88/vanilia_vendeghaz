@@ -1,0 +1,177 @@
+@use '../styles/colors';
+
+
+.orderForm {
+    z-index: -1;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10vh 2vh 2vh 2vh;
+    background-image: linear-gradient(to top, colors.$AshA 85%, transparent);
+    z-index: 0;
+    border: 6px solid colors.$Millbrook;
+    border-top: none;
+    box-shadow: 0px 0px 100px colors.$Birch inset;
+    font-size: 1rem;
+
+    label.dates,
+    input.dates {
+        flex-direction: column;
+        margin: 4vh 0px 1vh 0px;
+        padding: 0vh;
+        text-align: center;
+        font-size: 1.5vh;
+
+        &:focus {
+            text-align: center;
+        }
+    }
+
+    input.dates {
+        width: 45%;
+    }
+
+    #dateStart:before {
+        content: "Érkezés napja*";
+        font-size: 2vh;
+    }
+
+    #dateEnd:before {
+        content: "Távozás napja*";
+        font-size: 2vh;
+    }
+
+    .reserve-date-icon {
+        position: relative;
+        top: 5vh;
+        color: colors.$Millbrook;
+        font-size: 3vh;
+    }
+
+    a {
+        text-decoration: none;
+        color: colors.$Vanilla;
+    }
+
+    input {
+        width: 100%;
+        background-color: colors.$AshA2;
+        border: 2px solid;
+        border-color: colors.$Millbrook;
+        transition: 250ms;
+        font-size: 0.75rem;
+
+        &:hover {
+            box-shadow: 0px 0px 10px colors.$Millbrook;
+            border-color: colors.$Vanilla;
+        }
+
+        &:focus {
+            transition: 250ms;
+            background-color: colors.$AshA;
+            border-color: #70643f !important;
+            outline: none;
+            box-shadow: 2px 1px 5px colors.$Millbrook inset;
+            text-align: left;
+        }
+
+        &[type=checkbox] {
+            background-color: colors.$AshA;
+            border: 2px solid colors.$Millbrook;
+            border-radius: 50%;
+            width: 3vh;
+            height: 3vh;
+        }
+    }
+
+    label {
+        display: inline;
+        padding-left: 0.5rem;
+        text-align: left;
+
+        &[for=guestNumber],
+        &[for=childNumber],
+        &[for=selected-apartman] {
+            padding-right: 0px;
+        }
+    }
+
+    .btn {
+        background-color: colors.$Millbrook;
+        border-color: colors.$Millbrook;
+        color: colors.$Vanilla;
+
+        &:hover {
+            font-weight: bold;
+            padding: 6px 8px 6px 8px;
+            box-shadow: 0px 0px 10px colors.$Vanilla inset;
+            border-color: colors.$Vanilla;
+        }
+
+        &:active {
+            color: colors.$YellowMetal;
+            background-color: colors.$Ash;
+            border-color: #70643f;
+            box-shadow: 0px 0px 15px colors.$Vanilla ;
+        }
+    }
+
+    select {
+        font-size: 1rem;
+        font-family: 'cinzel';
+        padding: 0 1vh;
+        background-color: colors.$AshA2;
+        border: 2px solid;
+        border-color: colors.$Millbrook;
+        border-radius: 10px;
+        transition: 300ms;
+        margin-block: 5px;
+
+        &:hover {
+            box-shadow: 0px 0px 10px colors.$Birch inset;
+            border-color: colors.$Vanilla;
+        }
+
+        option {
+            background-color: colors.$AshA;
+            color: colors.$Millbrook;
+            font-weight: 600;
+        }
+    }
+
+    textarea {
+        background-color: colors.$AshA2;
+        border: 2px solid;
+        border-color: colors.$Millbrook;
+
+        &:hover {
+            box-shadow: 0px 0px 10px colors.$Millbrook;
+            border-color: colors.$Vanilla;
+        }
+
+        &:focus {
+            background-color: colors.$AshA;
+            outline: none;
+            border: 2px solid;
+            border-color: colors.$Millbrook;
+            box-shadow: 0 0 5px colors.$Millbrook inset;
+            text-align: left;
+        }
+    }
+}
+
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+
+
+@media only screen and (max-width: 992px) {
+
+    .orderForm {
+        flex-direction: column;
+        align-items: center;
+        // width: 95%;
+    }
+}

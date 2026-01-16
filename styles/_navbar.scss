@@ -1,0 +1,248 @@
+@use '../styles/colors';
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+
+    .navbar {
+
+        margin: 0 auto;
+        top: 1vh;
+        position: fixed;
+        z-index: 5;
+        box-shadow: 0 5px 15px colors.$Birch;
+
+        .mainLogo {
+            user-select: none;
+            padding-left: 4vw;
+
+            img {
+                transition: 300ms;
+                height: 7vh;
+                border-radius: 50% / 20%;
+                border: 3px colors.$Millbrook solid;
+
+                &:hover {
+                    border-radius: 50%;
+                    box-shadow: 0 0 5px colors.$Vanilla;
+                }
+
+                &:active {
+                    box-shadow: 0 0 5px colors.$Birch;
+                }
+            }
+        }
+
+        button.navbar-toggler {
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('../images/logo.jpg');
+            width: 8vh;
+            height: 8vh;
+            border-radius: 50% / 20%;
+            border: 3px colors.$Millbrook solid;
+        }
+
+        ul.navbar-nav {
+            user-select: none;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-family: colors.$Basic-font;
+
+            .nav-item {
+                padding: 0rem 1vw 0rem 1vw;
+                font-size: 1.8vh;
+                text-align: center;
+
+                a {
+                    color: colors.$Birch;
+                }
+
+                .dropdown-menu {
+                    background-color: colors.$Ash !important;
+                    border: none;
+
+                    .dropdown-item {
+                        color: colors.$Birch;
+                        text-wrap: wrap;
+                        font-size: 1rem;
+
+
+                        &:hover {
+                            transition: 400ms;
+                            background-color: colors.$Birch !important;
+                            color: colors.$Vanilla;
+                            border-radius: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .reservation a {
+                border-radius: 10px;
+                background-color: colors.$Birch;
+                color: colors.$Vanilla;
+
+                &:hover {
+                    transition: 300ms;
+                    color: colors.$Vanilla;
+                    box-shadow: 0px 0px 10px colors.$Birch;
+
+                }
+            }
+
+            .facebook,
+            .tiktok,
+            .messenger {
+                margin: 0;
+                padding: 0;
+                font-size: 1.2vw;
+
+                &:hover {
+                    padding: 0;
+                }
+            }
+        }
+
+    }
+}
+
+
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+
+@media only screen and (min-width: 1921px) {
+    .mainLogo {
+        padding-left: 17%;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    .mainLogo {
+        padding-left: 9%;
+    }
+}
+
+@media only screen and (min-width: 1401px) {
+
+    a.facebook,
+    a.tiktok,
+    a.messenger {
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .mainLogo {
+        padding-left: 4vw;
+    }
+
+    a.facebook,
+    a.tiktok,
+    a.messenger {
+        padding: 0 !important;
+        font-size: 1vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainLogo {
+        padding-left: 2vw;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    nav {
+        .mainLogo {
+            display: none;
+        }
+
+        .nav-item {
+
+            width: 50%;
+
+            a.facebook,
+            a.tiktok,
+            a.messenger {
+                font-size: 2vw !important;
+                padding: 0.5rem 0 !important;
+
+                &:hover {
+                    font-size: 2vw;
+                    // padding: 0.5rem 1rem !important;
+                }
+            }
+
+            .social {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        .reservation {
+            width: 50%;
+
+            a {
+                padding: 1rem 0rem 1rem 0rem !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    li.nav-item a {
+        font-size: 2vh;
+
+        &:hover {
+            font-size: 2vh;
+            padding: 0.5rem 1rem;
+        }
+
+        .fa-facebook,
+        .fa-tiktok,
+        .fa-facebook-messenger {
+
+            font-size: 2vh;
+        }
+
+        .nav-link a {
+            width: 100%;
+        }
+    }
+
+    .facebook::after {
+        font-size: 2vh;
+        // display: none;
+    }
+
+    .tiktok::after {
+        font-size: 2vh;
+        // display: none;
+    }
+
+    .messenger::after {
+        font-size: 2vh;
+        // display: none;
+    }
+
+    .dropdown-menu {
+        padding: 0;
+
+        .dropdown-item {
+            width: 100% !important;
+
+            &:hover {
+                padding: 4px 0 4px 0 !important;
+            }
+        }
+    }
+}

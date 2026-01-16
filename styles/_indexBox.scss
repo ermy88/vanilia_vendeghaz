@@ -1,0 +1,206 @@
+@use '../styles/colors';
+
+.indexBox {
+
+    // Box
+    display: block;
+    margin: 3rem auto;
+    width: 80%;
+    max-width: 1500px;
+    z-index: 10;
+    padding: 3rem 6rem 1vw 3rem;
+    border-radius: 83% 17% 85% 15% / 17% 76% 24% 83%;
+    border: 4px solid colors.$Millbrook;
+    outline: 2px solid colors.$AshA1;
+    box-shadow: 0px 0px 100px colors.$Birch inset;
+    background-color: colors.$AshA1;
+    overflow: hidden;
+    // Text
+    color: colors.$Birch;
+    font-family: cinzel;
+    font-size: 1.8vh;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 0px 2px colors.$MillbrookA;
+
+    p {
+        margin: 0;
+        padding: 0.8vh;
+    }
+
+    div.reserve {
+        // box
+        display: block;
+        text-align: left;
+        background-color: colors.$MillbrookA;
+        margin: 0 0 -3vw 0vw;
+        padding: 1% 0 10% 15%;
+        width: 35vw;
+        min-width: 400px;
+        height: 12vh;
+        border-radius: 22% 78% 95% 5% / 14% 75% 25% 86%;
+        box-shadow: 10px -5px 10px colors.$Vanilla ;
+        z-index: 100;
+
+        &:hover {
+            transition: 300ms;
+            box-shadow: 20px -10px 10px colors.$Vanilla;
+        }
+
+        // text
+        a {
+            padding-top: 2vh;
+            display: block;
+            color: colors.$Vanilla;
+            text-decoration: none;
+            font-size: 4vh;
+            text-shadow: 1px 1px 3px black;
+            letter-spacing: 4px;
+
+            &:hover {
+                transition: 1500ms;
+                text-shadow: 1px 1px 10px colors.$Vanilla;
+
+            }
+
+        }
+    }
+
+    img.img-outside {
+        border: 2px solid colors.$Millbrook;
+        border-radius: 73% 27% 81% 19% / 19% 79% 21% 81%;
+        margin: 5vh 2vh 1vh 0rem;
+        width: 50%;
+        float: left;
+        box-shadow: 0 0 5px black;
+        cursor: pointer;
+
+    }
+
+    span.emp-top {
+        display: inline;
+        font-weight: bold;
+        font-size: 1.8rem;
+        padding: 0vh 0 1vh 0;
+        letter-spacing: 2px;
+        text-shadow: 0px 2px 5px colors.$Vanilla;
+
+    }
+
+    span.emp-bottom {
+        text-align: center;
+        display: block;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        padding: 1vh 0 1vh 0;
+    }
+}
+
+// ------------------------------------- MEDIA QUERRIES --------------------------------------
+
+@media only screen and (max-width: 1921px) {
+    .indexBox {
+        padding-left: 4vw;
+
+        img.img-outside {
+            width: 28% !important;
+        }
+    }
+}
+@media only screen and (max-width: 1920px) {
+.indexBox {
+        width: 80%;
+
+        img.img-outside {
+            width: 50%;
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .indexBox {
+        width: 80%;
+
+        div.reserve {
+            padding-top: 1vh;
+            padding-left: 12%;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .indexBox {
+        
+        width: 90%;
+        text-align: center;
+        padding: 6vw;
+
+        img.img-outside {
+            width: 95% !important;
+            border-radius: 90% 10% 99% 1% / 30% 98% 2% 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .indexBox {
+        border-radius: 93% 7% 96% 4% / 9% 93% 7% 91%;
+
+        padding: 0 6vw;
+
+        img.img-outside {
+            width: 100%;
+            border-radius: 96% 4% 99% 1% / 30% 98% 2% 70%;
+
+        }
+
+        span.emp-bottom {
+            font-size: 1.5rem;
+            padding: 1vh 0 5vh 0;
+        }
+
+        div.reserve {
+            border-radius: 22% 78% 93% 7% / 15% 75% 25% 85%;
+            padding-top: 1vh;
+            margin-bottom: -2vw;
+            padding-left: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .indexBox {
+        font-size: 3vw;
+        width: 98%;
+        border: 10px solid colors.$Millbrook;
+        outline: 5px solid colors.$AshA1;
+        text-align: center;
+
+        img.img-outside {
+            width: 100%;
+            margin: 8vh 0 4vh 0;
+            border-radius: 96% 4% 99% 1% / 30% 98% 2% 70%;
+            margin-top: 5vh;
+            animation: pulsingShadow 4000ms infinite;
+            transform: rotateZ(-1deg);
+        }
+
+        @keyframes pulsingShadow {
+            50% {
+                // transform: rotateZ(0deg);
+                // box-shadow: 0 0 5px colors.$Millbrook;
+                box-shadow: 1px 5px 10px colors.$Vanilla;
+            }
+        }
+
+        span.emp-bottom {
+            text-align: center;
+            display: block;
+            font-size: 1.2rem;
+            padding: 1vh 0 5vh 0;
+        }
+    }
+}
