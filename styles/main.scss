@@ -1,6 +1,5 @@
 @use '../styles/colors';
 
-@use '../styles/bgndIN';
 @use '../styles/navbar';
 @use '../styles/snowFall';
 
@@ -10,7 +9,6 @@
 @use '../styles/priceBox';
 @use '../styles/gdprBox';
 @use '../styles/reservation-label';
-@use '../styles/orderForm';
 @use '../styles/rulesBox';
 
 @use '../styles/footer';
@@ -20,34 +18,17 @@
 @use '../styles/carousel-ground';
 @use '../styles/carousel-garden';
 
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-.animation {
-    position: relative;
-    animation: showIndexBox 3000ms cubic-bezier(0, 0.25, 0.5, 1.2);
-
-    @keyframes showIndexBox {
-        0% {
-            opacity: 0;
-            top: -1000px;
-        }
-
-        60% {
-            opacity: 0;
-        }
-
-        100% {
-            top: 0;
-        }
-    }
+body{
+    scroll-behavior: smooth;
 }
-
-
+// Árak/Foglalás menüpont
 .btn-res-animation {
     scale: 1.0;
     box-shadow: 0 0 10px colors.$Millbrook;
@@ -56,7 +37,6 @@
 
     @keyframes pulse {
         50% {
-            // box-shadow: 0 0 10px colors.$Vanilla;
             scale: 1.1;
             color: colors.$Vanilla;
         }
@@ -66,46 +46,14 @@
 .text {
     font-weight: bold;
     font-family: colors.$Basic-font;
-    font-size: 1.8vh;
+    font-size: 2vh;
 
     &:hover {
+        transition: 200ms;
         font-weight: bold;
-        text-shadow: 0px 0px 5px colors.$Vanilla;
+        text-shadow: 0px 0px 10px colors.$Vanilla;
     }
 }
-
-.carousel-control-next-icon {
-    background-color: colors.$Birch;
-    border-radius: 25% 75% 75% 25% / 50% 50% 50% 50%;
-
-    &:hover {
-        transition: 200ms;
-        scale: 1.2;
-        box-shadow: 0px 0px 50px colors.$Vanilla;
-    }
-
-    &:active {
-        scale: 1;
-        box-shadow: 0px 0px 50px colors.$Birch;
-    }
-}
-
-.carousel-control-prev-icon {
-    background-color: colors.$Birch;
-    border-radius: 75% 25% 25% 75% / 50% 50% 50% 50%;
-
-    &:hover {
-        transition: 200ms;
-        scale: 1.2;
-        box-shadow: 0px 0px 5px colors.$Vanilla;
-    }
-
-    &:active {
-        scale: 1;
-        box-shadow: 0px 0px 50px colors.$Birch;
-    }
-}
-
 
 #gmap {
     text-shadow: 2px 3px 5px colors.$Vanilla;
@@ -140,17 +88,6 @@
     }
 }
 
-.prices-border {
-    margin: 0 auto;
-    position: relative;
-    top: 15vh;
-    padding: 0;
-    border-radius: 1rem;
-    border: 1px solid colors.$Ash;
-    width: 60% !important;
-    box-shadow: 0 0 10px black;
-}
-
 div.spacer-line {
     height: 2vh;
     border-bottom: 1px solid grey;
@@ -175,33 +112,9 @@ div.spacer-line {
     transition: 400ms !important;
 }
 
-.prices-border {
-    width: 90%;
-}
 
 // ------------------------------------- MEDIA QUERRIES --------------------------------------
 
-@media only screen and (min-width: 1921px) {
-
-    .prices-border {
-        width: 50% !important;
-    }
-}
-
-@media only screen and (max-width: 1400px) {
-
-    .carousel-gallery,
-    .carousel-upstair,
-    .carousel-ground,
-    .carousel-garden {
-        top: 15vh;
-        width: 80vw;
-
-        img {
-            height: 75vh;
-        }
-    }
-}
 
 @media only screen and (max-width: 1200px) {
 
@@ -210,58 +123,9 @@ div.spacer-line {
     }
 }
 
-@media only screen and (max-width: 992px) {
 
-    .carousel-gallery,
-    .carousel-upstair,
-    .carousel-ground,
-    .carousel-garden {
-        top: 14vh;
-        width: 90%;
 
-        img {
-            height: 50vw;
-        }
-    }
-
-    .text {
-        font-size: 2vw;
-
-        &:hover {
-            font-size: 2vw;
-        }
-    }
-
-    .gmap {
-        width: 75%
-    }
-
-}
-
-@media only screen and (max-width: 767px) {
-
-    .carousel-gallery,
-    .carousel-upstair,
-    .carousel-ground,
-    .carousel-garden {
-        top: 15vh;
-        width: 98%;
-
-        img {
-            height: 58vw;
-        }
-
-        h4 {
-            font-size: 3vh;
-            padding-bottom: 2vh;
-        }
-
-        p,
-        ul {
-            font-size: 2vh;
-            padding: 0px 5vh;
-        }
-    }
+@media only screen and (max-width: 768px) {
 
     .gmap {
         top: 10vh;
@@ -270,32 +134,6 @@ div.spacer-line {
         iframe {
             width: 90%;
             height: 40vh;
-        }
-    }
-}
-
-@media only screen and (max-width: 670px) {
-
-    .carousel-gallery,
-    .carousel-upstair,
-    .carousel-ground,
-    .carousel-garden {
-        top: 16vh;
-        width: 80%;
-
-        img {
-            height: 74vh;
-        }
-
-        h4 {
-            font-size: 3vh;
-            padding-bottom: 2vh;
-        }
-
-        p,
-        ul {
-            font-size: 1rem;
-            padding: 0px 2vh;
         }
     }
 }

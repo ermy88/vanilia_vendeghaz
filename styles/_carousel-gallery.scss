@@ -1,24 +1,23 @@
 @use '../styles/colors';
 
 .carousel-gallery {
-    position: relative;
-    top: 12vh !important;
     z-index: 1;
     overflow: hidden;
-    padding: 0 0 0 0;
-    width: 95% !important;
-    background-color: colors.$AshA1;
+    padding: 12vh 0 10vh 0;
+    width: 92% !important;
+    background-image: linear-gradient(to bottom,
+            transparent 0%,
+            colors.$AshA1 20%,
+            colors.$AshA2 70%,
+            transparent);
     margin: 0 auto;
-    border-radius: 1rem;
-    border: 6px solid colors.$Millbrook;
-    outline: 2px solid colors.$AshA1;
     box-shadow: 0px 0px 100px colors.$Birch inset;
     user-select: none;
 
     h1 {
         font-weight: bolder;
         text-align: center;
-        margin: 10px;
+        margin: 0 0 3vh 0;
         font-family: 'cinzel';
         text-shadow: 0 0 15px colors.$Vanilla;
     }
@@ -26,7 +25,6 @@
     img {
         user-select: none;
         margin: 2rem auto;
-        // margin-top: 2rem;
         border: 2px solid colors.$Millbrook;
         border-radius: 10px;
         box-shadow: 0 0 5px colors.$Vanilla;

@@ -12,8 +12,14 @@ body::before {
   background-image: url("../images/main_bgnd.jpg");
   background-size: cover;
   background-position: top;
-  filter: blur(1px);
-  z-index: -1;
+  z-index: -2;
+  filter: blur(3px);
+  animation: unblur 2000ms ease;
+}
+@keyframes unblur {
+  50% {
+    filter: blur(10px);
+  }
 }
 
-/*# sourceMappingURL=bgndIN.css.map */
+/*# sourceMappingURL=bg-base.css.map */

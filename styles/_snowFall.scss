@@ -5,23 +5,35 @@
 
 .snowFall {
     position: fixed;
-    bottom: 2vw;
-    margin: 5vh 1vh;
+    bottom: 0;
+    margin: 4.5vh 1.5vh;
     z-index: 10;
-    i{
+    box-shadow: 0 0 10px colors.$Birch inset;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+
+    i {
+        margin-block: 5px;
         cursor: pointer;
         font-size: 2.5rem;
         color: colors.$ice;
-        animation: freeze 3000ms ease infinite;
+        animation: freeze 3000ms ease-out infinite;
+
         @keyframes freeze {
-        50% {
-            text-shadow: 0 0 10px colors.$ice;
-            color: colors.$thin-ice;
+            50% {
+                text-shadow: 0 0 5px colors.$ice;
+                color: colors.$thin-ice;                
+            }
         }
-    }
-        &:hover{
+
+        &:hover {
             transition: 300ms;
-            scale: 1.2;
+            scale: 1.1;
+            box-shadow: 0 0 10px colors.$Vanilla;
+            border-radius: 50%;
+
         }
     }
 }
@@ -29,7 +41,7 @@
 // SNOWFALL OFF AT START
 
 .snowOff {
-    position:fixed;
+    position: fixed;
     top: 100px;
     left: 0;
     width: 100%;
@@ -62,7 +74,7 @@
         top: -100px;
         color: rgb(255, 255, 255);
         user-select: none;
-        animation: snowFall ease-out infinite;
+        animation: snowFall ease-in-out infinite;
     }
 }
 
@@ -70,9 +82,10 @@
 
 @for $i from 1 through 500 {
     .snow span:nth-child(#{$i}) {
+
         left: math.random(100)* 1vw;
 
-        animation-delay: math.random(3)* 1s;
+        animation-delay: math.random(10)* 1s;
 
         animation-duration: math.random(20)* 1s;
 
@@ -89,7 +102,7 @@
     }
 
     100% {
-        transform: translateY(110vh) rotate(360deg);
+        transform: translateY(95vh) rotate(360deg);
         opacity: 0.3;
     }
 }

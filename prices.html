@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a5ae97f596.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/bgndIN.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jersey+15&family=Shojumaru&family=Yesteryear&family=Zen+Dots&display=swap"
         rel="stylesheet">
+    <script src="https://foglalas.appartman.hu/embed-script-min.js"></script>
+    <script type="module" src="source/main.js"></script>
 
 
 
@@ -127,162 +128,69 @@
         </nav>
     </header> -->
 
-    <main class="d-flex justify-content-center flex-column ">
+    <main class="d-flex justify-content-center flex-column animation">
 
+        <section class="priceBox">
+            <div class="text-center">
 
+                <h1></h1> <br>
 
-        <div class="prices-border ">
-            <section class="container-fluid priceBox d-flex justify-content-center w-100">
-                <div class="text-center">
-                    <h1></h1> <br>
-                    <ul>
-                        <li class="price-list-item">
-                            <p>Emeleti apartman (max. 4 fő): <br> 25 000 Ft / éj*</p>
-                        </li><br>
-                        <li class="price-list-item">
-                            <p>Földszinti apartman (max. 4 fő): <br> 35 000 Ft / éj*</p>
-                        </li><br>
-                        <li class="price-list-item">
-                            <p>Egy apartman foglalása esetén, ha kizárólagos használatot kérnek: <br> 40 000 Ft / éj*
-                            </p>
-                        </li>
-                        <li class="price-list-item"><br>
-                            <p>Teljes ház foglalása (legalább 3 éjszakára): <br> 50 000 Ft / éj*</p>
-                        </li>
-                        <li class="price-list-item"><br>
-                            <p>Kiemelt időszakokban: <br> Ár egyedi ajánlat alapján</p>
-                        </li>
+                <ul>
+                    <li class="price-list-item">
+                        <p>Emeleti apartman (max. 4 fő): <br> 25 000 Ft / éj*</p>
+                    </li><br>
 
-                        <p class="price-note">
-                            <strong>* Áraink az Áfát és az idegenforgalmi adót nem tartalmazzák.</strong>
+                    <li class="price-list-item">
+                        <p>Földszinti apartman (max. 4 fő): <br> 35 000 Ft / éj*</p>
+                    </li><br>
+
+                    <li class="price-list-item">
+                        <p>Egy apartman foglalása esetén, ha kizárólagos használatot kérnek: <br> 40 000 Ft / éj*
                         </p>
-                    </ul>
+                    </li>
+
+                    <li class="price-list-item"><br>
+                        <p>Teljes ház foglalása (legalább 3 éjszakára): <br> 50 000 Ft / éj*</p>
+                    </li>
+
+                    <li class="price-list-item"><br>
+                        <p>Kiemelt időszakokban: <br> Ár egyedi ajánlat alapján</p>
+                    </li>
+
+                    <p class="price-note">
+                        * Áraink az Áfát és az idegenforgalmi adót nem tartalmazzák.
+                    </p>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="">
+
+            <div class="reservation-label cinzel">
+                <h2>
+                    <strong>Foglalás</strong>
+                </h2>
+
+                <hr>
+
+                <div id="appartman-embed-iframe-wrapper">
+                    <iframe id="appartman-embed-iframe" src="https://foglalas.appartman.hu/vanilia-vendeghaz/embed"
+                    width="100%" scrolling="yes"></iframe>
                 </div>
-            </section>
-            <section class="">
-                <div class="reservation-label cinzel w-100">
-                    <h2>
-                        <strong>Foglalás</strong>
-                    </h2>
-                    <hr>
-                    <p>Kérjük érdeklődjön szabad időpontjaink felől, mielőtt elküldené foglalását! </p>
-                </div>
-            </section>
+                
+            </div>
 
-            <!-- Reserve Form -->
+        </section>
 
-            <section class="">
-                <div class="orderForm w-100">
-                    <div class="row col-12 col-lg-6">
-
-                        <form class="" action="https://formspree.io/f/mzdpvdwo" method="POST"> 
-                        <!-- <form class="" action="" method="" class=""> -->
-
-                            <div class="mt-2">
-                                <label for="fullName" class="form-label cinzel ">Teljes név*</label>
-                                <input type="text" name="fullName" class="form-control cinzel mt-1" id="fullName"
-                                    required>
-                            </div>
-                            <div class="my-3">
-                                <label for="email" class="form-label cinzel">E-mail cím*</label>
-                                <input type="email" name="email" class="form-control mt-1"
-                                    placeholder="_____@_____ . __" id="email" required>
-                            </div>
-
-                            <div class="my-3">
-                                <label for="phone" class="form-label cinzel">Telefonszám*</label>
-                                <input type="text" name="phoneNumber" class="form-control cinzel mt-1" id="phone"
-                                    placeholder="&#9742;" required>
-                            </div>
-
-                            <div class="d-flex flex-column justify-content-center align-items-center">
-
-                                <label for="selected-apartman" class="cinzel">Apartman</label>
-                                <select name="selected-apartman" id="selected-apartman" required>
-                                    <option value="" selected disabled>Kérjük válasszon...</option>
-                                    <option value="Teljes">Teljes apartman</option>
-                                    <option value="Emelet">Emeleti apartman</option>
-                                    <option value="Földszint">Földszinti apartman</option>
-                                </select>
-                                <!-- <p class="d-block ms-4 cinzel">(18 év alatti)</p> -->
-
-                            </div>
-                            <div class="d-flex flex-column justify-content-center align-items-center">
-
-                                <label for="guestNumber" class="cinzel ">Vendégek száma?</label>
-                                <select name="guestNumber" id="guestNumber" id="quests" required>
-                                    <option value="0" selected disabled>Kérjük válasszon...</option>
-                                    <option value="1 felnőtt" class="option">1</option>
-                                    <option value="2 felnőtt" class="option">2</option>
-                                    <option value="3 felnőtt" class="option">3</option>
-                                    <option value="4 felnőtt" class="option">4</option>
-                                    <option value="5 felnőtt" class="option">5</option>
-                                    <option value="6 felnőtt" class="option">6</option>
-                                    <option value="7 felnőtt" class="option">7</option>
-                                    <option value="8 felnőtt" class="option">8</option>
-                                </select>
-                            </div>
-                            <div class="d-flex flex-column justify-content-center align-items-center">
-
-                                <label for="childNumber" class="cinzel me-2">Gyerekek száma?</label>
-                                <select name="childNumber" id="childNumber">
-                                    <option value="0" selected disabled>Kérjük válasszon...</option>
-                                    <option value="0 gyerek">0</option>
-                                    <option value="1 gyerek">1</option>
-                                    <option value="2 gyerek">2</option>
-                                    <option value="3 gyerek">3</option>
-                                    <option value="4 gyerek">4</option>
-                                </select>
-                            </div>
-                    </div>
-                    <div class="row col-12 col-lg-6">
-
-
-                        <div class="d-flex justify-content-between mx-1 date-input">
-                            <!-- Érkezés > Távozás -->
-                            <input type="date" name="dateStart" class="form-control cinzel dates" id="dateStart"
-                                required>
-                            <div><i class="fa-solid fa-chevron-right reserve-date-icon"></i></div>
-                            <input type="date" name="dateEnd" class="form-control cinzel dates" id="dateEnd" required>
-
-                        </div>
-
-                        <div>
-                            <small class="d-block m-auto cinzel text-center px-2 m-0"></small>
-
-                        </div>
-                        <div class="mb-3 mx-1">
-
-
-                            <textarea type="text" name="message" class="form-control mt-3 cinzel" id="notes" rows="4"
-                                placeholder="Üzenet"></textarea>
-                        </div>
-                        <div class="mb-3 ms-2 d-flex">
-                            <input type="checkbox" class="form-check-input " id="checkbox" required>
-                            <label class="cinzel" for="checkbox">Megismertem és elfogadom az <a href="info.html#adatk"
-                                    target="_blank" title="Adatkezelési tájékoztató">adatkezelési tájékoztatóban</a>
-                                foglaltakat.</label>
-                        </div>
-                        <div class="container d-flex flex-column align-items-center">
-                            <button type="submit" class="btn cinzel w-100" onclick="onSubmit()">Foglalás
-                                elküldése</button>
-                            <div class="spacer-line"></div>
-                        </div>
-                        <span class="cinzel">* Kötelezően kitöltendő</span>
-                    </div>
-                </div>
-                </form>
-            </section>
-        </div>
     </main>
-
 
     <footer>
         <div class="scroll-top-btn" title="Lap tetejére">
             <a href="#top"><i class="fa-regular fa-circle-up"></i></a>
         </div>
 
-        <div style="height: 25vh; background: transparent;"></div>
+        
         <section class="container-fluid toFooter w-100">
 
             <div class="pt-5 w-75">
@@ -396,8 +304,8 @@
         </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="source/main.js"></script>
 </body>
 
 </html>

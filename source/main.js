@@ -1,17 +1,53 @@
 import { createNavbar } from "./navbar.comp.js";
 import { snowFall } from "./snowFall.comp.js";
 
+// Colors
+const color_Ash = '#cabfb3';
+const color_AshA = '#cabfb3dd';
+const color_AshA1 = '#cabfb3b9';
+const color_AshA2 = '#cabfb369';
+const color_Birch = '#393121';
+const color_Millbrook = '#644c3a';
+const color_MillbrookA = '#644c3ab9';
+const color_YellowMetal = '#70643f';
+const color_YellowMetalA = '#70643fc6';
+const color_Vanilla = '#F3E5AB';
+const color_ice = '#70edfd';
+const color_thinIce = ' #baf7ff79';
 
+// Navbar Presets //* navbar.comp.js
+const pageData = document.body.dataset.page;
 
-// Navbar Presets
-
-if (document.body.dataset.page !== 'home') {
-    createNavbar();  // navbar.comp.js
-    console.log('navbar created');
+if (pageData !== 'home') {
+    createNavbar();
 }
 
+// Background CSS selection
+(function () {
+    const cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+
+    switch (pageData) {
+
+        case 'upstair':
+            cssLink.href = 'styles/bg-upstair.css';
+            break;
+        case 'ground':
+            cssLink.href = 'styles/bg-ground.css';
+            break;
+        case 'garden':
+            cssLink.href = 'styles/bg-garden.css';
+            break;
+        default:
+            cssLink.href = 'styles/bg-base.css';
+    }
+
+    document.head.appendChild(cssLink);
+})();
+
+
+
 document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
-document.getElementsByTagName('nav')[0].style.width = '99%';
 document.getElementsByTagName('nav')[0].style.borderRadius = '10px 10px 20px 20px';
 
 //Navbar position -> top 0, background change if scrolled
@@ -22,7 +58,10 @@ window.onscroll = function navTop0() {
         document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb3';
         document.getElementsByTagName('nav')[0].style.top = '0vh';
         document.getElementsByTagName('nav')[0].style.transition = '500ms';
-        // document.getElementsByTagName('nav')[0].style.borderRadius = '10px 10px 25% 25%';
+        window.innerWidth > 992
+            ? document.getElementsByTagName('nav')[0].style.borderRadius = '0px 0px 25% 25%'
+            : null;
+
     } else {
         document.getElementsByTagName('nav')[0].style.backgroundImage = 'none';
         document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
@@ -40,33 +79,61 @@ window.onscroll = function navTop0() {
     }
 };
 
-//  NAVBAR
+//  NAVBAR - toggler icon
 
-document.getElementsByClassName('navbar')[0].addEventListener('mouseenter', () => {
-    document.getElementsByTagName('nav')[0].style.transition = '1000ms';
-    document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb3';
-    document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '50%';
-    document.getElementsByClassName('navbar-toggler-icon')[0].style.transition = '300ms';
+document.getElementsByClassName('navbar')[0].addEventListener('mouseenter', (togglerIcon, navBg) => {
+    togglerIcon = document.querySelector('.navbar-toggler-icon');
+
+    navBg = document.getElementsByTagName('nav')[0];
+    navBg.style.transition = '1000ms';
+    navBg.style.backgroundColor = '#cabfb3';
+    togglerIcon.style.borderRadius = '50%';
+    togglerIcon.style.transition = '300ms';
+
 });
 
-document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', () => {
-    document.getElementsByClassName('navbar-toggler-icon')[0].style.border = '3px #644c3a solid';
-    document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '50% / 20%';
-    document.getElementsByClassName('navbar-toggler-icon')[0].style.transition = '300ms';
+document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', (togglerIcon) => {
+    togglerIcon = document.querySelector('.navbar-toggler-icon');
+
+    togglerIcon.style.border = '3px #644c3a solid';
+    togglerIcon.style.borderRadius = '50% / 20%';
+    togglerIcon.style.transition = '300ms';
+
 });
+
+// Rotate mainLogo when window loaded
+(function () {
+
+    window.addEventListener('load', (logo, togglerIcon) => {
+        setTimeout(() => {
+            logo = document.querySelector('.mainLogo');
+            togglerIcon = document.querySelector('.navbar-toggler-icon');
+
+            logo.style.display = 'block';
+            logo.style.transition = '1000ms';
+            logo.style.transform = 'rotate(360deg)';
+
+            document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '50%';
+            togglerIcon.style.transition = '1000ms';
+            togglerIcon.style.transform = 'rotate(360deg)';
+
+        }, 1000);
+    });
+})();
+
+
 
 // RESERVE ANIMATION
 
 if (document.getElementsByClassName('reserve')[0]) {
 
-
     document.getElementsByClassName('reserve')[0].addEventListener('mouseenter', () => {
 
-        document.getElementsByClassName('reserve')[0].style.scale = '1.1';
+        document.getElementsByClassName('reserve')[0].style.scale = '1.05';
         document.getElementsByClassName('reserve')[0].style.transition = '350ms';
-
     });
 }
+
 if (document.getElementsByClassName('reserve')[0]) {
 
     document.getElementsByClassName('reserve')[0].addEventListener('mouseleave', () => {
@@ -76,7 +143,7 @@ if (document.getElementsByClassName('reserve')[0]) {
     });
 }
 
-// dinamikus évszám a foglalási oldalon
+// dinamikus évszám a foglalási oldalon H1
 
 if (document.getElementsByTagName('h1')[0].innerText === '') {
     document.getElementsByTagName('h1')[0].innerHTML =
@@ -110,51 +177,59 @@ function monthToString() {
     const monthName = ['január', 'február', 'március', 'április', 'május', 'június',
         'július', 'augusztus', 'szeptember', 'október', 'november', 'december'];
 
-    if (document.querySelector(".footerText")) {
+    if (document.querySelector('.footerText')) {
 
         let month = new Date().getMonth();
 
         document.querySelector('.footerText').innerHTML =
             `&copy; Vanília Vendégház. Bencsik Szabolcs | 
             ${new Date().getFullYear()}. 
-            ${monthName.slice(month, 1)} 
+            ${monthName.slice(month, month + 1)} 
             ${new Date().getDate()}.`;
     }
 };
 monthToString();
 
-// Date check on reserve form
+// Date check in reserve form
 
-const errorColor = '#a50000ff';
-const defaultTextColor = '#644c3a';
 
 function onSubmit() {
-    let isFormValid = false;
+    
+    const errorColor = '#a50000ff';
+    const defaultTextColor = '#644c3a';
+    // let isFormValid = false;
 
 
-    dateValidation() ? isFormValid = true : isFormValid = false;
+    dateValidation();
     // nameValidation();
     // emailValidation();
 
+    //  ? isFormValid = true : isFormValid = false;
 };
+// (function () {
+//     document.querySelector('#submit').addEventListener('click', onSubmit)
+// })();
 
 function dateValidation() {
 
-    const dateStart = new Date(document.querySelectorAll('input')[3].value);
-    const dateEnd = new Date(document.querySelectorAll('input')[4].value);
+    const dateStart = new Date($('input')[3].value);
+    const dateEnd = new Date($('input')[4].value);
     const datePresent = new Date();
 
     if (dateStart > datePresent && dateEnd > datePresent && dateStart < dateEnd) {
-        document.querySelector('small').style.transition = '500ms';
-        document.querySelector('small').innerText = '';
-        document.querySelector('small').style.color = defaultTextColor;
+
+        $document.querySelector('small').style.transition = '500ms';
+        $document.querySelector('small').innerText = '';
+        $document.querySelector('small').style.color = defaultTextColor;
         isFormValid = true;
+
     } else if (dateEnd < dateStart) {
         document.querySelector('small').style.transition = '500ms';
         document.querySelector('small').innerText =
             'A távozás korábbra van megadva, mint az érkezés.';
         document.querySelector('small').style.color = errorColor;
         isFormValid = false;
+
     } else {
         document.querySelector('small').style.transition = '500ms';
         document.querySelector('small').innerText = 'Helytelen dátum!';
@@ -164,17 +239,15 @@ function dateValidation() {
     return isFormValid;
 };
 
-function nameValidation() {
+// function nameValidation() {
 
-    nameInputField = document.querySelectorAll('input')[0].value;
-    // console.log(nameInputField);
+//     nameInputField = document.querySelectorAll('input')[0].value;
+//     // console.log(nameInputField);
 
-    if (/\d/.test(nameInputField.toLowerCase())) {
-        console.log('számok');
-    } else {
-        console.log("ok");
-    }
-}
+//     if (/\d/.test(nameInputField.toLowerCase())) {
+//         console.log('A név nem tartalmazhat számot');
+//
+// }
 
 // SOCIAL ICONS ANIMATION
 // FACEBOOK
@@ -182,41 +255,47 @@ document.querySelector('.facebook').addEventListener('mouseenter', (fb) => {
     fb = document.querySelector('.facebook');
     fb.style.transform = 'rotate(360deg)';
     fb.style.transition = '500ms';
-    fb.style.scale = 1.2;
+    fb.style.scale = 2;
 });
 document.querySelector('.facebook').addEventListener('mouseleave', (fb) => {
     fb = document.querySelector('.facebook');
-    fb.style.transition = '2000ms';
+    fb.style.transition = '1000ms';
     fb.style.transform = 'rotate(0deg)';
+    fb.style.scale = 1;
+
 });
 // TIKTOK
-document.querySelector('.tiktok').addEventListener('mouseenter', (fb) => {
-    fb = document.querySelector('.tiktok');
-    fb.style.transform = 'rotate(360deg)';
-    fb.style.transition = '500ms';
-    fb.style.scale = 1.2;
+document.querySelector('.tiktok').addEventListener('mouseenter', (tt) => {
+    tt = document.querySelector('.tiktok');
+    tt.style.transform = 'rotate(360deg)';
+    tt.style.transition = '500ms';
+    tt.style.scale = 2;
 });
-document.querySelector('.tiktok').addEventListener('mouseleave', (fb) => {
-    fb = document.querySelector('.tiktok');
-    fb.style.transition = '2000ms';
-    fb.style.transform = 'rotate(0deg)';
+document.querySelector('.tiktok').addEventListener('mouseleave', (tt) => {
+    tt = document.querySelector('.tiktok');
+    tt.style.transition = '1000ms';
+    tt.style.transform = 'rotate(0deg)';
+    tt.style.scale = 1;
+
 });
 // MESSENGER
-document.querySelector('.messenger').addEventListener('mouseenter', (fb) => {
-    fb = document.querySelector('.messenger');
-    fb.style.transform = 'rotate(360deg)';
-    fb.style.transition = '500ms';
-    fb.style.scale = 1.2;
+document.querySelector('.messenger').addEventListener('mouseenter', (msgr) => {
+    msgr = document.querySelector('.messenger');
+    msgr.style.transform = 'rotate(360deg)';
+    msgr.style.transition = '500ms';
+    msgr.style.scale = 2;
 });
-document.querySelector('.messenger').addEventListener('mouseleave', (fb) => {
-    fb = document.querySelector('.messenger');
-    fb.style.transition = '2000ms';
-    fb.style.transform = 'rotate(0deg)';
+document.querySelector('.messenger').addEventListener('mouseleave', (msgr) => {
+    msgr = document.querySelector('.messenger');
+    msgr.style.transition = '1000ms';
+    msgr.style.transform = 'rotate(0deg)';
+    msgr.style.scale = 1;
+
 });
 
-// Snowflakes
+// Snowflakes //* snowFall.comp.js
 const screenWidth = window.innerWidth;
-screenWidth > 900 ? snowFall(500) : snowFall(150); //snowFall.comp.js
+screenWidth > 900 ? snowFall(500) : snowFall(150);
 
 console.log('main.js running');
 

@@ -13,6 +13,19 @@ body::before {
   background-size: cover;
   background-position: top;
   z-index: -1;
+  filter: blur(2px);
+  animation: unblur 2500ms ease;
+}
+@keyframes unblur {
+  0% {
+    filter: blur(2px);
+  }
+  70% {
+    filter: blur(20px);
+  }
+  100% {
+    filter: blur(2px);
+  }
 }
 
-/*# sourceMappingURL=bgndUS.css.map */
+/*# sourceMappingURL=bg-upstair.css.map */

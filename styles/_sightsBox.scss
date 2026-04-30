@@ -1,5 +1,9 @@
 @use '../styles/colors';
 
+html {
+    scroll-behavior: smooth;
+}
+
 div.sightsBox {
     margin-top: 15vh;
     width: 60%;
@@ -48,6 +52,7 @@ div.sightsBox {
 
     }
 }
+
 // ------------------------------------- MEDIA QUERRIES --------------------------------------
 
 @media only screen and (max-width: 992px) {

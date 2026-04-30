@@ -1,231 +1,192 @@
 
-export function createNavbar(){
 
-// header
-const header = document.createElement('header');
+export function createNavbar() {
 
-// nav
-const nav = document.createElement('nav');
-nav.className = 'navbar navbar-expand-lg col-12 col-md-12';
+  // ===== header =====
+  const header = document.createElement('header');
 
-// container-fluid
-const container = document.createElement('div');
-container.className = 'container-fluid justify-content-evenly';
+  // ===== nav =====
+  const nav = document.createElement('nav');
+  nav.className = 'navbar navbar-expand-xxl col-12 col-md-12';
 
-// logo
-const logoA = document.createElement('a');
-logoA.className = 'mainLogo navbar-brand';
-logoA.href = 'index.html';
+  // ===== toggler =====
+  const toggler = document.createElement('button');
+  toggler.className = 'navbar-toggler';
+  toggler.type = 'button';
+  toggler.setAttribute('data-bs-toggle', 'collapse');
+  toggler.setAttribute('data-bs-target', '#navbarNavDropdown');
+  toggler.setAttribute('aria-controls', 'navbarNavDropdown');
+  toggler.setAttribute('aria-expanded', 'false');
+  toggler.setAttribute('aria-label', 'Toggle navigation');
 
-const logoImg = document.createElement('img');
-logoImg.src = 'images/logo.jpg';
-logoImg.alt = 'Vanília Vendégház';
-logoImg.title = 'www.vaniliavendeghaz.hu';
+  const togglerIcon = document.createElement('span');
+  togglerIcon.className = 'navbar-toggler-icon';
+  toggler.appendChild(togglerIcon);
 
-logoA.appendChild(logoImg);
+  // ===== collapse =====
+  const collapse = document.createElement('div');
+  collapse.className = 'collapse navbar-collapse';
+  collapse.id = 'navbarNavDropdown';
 
-// toggler
-const toggler = document.createElement('button');
-toggler.className = 'navbar-toggler';
-toggler.type = 'button';
-toggler.setAttribute('data-bs-toggle', 'collapse');
-toggler.setAttribute('data-bs-target', '#navbarNavDropdown');
-toggler.setAttribute('aria-controls', 'navbarNavDropdown');
-toggler.setAttribute('aria-expanded', 'false');
-toggler.setAttribute('aria-label', 'Toggle navigation');
+  // ===== ul =====
+  const ul = document.createElement('ul');
+  ul.className = 'navbar-nav';
 
-const togglerIcon = document.createElement('span');
-togglerIcon.className = 'navbar-toggler-icon';
-toggler.appendChild(togglerIcon);
+  // ===== logo =====
+  const logoLi = document.createElement('li');
+  logoLi.className = 'nav-list-item';
 
-// collapse
-const collapse = document.createElement('div');
-collapse.className = 'collapse navbar-collapse';
-collapse.id = 'navbarNavDropdown';
+  const mainLogo = document.createElement('a');
+  mainLogo.className = 'mainLogo';
+  mainLogo.href = 'index.html';
 
-// ul
-const ul = document.createElement('ul');
-ul.className = 'navbar-nav';
+  const mainLogoImg = document.createElement('img');
+  mainLogoImg.src = 'images/logo.jpg';
+  mainLogoImg.alt = 'Vanília Vendégház';
+  mainLogoImg.title = 'www.vaniliavendeghaz.hu';
 
-// helper: simple li
-function simpleItem(text, href, extraClass = '') {
-  const li = document.createElement('li');
-  li.className = `nav-item ${extraClass}`.trim();
+  mainLogo.appendChild(mainLogoImg);
+  logoLi.appendChild(mainLogo);
+  ul.appendChild(logoLi);
 
-  const a = document.createElement('a');
-  a.className = 'cinzel text nav-link';
-  a.href = href;
-  a.textContent = text;
+  // ===== Kezdőlap =====
+  ul.appendChild(createSimpleLi('Kezdőlap', 'index.html', true));
 
-  li.appendChild(a);
-  return li;
-}
+  // ===== Apartmanok dropdown =====
+  ul.appendChild(createDropdown(
+    'Apartmanok',
+    [
+      ['Emelet', 'upstair.html'],
+      ['Földszint', 'ground.html'],
+      ['Garden', 'garden.html'],
+    ]
+  ));
 
-// Kezdőlap
-ul.appendChild(simpleItem('Kezdőlap', 'index.html'));
+  // ===== Galéria =====
+  ul.appendChild(createSimpleLi('Galéria', 'gallery.html'));
 
-// Apartmanok
-const aptLi = document.createElement('li');
-aptLi.className = 'nav-item dropdown';
+  // ===== Szolgáltatások =====
+  ul.appendChild(createSimpleLi('Szolgáltatások', 'services.html'));
 
-const aptA = document.createElement('a');
-aptA.className = 'cinzel text nav-link';
-aptA.href = '#';
-aptA.setAttribute('role', 'button');
-aptA.setAttribute('data-bs-toggle', 'dropdown');
-aptA.setAttribute('aria-expanded', 'false');
-aptA.textContent = 'Apartmanok';
+  // ===== Programok =====
+  ul.appendChild(createDropdown(
+    'Programok / Látnivalók',
+    [
+      ['Gombaházak', 'sights.html#gombahazak'],
+      ['Kisvasút', 'sights.html#kisvasut'],
+      ['Kilátó - Miskó István sétány', 'sights.html#kilato'],
+      ['Tanösvény', 'sights.html#tanosveny'],
+      ['Termálfürdő', 'sights.html#termal'],
+      ['Szabadstrand', 'sights.html#strand'],
+    ],
+    true
+  ));
 
-const aptCenter = document.createElement('div');
-aptCenter.className = 'dropdown-center';
+  // ===== Információk =====
+  ul.appendChild(createDropdown(
+    'Információk',
+    [
+      ['Házirend', 'info.html#rules'],
+      ['Térkép', 'info.html#gmap'],
+      ['Panaszkezelési tájékoztató', 'info.html#complaint'],
+      ['Adatkezelési tájékoztató', 'info.html#adatk'],
+    ],
+    true,
+    true
+  ));
 
-const aptUl = document.createElement('ul');
-aptUl.className = 'dropdown-menu text-center';
+  // ===== Árak / Foglalás =====
+  const priceLi = document.createElement('li');
+  priceLi.className = 'reservation nav-list-item';
 
-[
-  ['Emelet', 'upstair.html'],
-  ['Földszint', 'ground.html'],
-  ['Garden', 'garden.html'],
-].forEach(([t, h]) => {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.className = 'dropdown-item cinzel text-center';
-  a.href = h;
-  a.textContent = t;
-  li.appendChild(a);
-  aptUl.appendChild(li);
-});
+  const priceA = document.createElement('a');
+  priceA.className = 'cinzel nav-link btn-res-animation text-center';
+  priceA.href = 'prices.html';
+  priceA.textContent = 'Árak/Foglalás';
 
-aptCenter.appendChild(aptUl);
-aptLi.append(aptA, aptCenter);
-ul.appendChild(aptLi);
+  priceLi.appendChild(priceA);
+  ul.appendChild(priceLi);
 
-// Galéria
-ul.appendChild(simpleItem('Galéria', 'gallery.html'));
+  // ===== social =====
+  const socialDiv = document.createElement('div');
+  socialDiv.className = 'd-flex justify-content-evenly gap-4 py-2 pt-lg-2';
 
-// Szolgáltatások
-ul.appendChild(simpleItem('Szolgáltatások', 'services.html'));
+  [
+    ['facebook', 'https://www.facebook.com/profile.php?id=61577007959763', 'fa-facebook'],
+    ['tiktok', 'https://www.tiktok.com/@vanlia.vendghz', 'fa-tiktok'],
+    ['messenger', 'https://m.me/61577007959763', 'fa-facebook-messenger'],
+  ].forEach(([cls, href, icon]) => {
+    const li = document.createElement('li');
+    li.className = 'nav-list-item';
 
-// Programok / Látnivalók
-const progLi = document.createElement('li');
-progLi.className = 'nav-item dropdown';
+    const a = document.createElement('a');
+    a.className = `text nav-link ${cls}`;
+    a.href = href;
+    a.target = '_blank';
 
-const progA = document.createElement('a');
-progA.className = 'cinzel text nav-link';
-progA.href = '';
-progA.setAttribute('role', 'button');
-progA.setAttribute('data-bs-toggle', 'dropdown');
-progA.setAttribute('aria-expanded', 'false');
-progA.textContent = 'Programok / Látnivalók';
+    const i = document.createElement('i');
+    i.className = `fa-brands ${icon}`;
 
-const progCenter = document.createElement('div');
-progCenter.className = 'dropdown-center text-center';
+    a.appendChild(i);
+    li.appendChild(a);
+    socialDiv.appendChild(li);
+  });
 
-const progUl = document.createElement('ul');
-progUl.className = 'dropdown-menu';
+  ul.appendChild(socialDiv);
 
-[
-  ['Gombaházak', 'sights.html#gombahazak'],
-  ['Kisvasút', 'sights.html#kisvasut'],
-  ['Kilátó - Miskó István sétány', 'sights.html#kilato'],
-  ['Tanösvény', 'sights.html#tanosveny'],
-  ['Termálfürdő', 'sights.html#termal'],
-  ['Szabadstrand', 'sights.html#strand'],
-].forEach(([t, h]) => {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.className = 'dropdown-item cinzel text-center';
-  a.href = h;
-  a.textContent = t;
-  li.appendChild(a);
-  progUl.appendChild(li);
-});
+  // ===== assemble =====
+  collapse.appendChild(ul);
+  nav.append(toggler, collapse);
+  header.appendChild(nav);
+  document.body.prepend(header);
 
-progCenter.appendChild(progUl);
-progLi.append(progA, progCenter);
-ul.appendChild(progLi);
 
-// Információk
-const infoLi = document.createElement('li');
-infoLi.className = 'nav-item dropdown';
+  // ===== helper functions =====
+  function createSimpleLi(text, href, current = false) {
+    const li = document.createElement('li');
+    li.className = 'nav-list-item';
 
-const infoA = document.createElement('a');
-infoA.className = 'cinzel text nav-link text-nowrap';
-infoA.href = '';
-infoA.setAttribute('role', 'button');
-infoA.setAttribute('data-bs-toggle', 'dropdown');
-infoA.setAttribute('aria-expanded', 'false');
-infoA.textContent = 'Információk';
+    const a = document.createElement('a');
+    a.className = 'cinzel text nav-link';
+    a.href = href;
+    a.textContent = text;
 
-const infoCenter = document.createElement('div');
-infoCenter.className = 'dropdown-center text-center';
+    if (current) a.setAttribute('aria-current', 'page');
 
-const infoUl = document.createElement('ul');
-infoUl.className = 'dropdown-menu';
+    li.appendChild(a);
+    return li;
+  }
 
-[
-  ['Házirend', 'info.html#rules'],
-  ['Térkép', 'info.html#gmap'],
-  ['Panaszkezelési tájékoztató', 'info.html#complaint'],
-  ['Adatkezelési tájékoztató', 'info.html#adatk'],
-].forEach(([t, h]) => {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.className = 'dropdown-item cinzel text-center';
-  a.href = h;
-  a.textContent = t;
-  li.appendChild(a);
-  infoUl.appendChild(li);
-});
+  function createDropdown(dd_title, dd_items, center = false, nowrap = false) {
+    const li = document.createElement('li');
+    li.className = 'nav-list-item dropdown';
 
-infoCenter.appendChild(infoUl);
-infoLi.append(infoA, infoCenter);
-ul.appendChild(infoLi);
+    const a = document.createElement('a');
+    a.className = `cinzel text nav-link${nowrap ? ' text-nowrap' : ''}`;
+    a.href = '#';
+    a.setAttribute('role', 'button');
+    a.setAttribute('data-bs-toggle', 'dropdown');
+    a.setAttribute('aria-expanded', 'false');
+    a.textContent = dd_title;
 
-// Árak / Foglalás
-const priceLi = document.createElement('li');
-priceLi.className = 'reservation nav-item';
+    const centerDiv = document.createElement('div');
+    centerDiv.className = `dropdown-center${center ? ' text-center' : ''}`;
 
-const priceA = document.createElement('a');
-priceA.className = 'cinzel nav-link btn-res-animation';
-priceA.href = 'prices.html';
-priceA.textContent = 'Árak/Foglalás';
+    const ul = document.createElement('ul');
+    ul.className = 'dropdown-menu' + (center ? ' text-center' : '');
 
-priceLi.appendChild(priceA);
-ul.appendChild(priceLi);
+    dd_items.forEach(([text, href]) => {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.className = 'dropdown-item cinzel text-center';
+      link.href = href;
+      link.textContent = text;
+      li.appendChild(link);
+      ul.appendChild(li);
+    });
 
-// social icons wrapper
-const socialDiv = document.createElement('div');
-socialDiv.className = 'd-flex justify-content-around my-3 gap-lg-2 gap-5';
-
-[
-  ['facebook', 'https://www.facebook.com/profile.php?id=61577007959763', 'fa-facebook'],
-  ['tiktok', 'https://www.tiktok.com/@vanlia.vendghz', 'fa-tiktok'],
-  ['messenger', 'https://m.me/61577007959763', 'fa-facebook-messenger'],
-].forEach(([cls, link, icon]) => {
-  const li = document.createElement('li');
-  li.className = 'nav-item';
-
-  const a = document.createElement('a');
-  a.className = `text nav-link ${cls}`;
-  a.href = link;
-  a.target = '_blank';
-
-  const i = document.createElement('i');
-  i.className = `fa-brands ${icon}`;
-
-  a.appendChild(i);
-  li.appendChild(a);
-  socialDiv.appendChild(li);
-});
-
-ul.appendChild(socialDiv);
-
-// assemble
-collapse.appendChild(ul);
-container.append(logoA, toggler, collapse);
-nav.appendChild(container);
-header.appendChild(nav);
-document.body.prepend(header);
-
+    centerDiv.appendChild(ul);
+    li.append(a, centerDiv);
+    return li;
+  }
 }
