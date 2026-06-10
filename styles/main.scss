@@ -1,4 +1,5 @@
 @use '../styles/colors';
+@use '../styles/fonts';
 
 @use '../styles/navbar';
 @use '../styles/snowFall';
@@ -23,36 +24,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
-body{
+body {
     scroll-behavior: smooth;
-}
-// Árak/Foglalás menüpont
-.btn-res-animation {
-    scale: 1.0;
-    box-shadow: 0 0 10px colors.$Millbrook;
-    animation: pulse 3000ms ease-in-out infinite;
-    filter: blur(0px);
-
-    @keyframes pulse {
-        50% {
-            scale: 1.1;
-            color: colors.$Vanilla;
-        }
-    }
-}
-
-.text {
-    font-weight: bold;
-    font-family: colors.$Basic-font;
-    font-size: 2vh;
-
-    &:hover {
-        transition: 200ms;
-        font-weight: bold;
-        text-shadow: 0px 0px 10px colors.$Vanilla;
-    }
 }
 
 #gmap {
@@ -88,30 +64,38 @@ body{
     }
 }
 
-div.spacer-line {
-    height: 2vh;
-    border-bottom: 1px solid grey;
-    width: 100%;
-}
 
-.big-modal {
-    top: 4vh;
-    background-color: transparent;
-    border: none;
-
-    img {
-        margin: 0 auto;
-        width: 75%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px wheat;
-    }
-}
 
 .carousel-fade,
 .carousel-item {
     transition: 400ms !important;
 }
 
+
+//------------------------------------- ANIMATION ---------------------------------------------
+.animation {
+    position: relative;
+    animation: showContent 2000ms cubic-bezier(.2, .09, 0, .99);
+
+    @keyframes showConten {
+        0% {
+            opacity: 0;
+            top: -1000px;
+            filter: blur(0px)
+        }
+
+        50% {
+            opacity: 0;
+            filter: blur(10px)
+        }
+
+        100% {
+            opacity: 1;
+            top: 0;
+            filter: blur(0px)
+        }
+    }
+}
 
 // ------------------------------------- MEDIA QUERRIES --------------------------------------
 
@@ -128,13 +112,8 @@ div.spacer-line {
 @media only screen and (max-width: 768px) {
 
     .gmap {
-        top: 10vh;
-        margin: 1rem;
-
-        iframe {
-            width: 90%;
-            height: 40vh;
-        }
+            height: 60vh;
+            width: 99%;
     }
 }
 
@@ -157,9 +136,4 @@ div.spacer-line {
             border-radius: 0;
         }
     }
-
-    .btn-res-animation {
-        animation: none;
-    }
-
 }

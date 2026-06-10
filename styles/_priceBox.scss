@@ -1,9 +1,10 @@
 @use '../styles/colors';
+@use '../styles/fonts';
 
 .priceBox {
     width: 92%;
-    background-image: linear-gradient(to bottom, transparent, colors.$AshA1 50%, transparent 99%);
-    font-family: colors.$Basic-font;
+    background-image: linear-gradient(to bottom, transparent, colors.$AshA1 50%, colors.$AshA2 90%, transparent);
+    font-family: fonts.$Basic-font;
     font-size: 2vh;
     font-weight: 600;
     margin: 0 auto;

@@ -15,11 +15,20 @@ const color_Vanilla = '#F3E5AB';
 const color_ice = '#70edfd';
 const color_thinIce = ' #baf7ff79';
 
+
 // Navbar Presets //* navbar.comp.js
 const pageData = document.body.dataset.page;
 
 if (pageData !== 'home') {
     createNavbar();
+}
+// NAVBAR Dropdown menu item to center
+
+const ddNum = document.getElementsByClassName('ddTitle').length;
+
+for (let el = 0; el < ddNum; el++) {
+    const dd = document.getElementsByClassName('ddTitle')[el];
+    dd.style.textAlign = 'center';
 }
 
 // Background CSS selection
@@ -45,7 +54,7 @@ if (pageData !== 'home') {
     document.head.appendChild(cssLink);
 })();
 
-
+// NAV color
 
 document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
 document.getElementsByTagName('nav')[0].style.borderRadius = '10px 10px 20px 20px';
@@ -102,6 +111,7 @@ document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', (tog
 });
 
 // Rotate mainLogo when window loaded
+
 (function () {
 
     window.addEventListener('load', (logo, togglerIcon) => {
@@ -120,8 +130,6 @@ document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', (tog
         }, 1000);
     });
 })();
-
-
 
 // RESERVE ANIMATION
 
@@ -169,7 +177,6 @@ document.getElementById('footer').children[3].classList.add('list-item');
 
 complainHandling.appendChild(complainHandlingRef);
 
-
 // actual date in footer
 
 function monthToString() {
@@ -192,9 +199,8 @@ monthToString();
 
 // Date check in reserve form
 
-
 function onSubmit() {
-    
+
     const errorColor = '#a50000ff';
     const defaultTextColor = '#644c3a';
     // let isFormValid = false;
@@ -218,9 +224,9 @@ function dateValidation() {
 
     if (dateStart > datePresent && dateEnd > datePresent && dateStart < dateEnd) {
 
-        $document.querySelector('small').style.transition = '500ms';
-        $document.querySelector('small').innerText = '';
-        $document.querySelector('small').style.color = defaultTextColor;
+        document.querySelector('small').style.transition = '500ms';
+        document.querySelector('small').innerText = '';
+        document.querySelector('small').style.color = defaultTextColor;
         isFormValid = true;
 
     } else if (dateEnd < dateStart) {
@@ -256,6 +262,7 @@ document.querySelector('.facebook').addEventListener('mouseenter', (fb) => {
     fb.style.transform = 'rotate(360deg)';
     fb.style.transition = '500ms';
     fb.style.scale = 2;
+ 
 });
 document.querySelector('.facebook').addEventListener('mouseleave', (fb) => {
     fb = document.querySelector('.facebook');
@@ -298,4 +305,7 @@ const screenWidth = window.innerWidth;
 screenWidth > 900 ? snowFall(500) : snowFall(150);
 
 console.log('main.js running');
+
+
+
 

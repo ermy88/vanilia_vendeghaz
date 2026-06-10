@@ -1,69 +1,98 @@
 @use '../styles/colors';
+@use '../styles/fonts';
 
 .serviceBox {
     margin: 0 auto;
+    width: 80%;
     text-align: center;
-    background-image: linear-gradient(to bottom, transparent, colors.$AshA1 5% 95%, transparent);
-    font-family: colors.$Basic-font;
-    width: 70%;
-    border-radius: 15px;
-    border: 3px solid colors.$Millbrook;
+    background-image: linear-gradient(to bottom, transparent, colors.$AshA2 5% 95%, transparent);
+    font-family: fonts.$Basic-font;
+    font-size: 2vh;
     outline: 1px solid colors.$AshA1;
     box-shadow: 0px 0px 100px colors.$Birch inset;
-    font-size: 1.3rem;
     padding: 0 6vw 4vh 6vw;
     overflow: hidden;
+    user-select: none;
+
 
     h1 {
-        padding: 10vh 0 1vw 0;
+        padding: 15vh 0 4vh 0;
         text-shadow: 0 0 5px colors.$Vanilla;
         font-weight: bold;
     }
 
-    li:nth-child(2n-1) {
-        text-align: left;
-        padding: 15px 20px;
-    }
+    ul {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2vh;
+        list-style-type: none;
 
-    li:nth-child(2n) {
-        text-align: right;
-        padding: 15px 20px;
-    }
+        .icon {
+            padding: 1vh;
+            user-select: none;
+            width: 40%;
+            color: colors.$Birch;
+            border-radius: 1rem;
+            background-color: transparent;
+            transition:
+                transform 400ms,
+                box-shadow 400ms,
+                background-color 400ms,
+                font-weight 400ms;
 
-    li:nth-child(7),
-    li:nth-child(11) {
-        img {
-            scale: 1.3;
+            img {
+                width: 8vw;
+                padding: 1vh;
+            }
+
+            &:hover {
+                box-shadow: 0 0 10px colors.$Birch;
+                border-radius: 1rem;
+                transform: scale(1.05);
+                background-color: colors.$AshA2;
+
+                p {
+                    font-weight: 600;
+                    transition: 400ms;
+                    text-align: center;
+                }
+            }
+
+            strong {
+                font-size: 2vw;
+                white-space: pre-line;
+            }
+        }
+
+        li:nth-child(7),
+        li:nth-child(11) {
+            img {
+                scale: 1.2;
+            }
+        }
+
+        li:nth-child(7),
+        li:nth-child(2) {
+            strong {
+                padding: 0;
+            }
         }
     }
-    div>img{
+
+    p.icon>img {
+        width: 20%;
+        padding-bottom: 2vh;
+    }
+
+    div>img {
+        padding-block: 1vh;
         width: 11% !important;
-        &:hover{
-            transition: 200ms;
-            scale:1.1;
-        }
-    }
-
-    // ----------------- ICONS -----------------
-    .icon {
-        padding: 1vh 0 1vh 0vw;
-        user-select: none;
-        margin-bottom: 20px;
-        border-radius: 50%;
-
-        img {
-            width: 100px;
-            padding: 15px;
-            margin: 10px 20px 10px 20px;
-
-        }
 
         &:hover {
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.603);
-            transition: 600ms;
-            border-radius: 2rem;
-            scale: 1.12;
-            background-color: transparent;
+            transition: 200ms;
+            scale: 1.1;
         }
     }
 }
@@ -71,27 +100,29 @@
 // Reserve button settings at bottom of serviceBox --------------------------------------------------------------------------
 
 .reserve {
-    padding: 3vh 3vh 3vh 0vh;
+    padding: 5vh 0vh 3vh 0;
+    letter-spacing: 1vh;
     text-align: center;
     background-color: colors.$MillbrookA;
-    margin: 10vh 0 -3vw -6vw;
-    width: 60%;
-    border-radius: 70% 90% 100% 10% / 50% 100% 0% 50%;
-    box-shadow: 10px -5px 10px colors.$Vanilla;
+    margin: 10vh auto -3vw auto;
+    width: 75%;
+    border-radius: 50% 50% 10% 10% / 100% 100% 0% 0%;
+    box-shadow: 0px 0px 5px colors.$Vanilla;
 
     &:hover {
-        box-shadow: 20px -10px 10px colors.$Vanilla;
+        box-shadow: 0px 0px 10px colors.$Vanilla;
     }
 
     a {
         color: colors.$Vanilla;
         text-decoration: none;
-        font-size: 4vh;
+        font-size: 4vw;
         text-shadow: 1px 1px 3px black;
+        transition: text-shadow 300ms;
 
         &:hover {
             color: colors.$Vanilla;
-            text-shadow: 1px 1px 10px black;
+            text-shadow: 1px 1px 10px colors.$Vanilla;
         }
     }
 }
@@ -99,14 +130,14 @@
 // ------------------------------------- MEDIA QUERRIES --------------------------------------
 
 @media only screen and (min-width: 1980px) {
-    .reserve{
+    .reserve {
         margin-bottom: -2vw;
     }
 }
 
 @media only screen and (max-width: 992px) {
-    
-    .serviceBox{
+
+    .serviceBox {
         width: 98%;
     }
 
@@ -118,18 +149,50 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .reserve{
-        margin-bottom: -8vw;
+    .serviceBox {
+
+        // padding: 0;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .icon {
+                padding: 5vh;
+                font-size: 3vh;
+                width: 100% !important;
+
+                img {
+                    width: 25%;
+                }
+
+                strong {
+                    font-size:100%;
+                }
+            }
+
+            li:nth-child(7),
+            li:nth-child(2) {
+                strong {
+                    padding: 0;
+                }
+            }
+        }
+
+        p.icon>img {
+            width: 30%;
+        }
     }
-    
 }
 
 @media only screen and (max-width: 576px) {
-    .reserve{
-        margin-bottom: -10vw;
+    .reserve {
+        margin-bottom: -3vw;
 
     }
-        .serviceBox {
-            width: 98% !important;
-        }
+
+    .serviceBox {
+        width: 98% !important;
+    }
 }

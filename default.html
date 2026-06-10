@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Vanília Vendégház</title>
-	<link rel="icon" type="image/x-icon" href="icons/favicon.png">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-	<script src="https://kit.fontawesome.com/a5ae97f596.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="styles/bgndIN.css">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jersey+15&family=Shojumaru&family=Yesteryear&family=Zen+Dots&display=swap"
-		rel="stylesheet">
+<meta charset="UTF-8">
+<title>3D Cube</title>
 
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    perspective: 1000px;
+}
 
+/* Kocka konténer */
+.cube {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+}
 
+/* Oldalak */
+.face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 200, 255, 0.7);
+    border: 2px solid #fff;
+}
+
+/* 6 oldal pozicionálása */
+.front  { transform: rotateY(0deg) translateZ(75px); }
+.back   { transform: rotateY(180deg) translateZ(75px); }
+.right  { transform: rotateY(90deg) translateZ(75px); }
+.left   { transform: rotateY(-90deg) translateZ(75px); }
+.top    { transform: rotateX(90deg) translateZ(75px); }
+.bottom { transform: rotateX(-90deg) translateZ(75px); }
+</style>
 </head>
 
-<body id="top">
-	<h1>DEFAULT SITE</h1>
-	</footer>
-</body>
+<body>
 
+<div class="cube" id="cube">
+    <div class="face front"></div>
+    <div class="face back"></div>
+    <div class="face right"></div>
+    <div class="face left"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+</div>
+
+<script>
+const cube = document.getElementById('cube');
+
+let x = 0;
+let y = 0;
+
+function animate() {
+    x += 0.5;
+    y += 0.7;
+
+    cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
 </html>

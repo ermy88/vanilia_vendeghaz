@@ -1,34 +1,11 @@
 @use '../styles/colors';
 
-.animation {
-    position: relative;
-    animation: showContent 2000ms cubic-bezier(.2,.09,0,.99);
-
-    @keyframes showContent {
-        0% {
-            opacity: 0;
-            top: -1000px;
-            filter: blur(0px)
-        }
-
-        50% {
-            opacity: 0;
-            filter: blur(10px)
-        }
-
-        100% {
-            opacity: 1;
-            top: 0;
-            filter: blur(0px)
-        }
-    }
-}
 
 .indexBox {
 
     // Box
     display: block;
-    margin: 1vh auto;
+    margin: 9.5vh auto;
     width: 80%;
     max-width: 1500px;
     z-index: 10;
@@ -96,9 +73,8 @@
         border-radius: 73% 27% 81% 19% / 19% 79% 21% 81%;
         margin: 5vh 2vh 1vh 0rem;
         float: left;
-        box-shadow: 2px 5px 15px colors.$Birch;
+        box-shadow: 2px px 15px colors.$Birch;
         cursor: pointer;
-
     }
 
     span.emp-top {
@@ -205,9 +181,7 @@
         img.img-outside {
             width: 90%;
             margin: 8vh 0 4vh 0;
-            border-radius: 96% 4% 99% 1% / 30% 98% 2% 70%;
-
-            margin-top: 5vh;
+            border-radius: 96% 4% 99% 1% / 60% 98% 2% 70%;
             animation: pulsingShadow 4000ms infinite;
             transform: rotateZ(-1deg);
         }

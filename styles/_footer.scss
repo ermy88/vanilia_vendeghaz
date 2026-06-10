@@ -1,5 +1,5 @@
-@use'../styles/colors';
-
+@use '../styles/colors';
+@use '../styles/fonts';
 
 footer {
     .scroll-top-btn {
@@ -39,7 +39,7 @@ footer {
 
 .toFooter {
     // margin-top: 25vh;
-    font-family: colors.$Basic-font;
+    font-family: fonts.$Basic-font;
     color: colors.$Ash;
     display: flex;
     position: sticky;
@@ -105,7 +105,7 @@ footer {
 
 .footer-index {
     user-select: none;
-    font-family: colors.$Basic-font;
+    font-family: fonts.$Basic-font;
     color: colors.$Vanilla;
     z-index: 11;
     height: 4vh;

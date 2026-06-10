@@ -1,111 +1,165 @@
 @use '../styles/colors';
+@use '../styles/fonts';
 
 
+.navbar {
+    padding: 0vh 4vh 0vh 4vh;
+    top: 1vh;
+    position: fixed;
+    align-items: center;
+    z-index: 15;
+    box-shadow: 0 0px 10px colors.$Birch;
 
-header {
+    .mainLogo {
+        display: block;
+        user-select: none;
+        padding-block: 10px;
 
-    .navbar {
-        padding: 0vh 4vh 0vh 4vh;
-        top: 1vh;
-        position: fixed;
-        align-items: center;
-        z-index: 5;
-        box-shadow: 0 0px 10px colors.$Birch;
+        img {
+            transition: 300ms;
+            height: 6vh;
+            border-radius: 50% / 20%;
+            border: 3px colors.$Millbrook solid;
 
-        .mainLogo {
-            display: block;
-            user-select: none;
-            padding-block: 10px;
+            &:hover {
+                border-radius: 50%;
+                box-shadow: 0 0 5px colors.$Vanilla;
+            }
 
-            img {
-                transition: 300ms;
-                height: 6vh;
-                border-radius: 50% / 20%;
-                border: 3px colors.$Millbrook solid;
-
-                &:hover {
-                    border-radius: 50%;
-                    box-shadow: 0 0 5px colors.$Vanilla;
-                }
-
-                &:active {
-                    box-shadow: 0 0 5px colors.$Birch;
-                }
+            &:active {
+                box-shadow: 0 0 5px colors.$Birch;
             }
         }
+    }
 
-        .navbar-nav {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
 
-            user-select: none;
-            font-family: colors.$Basic-font;
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        user-select: none;
+        font-family: fonts.$Basic-font;
 
-            .nav-list-item {
+        .nav-list-item {
 
-                a {
-                    font-size: 2vh;
-                    color: colors.$Birch;
+            a {
+                font-size: 2vh;
+                color: colors.$Birch;
 
-                    &:hover {
-                        scale: 1.1;
-                    }
+                hr {
+                    opacity: 0;
+                    width: 10%;
                 }
 
-                .dropdown-menu {
+                &:hover {
+                    hr {
+                        text-align: center;
+                        transition:
+                            opacity 500ms,
+                            width 500ms;
+                        width: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .dropdown-menu.show {
+                height: 100%;
+                visibility: visible;
+                transform: translateY(14px);
+            }
+
+            .dropdown-menu {
+                display: block;
+                text-align: center;
+                height: 0;
+                visibility: hidden;
+                transform: translateY(0px);
+                transition:
+                    height .4s ease,
+                    transform .4s ease,
+                    visibility .2s;
+                padding: 0;
+                border: none;
+
+                li {
+                    box-shadow: 0 1px 5px colors.$Millbrook;
+                    border-radius: 5px;
                     background-color: colors.$Ash !important;
-                    border: none;
 
                     .dropdown-item {
+                        padding: 1vh 4vh;
                         color: colors.$Birch;
                         text-wrap: wrap;
-                        font-size: 1rem;
-
+                        font-size: 1.8vh;
+                        transition:
+                            background-color 300ms ease;
+                        border-radius: 5px;
 
                         &:hover {
-                            transition: 400ms;
+                            transition: 300ms ease;
                             background-color: colors.$Birch !important;
+                            box-shadow: 0 1px 2px;
                             color: colors.$Vanilla;
-                            border-radius: 1rem;
+                            transform: scale(1.07);
                         }
                     }
                 }
             }
+        }
 
-            .reservation a {
+        .reservation {
+            z-index: 100;
+
+            a {
+
                 border-radius: 10px;
                 background-color: colors.$Birch;
                 color: colors.$Vanilla;
+                padding: 10px 2vw;
+                box-shadow: 0 0 10px colors.$Millbrook;
 
                 &:hover {
-                    transition: 300ms;
-                    color: colors.$Vanilla;
-                    box-shadow: 0px 0px 10px colors.$Birch;
+                    transition: 200ms;
+                    text-shadow: 0 0 5px colors.$Vanilla;
+                }
 
+                animation: pulse 2500ms ease-in-out infinite;
+
+                @keyframes pulse {
+                    50% {
+                        scale: 1.05;
+                    }
                 }
             }
-
-
-        }
-
-        button.navbar-toggler {
-            border: none;
-            outline: none;
-            width: 100%;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url('../images/logo.jpg');
-            width: 8vh;
-            height: 8vh;
-            border-radius: 50% / 20%;
-            border: 3px colors.$Millbrook solid;
         }
     }
+
+    button.navbar-toggler {
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('../images/logo.jpg');
+        width: 8vh;
+        height: 8vh;
+        border-radius: 50% / 20%;
+        border: 3px colors.$Millbrook solid;
+    }
+
+    a.facebook,
+    a.tiktok,
+    a.messenger {
+        margin: 1vh 2vh;
+
+    }
 }
+
+
 
 
 
@@ -114,31 +168,49 @@ header {
 
 
 @media only screen and (max-width: 1400px) {
+    .navbar {
 
-    .mainLogo {
-        padding-top: 10px;
-    }
+        .navbar-nav {
 
-    a.facebook,
-    a.tiktok,
-    a.messenger {
-        font-size: 2vh !important;
-        margin: 0vh 2vw;
+            .mainLogo {
+                display: none !important;
+            }
+
+            .nav-list-item {
+                box-shadow: none;
+
+                .dropdown-menu.show {
+
+                    transition: 0;
+                    transform: translateY(0px);
+
+                    li {
+                        transform: translateY(0px);
+                        box-shadow: none;
+
+                    }
+                }
+            }
+        }
+
+        a.facebook,
+        a.tiktok,
+        a.messenger {
+            font-size: 3vh !important;
+            margin: 3vh 4vh;
+        }
     }
 }
 
-@media only screen and (max-width: 1200px) {}
-
-
 @media only screen and (max-width: 992px) {
 
-    nav {
+    .navbar {
         .mainLogo {
             display: none !important;
         }
 
         .reservation {
-            margin-block: 3vh;
+            margin-block: 1vh;
             width: 40%;
             min-width: 200px;
 
@@ -148,12 +220,13 @@ header {
 
 @media only screen and (max-width: 576px) {
 
+    .navbar {
 
-    a.facebook,
-    a.tiktok,
-    a.messenger {
-        margin: 2vh 5vw;
+        a.facebook,
+        a.tiktok,
+        a.messenger {
+            margin: 3vh 3vh;
 
+        }
     }
-
 }

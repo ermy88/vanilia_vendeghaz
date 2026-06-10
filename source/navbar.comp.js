@@ -70,7 +70,7 @@ export function createNavbar() {
 
   // ===== Programok =====
   ul.appendChild(createDropdown(
-    'Programok / Látnivalók',
+    'Programok | Látnivalók',
     [
       ['Gombaházak', 'sights.html#gombahazak'],
       ['Kisvasút', 'sights.html#kisvasut'],
@@ -97,10 +97,10 @@ export function createNavbar() {
 
   // ===== Árak / Foglalás =====
   const priceLi = document.createElement('li');
-  priceLi.className = 'reservation nav-list-item';
+  priceLi.className = 'reservation nav-list-item text-center';
 
   const priceA = document.createElement('a');
-  priceA.className = 'cinzel nav-link btn-res-animation text-center';
+  priceA.className = 'cinzel nav-link';
   priceA.href = 'prices.html';
   priceA.textContent = 'Árak/Foglalás';
 
@@ -109,7 +109,7 @@ export function createNavbar() {
 
   // ===== social =====
   const socialDiv = document.createElement('div');
-  socialDiv.className = 'd-flex justify-content-evenly gap-4 py-2 pt-lg-2';
+  socialDiv.className = 'd-flex justify-content-evenly';
 
   [
     ['facebook', 'https://www.facebook.com/profile.php?id=61577007959763', 'fa-facebook'],
@@ -162,7 +162,7 @@ export function createNavbar() {
     li.className = 'nav-list-item dropdown';
 
     const a = document.createElement('a');
-    a.className = `cinzel text nav-link${nowrap ? ' text-nowrap' : ''}`;
+    a.className = `cinzel text nav-link ddTitle${nowrap ? ' text-nowrap' : ''}`;
     a.href = '#';
     a.setAttribute('role', 'button');
     a.setAttribute('data-bs-toggle', 'dropdown');
@@ -190,3 +190,19 @@ export function createNavbar() {
     return li;
   }
 }
+
+
+
+
+
+
+
+
+
+// if(pageData === 'prices'){
+
+//     if (document.getElementsByTagName('h1')[0].innerText === '') {
+//         document.getElementsByTagName('h1')[0].innerHTML =
+//         `Vanília Vendégház Árlista <br> ${new Date().getFullYear()}`;
+//     }
+// }

@@ -1,9 +1,10 @@
 @use '../styles/colors';
+@use '../styles/fonts';
 
 .gdprBox {
     position: relative;
     top: 0vh;
-    font-family: colors.$Basic-font;
+    font-family: fonts.$Basic-font;
     padding: 5vw 5vw 20vh 5vw;
     width: 60%;
     box-shadow: 0px 0px 100px colors.$Birch inset;

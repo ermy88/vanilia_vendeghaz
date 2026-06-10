@@ -1,11 +1,11 @@
 @use '../styles/colors';
-
+@use '../styles/fonts';
 
 .rulesBox {
     position: relative;
     margin: 0 auto;
     top: 20vh;
-    font-family: colors.$Basic-font;
+    font-family: fonts.$Basic-font;
     font-weight: 600;
     width: 60%;
     border-radius: 2rem;
@@ -30,6 +30,7 @@
     h5 {
         font-weight: 700;
     }
+
     p,
     h4 {
         margin: 3vh auto;
@@ -37,13 +38,14 @@
         padding-bottom: 1rem;
     }
 
-    ol {
+    ul {
         text-align: left;
-        padding-inline-start: 6rem;
+        padding: 0 10vw;
 
         li {
             text-align: justify;
-            padding: 1rem 6rem 0 0rem;
+            list-style-position: inside;
+            list-style-type: decimal;
         }
     }
 
@@ -61,6 +63,11 @@
 
     section div.rulesBox {
         width: 100%;
+    }
+
+    .gmap {
+            width: 99% !important;
+            height: 60vh;
     }
 }
 
@@ -82,15 +89,6 @@
         span.span-thx {
             font-size: 3vh;
             text-align: center;
-        }
-
-        ol {
-            list-style-position: inside;
-            padding-inline-start: 2rem;
-
-            li {
-                padding: 0rem 2rem 0 1rem;
-            }
         }
     }
 }
