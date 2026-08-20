@@ -43,12 +43,15 @@
         font-family: fonts.$Basic-font;
 
         .nav-list-item {
-
+            
             a {
                 font-size: 2vh;
                 color: colors.$Birch;
-
+                
                 hr {
+                    transition:
+                        opacity 500ms,
+                        width 500ms;
                     opacity: 0;
                     width: 10%;
                 }
@@ -56,9 +59,6 @@
                 &:hover {
                     hr {
                         text-align: center;
-                        transition:
-                            opacity 500ms,
-                            width 500ms;
                         width: 100%;
                         opacity: 1;
                     }
@@ -103,7 +103,7 @@
                             background-color: colors.$Birch !important;
                             box-shadow: 0 1px 2px;
                             color: colors.$Vanilla;
-                            transform: scale(1.07);
+                            transform: scale(1.05);
                         }
                     }
                 }
@@ -177,13 +177,13 @@
             }
 
             .nav-list-item {
-                box-shadow: none;
 
                 .dropdown-menu.show {
 
-                    transition: 0;
+                    // transition: 0;
                     transform: translateY(0px);
 
+                    background-color: colors.$Ash;
                     li {
                         transform: translateY(0px);
                         box-shadow: none;

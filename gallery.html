@@ -4,405 +4,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanília Vendégház Galéria </title>
+    <title>Vanília Vendégház</title>
     <link rel="icon" type="image/x-icon" href="icons/favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <!-- FONTS -->
     <script src="https://kit.fontawesome.com/a5ae97f596.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- CINZEL FONT -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jersey+15&family=Shojumaru&family=Yesteryear&family=Zen+Dots&display=swap"
         rel="stylesheet">
+    <!-- DANCING SCRIPT FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- MAIN | BS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hu_HU">
+    <meta property="og:url" content="https://vaniliavendeghaz.hu/">
+    <meta property="og:site_name" content="Vanília Vendégház">
+
+    <meta property="og:title" content="Vanília Vendégház – Nyugodt pihenés Tiszakécskén">
+    <meta property="og:description"
+        content="Otthonos vendégház Tiszakécskén, a Tisza közelében. Kényelmes szállás, nyugodt környezet, családbarát pihenés. Nézd meg és foglalj!">
+
+    <meta property="og:image" content="https://vaniliavendeghaz.hu/images/outside.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vanília Vendégház Tiszakécskén – udvar és vendégház">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vanília Vendégház – Pihenés a Tisza közelében">
+    <meta name="twitter:description"
+        content="Nyugodt, barátságos vendégház Tiszakécskén. Ideális választás családoknak és pároknak.">
+    <meta name="twitter:image" content="https://vaniliavendeghaz.hu/images/outside.jpg">
 
 
 
 </head>
 
-<body id="top" data-page="inner">
-
-    <!-- <header>
-        
-        <nav class="navbar navbar-expand-lg col-12 col-md-12">
-            <div class="container-fluid justify-content-evenly">
-                <a class="mainLogo navbar-brand" href="index.html"><img src="images/logo.jpg" alt="Vanília Vendégház"
-                    title="www.vaniliavendeghaz.hu"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item ">
-                            <a class="cinzel text nav-link" aria-current="page" href="index.html">Kezdőlap</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="cinzel text nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Apartmanok
-                            </a>
-
-                            <div class="dropdown-center">
-                                <ul class="dropdown-menu text-center">
-                                    <li><a class="dropdown-item cinzel text-center" href="upstair.html">Emelet</a></li>
-                                    <li><a class="dropdown-item cinzel text-center" href="ground.html">Földszint</a>
-                                    </li>
-                                    <li><a class="dropdown-item cinzel text-center" href="garden.html">Garden</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="cinzel text nav-link" href="gallery.html">Galéria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="cinzel text nav-link" href="services.html">Szolgáltatások</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="cinzel text nav-link" href="" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Programok / Látnivalók
-                            </a>
-                            <div class="dropdown-center text-center">
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item cinzel text-center"
-                                            href="sights.html#gombahazak">Gombaházak</a>
-                                    </li>
-                                    <li><a class="dropdown-item cinzel text-center"
-                                            href="sights.html#kisvasut">Kisvasút</a>
-                                    </li>
-                                    <li><a class="dropdown-item cinzel text-center" href="sights.html#kilato">Kilátó -
-                                            Miskó István sétány</a></li>
-                                    <li><a class="dropdown-item cinzel text-center"
-                                            href="sights.html#tanosveny">Tanösvény</a>
-                                    </li>
-                                    <li><a class="dropdown-item cinzel text-center"
-                                            href="sights.html#termal">Termálfürdő</a>
-                                    </li>
-                                    <li><a class="dropdown-item cinzel text-center"
-                                            href="sights.html#strand">Szabadstrand</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="cinzel text nav-link text-nowrap" href="" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Információk
-                            </a>
-                            <div class="dropdown-center text-center">
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item cinzel text-center" href="info.html#rules">Házirend</a>
-                                    </li>
-                                    <li><a class="dropdown-item cinzel text-center" href="info.html#gmap">Térkép</a>
-                                    </li>
-                                    <li><a class="dropdown-item cinzel text-center"
-                                            href="info.html#complaint">Panaszkezelési
-                                            tájékoztató</a></li>
-                                    <li><a class="dropdown-item cinzel text-center" href="info.html#adatk">Adatkezelési
-                                            tájékoztató</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="reservation nav-item">
-                            <a class="cinzel nav-link btn-res-animation" href="prices.html">Árak/Foglalás</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="text nav-link facebook"
-                                href="https://www.facebook.com/profile.php?id=61577007959763" target="_blank"
-                                title="Kövess Facebookon!">
-                                <i class="fa-brands fa-facebook"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="text nav-link tiktok" href="https://www.tiktok.com/@vanlia.vendghz"
-                                target="_blank">
-                                <i class="fa-brands fa-tiktok"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="text nav-link messenger" href="https://m.me/61577007959763" target="_blank"
-                                title="Kérdezz tőlünk Messengeren!">
-                                <i class="fa-brands fa-facebook-messenger"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> -->
+<body id="top" data-page="inner gallery">
 
     <main class="animation">
-        <div class="carousel-gallery">
-            <h1 style="height: 1vh;">Galéria</h1>
-            <div id="carouselExampleFadeAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner mt-2">
 
-                    <div class="carousel-item active">
-                        <img src="images/gallery/IMG_4128.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4131.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4134.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4146.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4148.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4154.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4161.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4170.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4179.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4182.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4214.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4215.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4218.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4223.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4227.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4240.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4244.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4248.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4258.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4263.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4271.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4277.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4279.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4282.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item ">
-                        <img src="images/gallery/IMG_4285.jpg" class="d-block pic-" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4287.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4293.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4298.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4315.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4319.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4322.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4327.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4334.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4337.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4343.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4594.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4597.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4600.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4600-2.jpg" class="d-block pic-nf" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4605.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4615.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4618.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4619.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4621.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4624.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4628.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4633.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4635.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4638.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4641.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4645.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4647.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4655.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4657.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4660.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4670.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4676.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4679.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4681.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4686.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4692.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4696.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4702.jpg" class="d-block pic-nf" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4706.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4711.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4713.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4716.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4719.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4725.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4728.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4733.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4750.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4753.jpg" class="d-block pic-nf" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4760.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4762.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4770.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4778.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4781.jpg" class="d-block pic-h" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4790.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4794.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4797.jpg" class="d-block pic-nf" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4804.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4834.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4837.jpg" class="d-block pic-w" alt="gard3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/gallery/IMG_4840.jpg" class="d-block pic-w" alt="gard3">
+        <div class="gallery-page">
+
+            <h1 class="gallery-title">Galéria</h1>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4128.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="0">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4131.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4134.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4146.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="3">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4148.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="4">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4154.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="5">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4161.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="6">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4170.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="7">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4179.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="8">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4182.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="9">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4214.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="10">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4215.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="11">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4218.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="12">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4223.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="13">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4227.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="14">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4240.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="15">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4244.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="16">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4248.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="17">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4258.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="18">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4263.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="19">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4271.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="20">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4277.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="21">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4279.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="22">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4282.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="23">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4285.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="24">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4287.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="25">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4293.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="26">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4298.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="27">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4315.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="28">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4319.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="29">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4322.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="30">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4327.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="31">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4334.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="32">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4337.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="33">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4343.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="34">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4594.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="35">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4597.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="36">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4600.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="37">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4600-2.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="38">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4605.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="39">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4615.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="40">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4618.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="41">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4619.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="42">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4621.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="43">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4624.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="44">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4628.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="45">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4633.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="46">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4635.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="47">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4638.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="48">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4641.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="49">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4645.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="50">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4647.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="51">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4655.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="52">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4657.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="53">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4660.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="54">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4670.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="55">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4676.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="56">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4679.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="57">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4681.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="58">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4686.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="59">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4692.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="60">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4696.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="61">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4702.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="62">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4706.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="63">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4711.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="64">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4713.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="65">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4716.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="66">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4719.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="67">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4725.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="68">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4728.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="69">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4733.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="70">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4750.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="71">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4753.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="72">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4760.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="73">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4762.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="74">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4770.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="75">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4778.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="76">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4781.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="77">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4790.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="78">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4794.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="79">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4797.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="80">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4834.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="81">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4837.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="82">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/IMG_4840.jpg" alt="Vanília Vendégház galéria" class="gallery-image"
+                        data-gallery-index="83">
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap modal képnézegető -->
+        <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content gallery-modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Bezárás"></button>
+                        <span class="modal-close-ttl" data-bs-dismiss="modal">BEZÁR</span>
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFadeAutoplaying"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
+                    <div class="modal-body">
+                        <button type="button" class="gallery-modal-control gallery-prev"
+                            aria-label="Előző kép">&#10094;</button>
 
-                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleFadeAutoplaying"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon " aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                        <img id="galleryModalImage" class="gallery-modal-image" src="" alt="Vanília Vendégház galéria">
 
+                        <button type="button" class="gallery-modal-control gallery-next"
+                            aria-label="Következő kép">&#10095;</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -470,7 +480,7 @@
                             <hr>
                             <li class="list-item"><a href="upstair.html">Emelet</a></li>
                             <li class="list-item"><a href="ground.html">Földszint</a></li>
-                            <li class="list-item"><a href="garden.html">Garden</a></li>
+                            <li class="list-item"><a href="garden.html">Nyári Lak és Kert</a></li>
                             <hr>
                             <li class="list-item"><a href="gallery.html">Galéria</a></li>
                             <hr>
@@ -525,7 +535,6 @@
             </p>
         </div>
     </footer>
-
     <script type="module" src="source/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -54,11 +54,11 @@ export function createNavbar() {
 
   // ===== Apartmanok dropdown =====
   ul.appendChild(createDropdown(
-    'Apartmanok',
+    'Vanília Vendégház',
     [
       ['Emelet', 'upstair.html'],
       ['Földszint', 'ground.html'],
-      ['Garden', 'garden.html'],
+      ['Nyári lak és Kert', 'garden.html'],
     ]
   ));
 
@@ -115,12 +115,12 @@ export function createNavbar() {
     ['facebook', 'https://www.facebook.com/profile.php?id=61577007959763', 'fa-facebook'],
     ['tiktok', 'https://www.tiktok.com/@vanlia.vendghz', 'fa-tiktok'],
     ['messenger', 'https://m.me/61577007959763', 'fa-facebook-messenger'],
-  ].forEach(([cls, href, icon]) => {
+  ].forEach(([name, href, icon]) => {
     const li = document.createElement('li');
     li.className = 'nav-list-item';
 
     const a = document.createElement('a');
-    a.className = `text nav-link ${cls}`;
+    a.className = `text nav-link ${name}`;
     a.href = href;
     a.target = '_blank';
 
@@ -142,6 +142,8 @@ export function createNavbar() {
 
 
   // ===== helper functions =====
+  //* SIMPLE LIST ITEM
+
   function createSimpleLi(text, href, current = false) {
     const li = document.createElement('li');
     li.className = 'nav-list-item';
@@ -151,11 +153,17 @@ export function createNavbar() {
     a.href = href;
     a.textContent = text;
 
+    const hr = document.createElement('hr');
+    hr.className = 'p-0 m-0';
+
     if (current) a.setAttribute('aria-current', 'page');
 
+    a.appendChild(hr);
     li.appendChild(a);
     return li;
   }
+
+  //*DROPDOWN MENU
 
   function createDropdown(dd_title, dd_items, center = false, nowrap = false) {
     const li = document.createElement('li');
@@ -179,30 +187,19 @@ export function createNavbar() {
       const li = document.createElement('li');
       const link = document.createElement('a');
       link.className = 'dropdown-item cinzel text-center';
-      link.href = href;
       link.textContent = text;
+      link.href = href;
       li.appendChild(link);
       ul.appendChild(li);
     });
+
+    const hr = document.createElement('hr');
+    hr.className = 'p-0 m-0';
+    // hr.style.width ='90%';
+    a.appendChild(hr);
 
     centerDiv.appendChild(ul);
     li.append(a, centerDiv);
     return li;
   }
 }
-
-
-
-
-
-
-
-
-
-// if(pageData === 'prices'){
-
-//     if (document.getElementsByTagName('h1')[0].innerText === '') {
-//         document.getElementsByTagName('h1')[0].innerHTML =
-//         `Vanília Vendégház Árlista <br> ${new Date().getFullYear()}`;
-//     }
-// }

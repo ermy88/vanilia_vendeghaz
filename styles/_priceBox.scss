@@ -17,16 +17,32 @@
         font-weight: bold;
     }
 
-    li {
-        list-style-type: none;
-        font-size: 1.5rem;
+    .check {
+        margin-inline-start: 20px;
+
     }
 
-    p.price-note {
-        text-align: left;
-        margin: 5vh 0 0 5vw;
-        color: colors.$Vanilla;
-        opacity: 0.5;
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            font-size: 1.4vw;
+            width: 75%;
+            margin: 0 auto;
+
+            .sz_card {
+                width: 30%;
+            }
+        }
+
+        p.price-note {
+            text-align: left;
+            margin: 5vh 0 0 5vw;
+            color: colors.$Vanilla;
+            opacity: 0.5;
+        }
     }
 
 
@@ -34,14 +50,21 @@
 
 // ------------------------------------- MEDIA QUERRIES --------------------------------------
 
-@media only screen and (max-width: 576) {}
+@media only screen and (max-width: 768px) {
 
-.priceBox {
-    h1 {
-        font-size: 4vh;
-    }
+    .priceBox {
+        h1 {
+            font-size: 4vh;
+        }
 
-    li {
-        font-size: 2.5vh;
+        ul {
+
+            li {
+                font-size: 2.5vh;
+                .sz_card{
+                    width: 80%;
+                }
+            }
+        }
     }
 }

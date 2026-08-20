@@ -1,5 +1,6 @@
-import { createNavbar } from "./navbar.comp.js";
+import { createNavbar } from "../source/navbar.comp.js";
 import { snowFall } from "./snowFall.comp.js";
+import "./gallery.modal.js"
 
 // Colors
 const color_Ash = '#cabfb3';
@@ -22,6 +23,7 @@ const pageData = document.body.dataset.page;
 if (pageData !== 'home') {
     createNavbar();
 }
+
 // NAVBAR Dropdown menu item to center
 
 const ddNum = document.getElementsByClassName('ddTitle').length;
@@ -82,8 +84,7 @@ window.onscroll = function navTop0() {
 
     if (document.documentElement.scrollTop > 100) {
         document.getElementsByClassName('scroll-top-btn')[0].style.display = 'inline';
-    }
-    else {
+    } else {
         document.getElementsByClassName('scroll-top-btn')[0].style.display = 'none';
     }
 };
@@ -123,7 +124,7 @@ document.getElementsByClassName('navbar')[0].addEventListener('mouseleave', (tog
             logo.style.transition = '1000ms';
             logo.style.transform = 'rotate(360deg)';
 
-            document.getElementsByClassName('navbar-toggler-icon')[0].style.borderRadius = '50%';
+            togglerIcon.style.borderRadius = '50%';
             togglerIcon.style.transition = '1000ms';
             togglerIcon.style.transform = 'rotate(360deg)';
 
@@ -153,18 +154,19 @@ if (document.getElementsByClassName('reserve')[0]) {
 
 // dinamikus évszám a foglalási oldalon H1
 
-if (document.getElementsByTagName('h1')[0].innerText === '') {
+if (pageData === 'inner prices') {
+
     document.getElementsByTagName('h1')[0].innerHTML =
         `Vanília Vendégház Árlista <br> ${new Date().getFullYear()}`;
 }
 
-// NTAK nr. under logo in footer
+// NTAK num in footer
 
 let ntakNumber = document.createElement('li');
 ntakNumber.innerHTML = 'NTAK reg.szám: <br> MA25117534'
 ntakNumber = document.getElementById('footer').appendChild(ntakNumber).classList.add("list-item");
 
-// Footer panaszkezelési tájékoztató elem
+// Footer panaszkezelési tájékoztató
 
 let complainHandling = document.createElement('li');
 let complainHandlingRef = document.createElement('a');
@@ -197,25 +199,6 @@ function monthToString() {
 };
 monthToString();
 
-// Date check in reserve form
-
-function onSubmit() {
-
-    const errorColor = '#a50000ff';
-    const defaultTextColor = '#644c3a';
-    // let isFormValid = false;
-
-
-    dateValidation();
-    // nameValidation();
-    // emailValidation();
-
-    //  ? isFormValid = true : isFormValid = false;
-};
-// (function () {
-//     document.querySelector('#submit').addEventListener('click', onSubmit)
-// })();
-
 function dateValidation() {
 
     const dateStart = new Date($('input')[3].value);
@@ -245,15 +228,6 @@ function dateValidation() {
     return isFormValid;
 };
 
-// function nameValidation() {
-
-//     nameInputField = document.querySelectorAll('input')[0].value;
-//     // console.log(nameInputField);
-
-//     if (/\d/.test(nameInputField.toLowerCase())) {
-//         console.log('A név nem tartalmazhat számot');
-//
-// }
 
 // SOCIAL ICONS ANIMATION
 // FACEBOOK
@@ -262,7 +236,7 @@ document.querySelector('.facebook').addEventListener('mouseenter', (fb) => {
     fb.style.transform = 'rotate(360deg)';
     fb.style.transition = '500ms';
     fb.style.scale = 2;
- 
+
 });
 document.querySelector('.facebook').addEventListener('mouseleave', (fb) => {
     fb = document.querySelector('.facebook');
@@ -304,7 +278,7 @@ document.querySelector('.messenger').addEventListener('mouseleave', (msgr) => {
 const screenWidth = window.innerWidth;
 screenWidth > 900 ? snowFall(500) : snowFall(150);
 
-console.log('main.js running');
+// console.log('main.js running');
 
 
 

@@ -24,11 +24,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
-
-body {
-    scroll-behavior: smooth;
+body.modal-open {
+    overflow-y: scroll !important;
+    padding-right: 0 !important;
 }
 
 #gmap {
@@ -75,12 +74,12 @@ body {
 //------------------------------------- ANIMATION ---------------------------------------------
 .animation {
     position: relative;
-    animation: showContent 2000ms cubic-bezier(.2, .09, 0, .99);
+    animation: showContent 2000ms ease-out;
 
-    @keyframes showConten {
+    @keyframes showContent {
         0% {
             opacity: 0;
-            top: -1000px;
+            top: -200px;
             filter: blur(0px)
         }
 

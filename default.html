@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="UTF-8">
-<title>3D Cube</title>
+<title>Fejlesztés alatt</title>
 
 <style>
 body {
@@ -11,46 +11,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #111;
-    perspective: 1000px;
+    background: #644c3a;
+    perspective: 500px;
 }
 
 /* Kocka konténer */
 .cube {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     transform-style: preserve-3d;
 }
 
 /* Oldalak */
 .face {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    background: rgba(0, 200, 255, 0.7);
-    border: 2px solid #fff;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #644c3f;
+    /* border-radius: 1rem; */
 }
 
 /* 6 oldal pozicionálása */
-.front  { transform: rotateY(0deg) translateZ(75px); }
-.back   { transform: rotateY(180deg) translateZ(75px); }
-.right  { transform: rotateY(90deg) translateZ(75px); }
-.left   { transform: rotateY(-90deg) translateZ(75px); }
-.top    { transform: rotateX(90deg) translateZ(75px); }
-.bottom { transform: rotateX(-90deg) translateZ(75px); }
+.front  { transform: rotateY(0deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
 </style>
+
 </head>
 
 <body>
 
 <div class="cube" id="cube">
-    <div class="face front"></div>
-    <div class="face back"></div>
-    <div class="face right"></div>
-    <div class="face left"></div>
-    <div class="face top"></div>
-    <div class="face bottom"></div>
+    <div class="face front"><img src="images/logo.jpg" alt="" width="100%"></div>
+    <div class="face back"><img src="images/logo.jpg" alt="" width="100%"></div>
+    <div class="face right"><img src="images/logo.jpg" alt="" width="100%"></div>
+    <div class="face left"><img src="images/logo.jpg" alt="" width="100%"></div>
+    <div class="face top"><img src="images/logo.jpg" alt="" width="100%"></div>
+    <div class="face bottom"><img src="images/logo.jpg" alt="" width="100%"></div>
 </div>
 
 <script>
