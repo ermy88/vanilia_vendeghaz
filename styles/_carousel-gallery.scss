@@ -11,12 +11,16 @@
         font-weight: bolder;
         text-align: center;
         font-family: 'cinzel';
-        // text-shadow: 0 0 10px colors.$Vanilla;
+        color: colors.$Birch;
+        letter-spacing: 1vw;
+        user-select: none;
+        font-size: 5vw;
+        text-shadow: 0 0 10px colors.$Vanilla;
         box-shadow: 0 0 10px colors.$Birch inset;
         background-image: linear-gradient(to bottom, transparent, colors.$AshA2 10% 90%, transparent);
         width: 100%;
         margin: 0vh auto;
-        padding: 5vh;
+        padding: 3vh;
         border-radius: 5% 5% 0 0;
     }
 
@@ -28,17 +32,16 @@
     box-shadow: 0 0 50px colors.$Birch inset;
     gap: 40px !important;
     padding: 50px 40px 50px 40px;
-    background-image: linear-gradient(to bottom, transparent, colors.$AshA2 50%, transparent);
+    background-image: linear-gradient(to bottom, transparent 1%, colors.$AshA1 10% 95%, transparent);
 
     .gallery-item {
-
-
         opacity: 0;
-        // transform: translateY(40px);
-        transition: opacity 750ms ease-out,
-                    transform 750ms ease-out,
-                    box-shadow 250ms ease-out;
-
+        transform: translateY(20px);
+        transition:
+            opacity 750ms ease-out,
+            transform 250ms ease-out,
+            box-shadow 250ms ease-out,
+            scale 300ms ease-in-out;
         display: block !important;
         position: relative;
         width: 100% !important;
@@ -46,18 +49,20 @@
         overflow: hidden;
         cursor: pointer;
         border-radius: 20px;
-        // transition: box-shadow 250ms;
-
+        box-shadow: 0 0 10px colors.$Birch;
+        
         &:hover {
             box-shadow: 0 0 20px colors.$Birch;
+            scale:(1.05);
         }
     }
-
+    
     .gallery-item.visible {
+        
         opacity: 1;
         transform: translateY(0);
     }
-
+    
     .gallery-image {
         user-select: none;
         display: block !important;
@@ -66,7 +71,9 @@
         max-width: none !important;
         object-fit: cover !important;
         cursor: pointer;
-        transition: transform .25s ease, opacity .25s ease;
+        transition: 
+        transform .25s ease, 
+        opacity .25s ease;
 
         &:hover {
             transform: scale(1.05);
@@ -77,9 +84,7 @@
 
 .gallery-modal-content {
     background: transparent !important;
-    // background: red;
     border: 0;
-    border-radius: 10px;
 
     .modal-body {
         min-height: 75vh;
@@ -92,10 +97,11 @@
         .gallery-modal-image {
             display: block;
             max-width: 100%;
-            max-height: 80vh;
+            max-height:80vh;
             width: auto;
             height: auto;
             object-fit: contain;
+            border-radius: 10px;
         }
     }
 

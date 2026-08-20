@@ -1,7 +1,7 @@
 import "../source/scrollShow.comp.js"
 
 window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 }
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 e.preventDefault();
             }
         });
-//         document.addEventListener('keydown', (e) => {
-//     if (e.key === 'F12') {
-//         e.preventDefault();
-//     }
-// });
+        //         document.addEventListener('keydown', (e) => {
+        //     if (e.key === 'F12') {
+        //         e.preventDefault();
+        //     }
+        // });
     }
 
     const images = document.querySelectorAll(".gallery-image");
@@ -52,13 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    prev.addEventListener("click", () => showImage(current - 1));
-    next.addEventListener("click", () => showImage(current + 1));
+    prev.addEventListener("click", () => {
+        showImage(current - 1)
+    });
+
+    next.addEventListener("click", () => {
+        showImage(current + 1)
+    });
 
     document.addEventListener("keydown", event => {
         if (!modalElement.classList.contains("show")) return;
 
         if (event.key === "ArrowLeft") showImage(current - 1);
         if (event.key === "ArrowRight") showImage(current + 1);
+        if (event.key === "ArrowUp") showImage(current - 4);
+        if (event.key === "ArrowDown") showImage(current + 4);
     });
 });

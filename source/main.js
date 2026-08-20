@@ -40,13 +40,13 @@ for (let el = 0; el < ddNum; el++) {
 
     switch (pageData) {
 
-        case 'upstair':
+        case 'inner upstair':
             cssLink.href = 'styles/bg-upstair.css';
             break;
-        case 'ground':
+        case 'inner ground':
             cssLink.href = 'styles/bg-ground.css';
             break;
-        case 'garden':
+        case 'inner garden':
             cssLink.href = 'styles/bg-garden.css';
             break;
         default:
@@ -63,21 +63,25 @@ document.getElementsByTagName('nav')[0].style.borderRadius = '10px 10px 20px 20p
 
 //Navbar position -> top 0, background change if scrolled
 
-window.onscroll = function navTop0() {
+window.onscroll = function navTop0(navLogo, navbar) {
+    navLogo = document.querySelector('.mainLogo');
+    navbar = document.getElementsByTagName('nav')[0];
 
-    if (document.documentElement.scrollTop > 1) {
-        document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb3';
-        document.getElementsByTagName('nav')[0].style.top = '0vh';
-        document.getElementsByTagName('nav')[0].style.transition = '500ms';
+    if (document.documentElement.scrollTop > 0) {
+        navbar.style.backgroundColor = '#cabfb3';
+        navbar.style.top = '0vh';
+        navbar.style.transition = '300ms';
+        navLogo.style.paddingBottom = '15px';
         window.innerWidth > 992
-            ? document.getElementsByTagName('nav')[0].style.borderRadius = '0px 0px 25% 25%'
+            ? navbar.style.borderRadius = '0px 0px 25% 25%'
             : null;
 
     } else {
-        document.getElementsByTagName('nav')[0].style.backgroundImage = 'none';
-        document.getElementsByTagName('nav')[0].style.backgroundColor = '#cabfb369';
-        document.getElementsByTagName('nav')[0].style.top = '1vh';
-        document.getElementsByTagName('nav')[0].style.borderRadius = '10px 10px 20px 20px';
+        navbar.style.backgroundImage = 'none';
+        navbar.style.backgroundColor = '#cabfb369';
+        navbar.style.top = '1vh';
+        navbar.style.borderRadius = '10px 10px 20px 20px';
+        navLogo.style.paddingBlock = '10px';
 
     }
     // Scroll-top-btn

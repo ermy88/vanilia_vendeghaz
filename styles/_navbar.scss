@@ -32,7 +32,6 @@
         }
     }
 
-
     .navbar-nav {
         width: 100%;
         display: flex;
@@ -43,11 +42,11 @@
         font-family: fonts.$Basic-font;
 
         .nav-list-item {
-            
+
             a {
                 font-size: 2vh;
                 color: colors.$Birch;
-                
+
                 hr {
                     transition:
                         opacity 500ms,
@@ -184,6 +183,7 @@
                     transform: translateY(0px);
 
                     background-color: colors.$Ash;
+
                     li {
                         transform: translateY(0px);
                         box-shadow: none;

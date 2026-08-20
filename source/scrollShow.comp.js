@@ -12,11 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // }
 });
 }, {
-    threshold: 0.8, // mennyi % legyen látható, hogy elinduljon
-    rootMargin: '0px 0px -50px 0px' // mikor induljon el (itt kicsit korábban)
+    threshold: 0.5, // mennyi % legyen látható, hogy elinduljon
+    // rootMargin: '0px 0px -50px 0px' // mikor induljon el (itt kicsit korábban)
 });
 
 elements.forEach(el => observer.observe(el));
 });
 
-console.log("import success");
