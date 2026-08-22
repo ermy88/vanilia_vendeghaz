@@ -1,6 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.gallery-item');
   
   const observer = new IntersectionObserver((entries) => {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 }, {
     threshold: 0.5, // mennyi % legyen látható, hogy elinduljon
-    // rootMargin: '0px 0px -50px 0px' // mikor induljon el (itt kicsit korábban)
+    rootMargin: '0px 0px -50px 0px' // mikor induljon el (itt kicsit korábban)
 });
 
 elements.forEach(el => observer.observe(el));

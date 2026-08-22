@@ -1,6 +1,7 @@
 import { createNavbar } from "../source/navbar.comp.js";
 import { snowFall } from "./snowFall.comp.js";
-import "./gallery.modal.js"
+import "./gallery.modal.js";
+import "./services-scrollShadow.comp.js";
 
 // Colors
 const color_Ash = '#cabfb3';
@@ -48,6 +49,9 @@ for (let el = 0; el < ddNum; el++) {
             break;
         case 'inner garden':
             cssLink.href = 'styles/bg-garden.css';
+            break;
+        case 'inner gallery':
+            cssLink.href = 'styles/bg-gallery.css';
             break;
         default:
             cssLink.href = 'styles/bg-base.css';
@@ -202,35 +206,6 @@ function monthToString() {
     }
 };
 monthToString();
-
-function dateValidation() {
-
-    const dateStart = new Date($('input')[3].value);
-    const dateEnd = new Date($('input')[4].value);
-    const datePresent = new Date();
-
-    if (dateStart > datePresent && dateEnd > datePresent && dateStart < dateEnd) {
-
-        document.querySelector('small').style.transition = '500ms';
-        document.querySelector('small').innerText = '';
-        document.querySelector('small').style.color = defaultTextColor;
-        isFormValid = true;
-
-    } else if (dateEnd < dateStart) {
-        document.querySelector('small').style.transition = '500ms';
-        document.querySelector('small').innerText =
-            'A távozás korábbra van megadva, mint az érkezés.';
-        document.querySelector('small').style.color = errorColor;
-        isFormValid = false;
-
-    } else {
-        document.querySelector('small').style.transition = '500ms';
-        document.querySelector('small').innerText = 'Helytelen dátum!';
-        document.querySelector('small').style.color = errorColor;
-        isFormValid = false;
-    }
-    return isFormValid;
-};
 
 
 // SOCIAL ICONS ANIMATION

@@ -1,4 +1,4 @@
-import "../source/scrollShow.comp.js"
+import "./gallery-scrollShow.comp.js"
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
