@@ -38,7 +38,6 @@ footer {
 }
 
 .toFooter {
-    // margin-top: 25vh;
     font-family: fonts.$Basic-font;
     color: colors.$Ash;
     display: flex;
@@ -50,56 +49,56 @@ footer {
     font-size: 1rem;
 
     ul {
-        padding: 0;
-    }
+        padding-top: 20px;
 
-    .coordinates {
-        font-size: 1rem;
-        margin: 0;
-    }
+        .coordinates {
+            font-size: 1rem;
+            margin: 0;
+        }
 
-    h5 {
-        text-align: center;
-        font-size: 1.5rem;
-    }
+        h5 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
 
-    li.list-item {
-        list-style-type: none;
-        text-align: center;
-        padding: 6px;
+        li.list-item {
+            list-style-type: none;
+            text-align: center;
+            padding: 6px;
 
-        a {
-            text-wrap: nowrap;
-            text-decoration: none;
-            color: colors.$Ash;
-            padding: 0px 1vw 0px 1vw;
-            border-radius: 20px;
+            a {
+                text-wrap: nowrap;
+                text-decoration: none;
+                color: colors.$Ash;
+                padding: 0px 1vw 0px 1vw;
+                border-radius: 20px;
 
-            h5 {
-                text-align: center;
+                h5 {
+                    text-align: center;
+                }
+
+                &:hover {
+                    color: colors.$Vanilla;
+                    border-color: colors.$Vanilla;
+                    transition: 500ms;
+                    box-shadow: 0 0 5px colors.$Vanilla;
+                }
             }
 
-            &:hover {
-                color: colors.$Vanilla;
-                border-color: colors.$Vanilla;
-                transition: 500ms;
-                box-shadow: 0 0 5px colors.$Vanilla;
+
+            img {
+                height: 18vh;
+                border-radius: 50% / 20%;
+                border: 3px colors.$Millbrook solid;
             }
         }
 
-
-        img {
-            height: 18vh;
-            border-radius: 50% / 20%;
-            border: 3px colors.$Millbrook solid;
+        hr {
+            width: 60%;
+            margin: 0rem auto;
+            border: none;
+            border-top: 1px solid colors.$Ash;
         }
-    }
-
-    hr {
-        width: 60%;
-        margin: 0rem auto;
-        border: none;
-        border-top: 1px solid colors.$Ash;
     }
 }
 
